@@ -8,12 +8,18 @@
 
 <!-- Bootstrap -->
 <link href="css/bootstrap.css" rel="stylesheet" media="screen" />
+<!--Bootstrap2-->
+<link href="Bootstrap2/css/bootstrap2.css" rel="stylesheet" media="screen">
 
 <!-- JavaScript plugins (requires jQuery) -->
 <script src="http://code.jquery.com/jquery.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.js"></script><!-- Optionally enable responsive features in IE8 -->
 <script src="js/respond.js"></script>
+<!--JS2-->
+<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="Bootstrap2/js/bootstrap2.js"></script>
+
 
 <style>
 .trans
@@ -178,9 +184,9 @@ border="0" cellpadding="4" cellspacing="0">
 
 <div id="hidden-content" style="display:none;">
 
-    <div id="home-content" colspan="5" rowspan="1" style="vertical-align: top;"> <!-- Home -->
+    <div class="tabbable tabs-left" id="home-content" colspan="1" rowspan="1" style="vertical-align: top;"> <!-- Home -->
 		<!--Pills-->
-	    <ul class="nav nav-pills">
+	    <ul class="nav nav-pills nav-stacked nav-justified">
 		    <li class="active"><a href="#education-panel" data-toggle="pill">Education</a></li>
 		    <li><a href="#clinical-panel" data-toggle="pill">Clinical practice</a></li>
 		    <li><a href="#awards-panel" data-toggle="pill">Awards</a></li>
