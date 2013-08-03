@@ -99,54 +99,54 @@ border="0" cellpadding="4" cellspacing="0">
 					<tr>
 						<td style="vertical-align: center; text-align: center; width: 915px">
 				
-<!-- Split buttons -->
-<!--Home-->
-<div class="btn-group">
-  <a class="btn btn-default" id="home-nav" href="#">Home</a> <!--had problems linking the button - big fixed-->
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="education.html">Education</a></li>
-    <li><a href="clinic.html">Clinical practice</a></li>
-    <li><a href="awards.html">Awards</a></li>
-  </ul>
-</div>
-<!--Research-->
-<div class="btn-group">
-  <a class="btn btn-default" href="research.html">Research</a>
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="ki.html">Karolinska Institute</a></li>
-    <li><a href="rsi.html">Research Science Institute</a></li>
-    <li><a href="kth.html">Royal Institute of Technology</a></li>
-  </ul>
-</div>
-<!--Leadership-->
-<div class="btn-group">
-  <a class="btn btn-default" href="leadership.html">Leadership</a>
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="rays.html">Research Academy for Young Scientists</a></li>
-    <li><a href="fuf.html">Federation of Young Scientists</a></li>
-    <li><a href="edsa.html">European Dental Students' Association</a></li>
-  </ul>
-</div>
-<!--Projects-->
-<div class="btn-group">
-  <a class="btn btn-default" href="projects.html">Projects</a>
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="robotics.html">Robotics</a></li>
-    <li><a href="bioeng.html">Bioengineering</a></li>
-  </ul>
-</div>
+                        <!-- Split buttons -->
+                        <!--Home-->
+                        <div class="btn-group">
+                          <a class="btn btn-default" id="home-nav" href="#">Home</a> <!--had problems linking the button - big fixed-->
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a href="education.html">Education</a></li>
+                            <li><a href="clinic.html">Clinical practice</a></li>
+                            <li><a href="awards.html">Awards</a></li>
+                          </ul>
+                        </div>
+                        <!--Research-->
+                        <div class="btn-group">
+                          <a class="btn btn-default" href="research.html">Research</a>
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a href="ki.html">Karolinska Institute</a></li>
+                            <li><a href="rsi.html">Research Science Institute</a></li>
+                            <li><a href="kth.html">Royal Institute of Technology</a></li>
+                          </ul>
+                        </div>
+                        <!--Leadership-->
+                        <div class="btn-group">
+                          <a class="btn btn-default" href="leadership.html">Leadership</a>
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a href="rays.html">Research Academy for Young Scientists</a></li>
+                            <li><a href="fuf.html">Federation of Young Scientists</a></li>
+                            <li><a href="edsa.html">European Dental Students' Association</a></li>
+                          </ul>
+                        </div>
+                        <!--Projects-->
+                        <div class="btn-group">
+                          <a class="btn btn-default" href="projects.html">Projects</a>
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a href="robotics.html">Robotics</a></li>
+                            <li><a href="bioeng.html">Bioengineering</a></li>
+                          </ul>
+                        </div>
 						</td>
 						<td style="vertical-align: center; text-align: right;">
 				<!--Contact-->
@@ -179,27 +179,24 @@ border="0" cellpadding="4" cellspacing="0">
 <div id="hidden-content" style="display:none;">
 
     <div id="home-content" colspan="5" rowspan="1" style="vertical-align: top;"> <!-- Home -->
-        <table style="text-align: left; height: 463px; width: 1095px;"
-		border="0" cellpadding="4" cellspacing="0">
-		<tbody>
-			<tr>
-				<td style="vertical-align: top; width: 240px; height: 412px; background-color: #fffff;">
-				<!--Pills-->
-				<div>
-				    <ul class="nav nav-pills nav-stacked" class="trans">
-					    <li class="active"><a href="#education-panel">Education</a></li>
-					    <li><a href="#clinical-panel">Clinical practice</a></li>
-					    <li><a href="#awards-panel">Awards</a></li>
-				    </ul>
-				</div>
-				</td>
-				<td style="vertical-align: top; width: 849px; height: 412px;">
-				<!--Main Content-->
+		<!--Pills-->
+	    <ul class="nav nav-pills">
+		    <li class="active"><a href="#education-panel" data-toggle="pill">Education</a></li>
+		    <li><a href="#clinical-panel" data-toggle="pill">Clinical practice</a></li>
+		    <li><a href="#awards-panel" data-toggle="pill">Awards</a></li>
+	    </ul>
 
-				</td>
-			</tr>
-		</tbody>
-		</table>
+        <div class="pill-content">
+            <div class="pill-pane fade in active" id="education-panel">
+              <p>Education!</p>
+            </div>
+            <div class="pill-pane fade" id="clinical-panel">
+              <p>Clinical!</p>
+            </div>
+            <div class="pill-pane fade" id="awards-panel">
+              <p>Awards!</p>
+            </div>
+        </div>
     </div> <!-- End Home -->
 
 </div>
