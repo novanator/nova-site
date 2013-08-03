@@ -2,6 +2,9 @@ nova-site
 =========
 This is my personal site
 
+To check the status:
+git status
+
 To add and commit files: 
 git commit -a -m 'commit message'
 
