@@ -1114,7 +1114,7 @@ th {
 .table thead > tr > td,
 .table tbody > tr > td,
 .table tfoot > tr > td {
-  padding: 8px;
+  padding: 4px;
   line-height: 1.428571429;
   vertical-align: top;
   border-top: 1px solid #dddddd;
@@ -2448,7 +2448,7 @@ button.close {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #999999;
+  background-color: #eeeeee;
 }
 
 .nav > li.disabled > a {

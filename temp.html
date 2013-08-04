@@ -8,18 +8,12 @@
 
 <!-- Bootstrap -->
 <link href="css/bootstrap.css" rel="stylesheet" media="screen" />
-<!--Bootstrap2-->
-<link href="Bootstrap2/css/bootstrap2.css" rel="stylesheet" media="screen">
 
 <!-- JavaScript plugins (requires jQuery) -->
 <script src="http://code.jquery.com/jquery.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.js"></script><!-- Optionally enable responsive features in IE8 -->
 <script src="js/respond.js"></script>
-<!--JS2-->
-<script src="http://code.jquery.com/jquery.js"></script>
-    <script src="Bootstrap2/js/bootstrap2.js"></script>
-
 
 <style>
 .trans
@@ -37,6 +31,7 @@ a.logo:hover {
 .header-img {
 	width: 143px; 
 	height: 143px;
+	border-radius: 10px;
 }
 </style>
 
@@ -58,57 +53,45 @@ $(document).ready(function(){
 	    console.log("Yolo");
 	    $("#main-content").html("").append($("#home-content").html());
 	});
-	
 	$("#home-nav").click();
+	
+	$("#research-nav").on("click", function() {
+	    console.log("Yolo");
+	    $("#main-content").html("").append($("#research-content").html());
+	});
+	$("#research-nav").click();
+	
+	$("#leadership-nav").on("click", function() {
+	    console.log("Yolo");
+	    $("#main-content").html("").append($("#leadership-content").html());
+	});
+	$("#leadership-nav").click();
+	
+	$("#projects-nav").on("click", function() {
+	    console.log("Yolo");
+	    $("#main-content").html("").append($("#home-projects").html());
+	});
+	$("#projects-nav").click();
 });
 </script>
+
 </head>
-
-<body>
-<table style="width: 1100px; margin-left: auto; margin-right: auto;"
-border="0" cellpadding="4" cellspacing="0">
-	<tbody>
-		<tr> <!-- HEADER -->
-			<td style="vertical-align: top;">
-			<a href="#"> <!-- TODO fix later -->
-			<img style="width: 497px; height: 146px;" alt="Banner."
-			src="Images/banner3.png"><br>
-			</td>
-
-			<td style="vertical-align: bottom; text-align: right;">
-			<img id="biotech-img" class="header-img" alt="Biotechnology" src="Images/biotech.jpg"><br>
-			</td>
-
-			<td style="vertical-align: bottom; text-align: right;">
-			<img id="cs-img" class="header-img" alt="Computer Science."
-			src="Images/cs.png"><br>
-			</td>
-			
-			<td style="vertical-align: bottom; text-align: right;">
-			<img  id="med-img" class="header-img" alt="X-Ray."
-			src="Images/OPG.jpg"><br>
-			</td>
-		
-			<td style="vertical-align: bottom; text-align: right;">
-			<img id="ee-img" class="header-img" alt="Electrical Engineering."
-			src="Images/el.png"><br>
-			</td>
-		</tr> <!-- END header -->
-		
-		
-		<tr align="center" style="height: 44px;"> <!-- Nav -->
-			<td colspan="5" rowspan="1" style="vertical-align: center; text-align: center; height: 44px; border-radius: 5px; background-color: #175483;">
-
+<body style="background-color: #c7d9e8">
+<div style="width: 1100px; margin-left: auto; margin-right: auto;">
+<div style="width:1100px;height:2px;border:1px solid #fffff;"></div>
+		<!-- Nav -->
+			<div colspan="5" rowspan="1" style="vertical-align: center; text-align: center; height: 44px; border-radius: 7px; background-color: #175483;">
+			<div style="width:1100px;height:2px;"></div>
 			<table style="text-align: right; height: 40px; width: 1095px;"
 				border="0" cellpadding="0" cellspacing="0">
 				<tbody>
 					<tr>
-						<td style="vertical-align: center; text-align: center; width: 915px">
+						<td style="vertical-align: center; text-align: center;">
 				
                         <!-- Split buttons -->
                         <!--Home-->
                         <div class="btn-group">
-                          <a class="btn btn-default" id="home-nav" href="#">Home</a> <!--had problems linking the button - big fixed-->
+                          <a class="btn btn-default" id="home-nav" href="#">Home</a> <!--had problems linking the button - bug fixed-->
                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
                           </button>
@@ -120,7 +103,7 @@ border="0" cellpadding="4" cellspacing="0">
                         </div>
                         <!--Research-->
                         <div class="btn-group">
-                          <a class="btn btn-default" href="research.html">Research</a>
+                          <a class="btn btn-default" id="research-nav" href="#">Research</a>
                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
                           </button>
@@ -132,7 +115,7 @@ border="0" cellpadding="4" cellspacing="0">
                         </div>
                         <!--Leadership-->
                         <div class="btn-group">
-                          <a class="btn btn-default" href="leadership.html">Leadership</a>
+                          <a class="btn btn-default" id="leadership-nav" href="#">Leadership</a>
                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
                           </button>
@@ -144,7 +127,7 @@ border="0" cellpadding="4" cellspacing="0">
                         </div>
                         <!--Projects-->
                         <div class="btn-group">
-                          <a class="btn btn-default" href="projects.html">Projects</a>
+                          <a class="btn btn-default" id="projects-nav" href="#">Projects</a>
                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
                           </button>
@@ -152,41 +135,80 @@ border="0" cellpadding="4" cellspacing="0">
                             <li><a href="robotics.html">Robotics</a></li>
                             <li><a href="bioeng.html">Bioengineering</a></li>
                           </ul>
-                        </div>
+                        </div>    
 						</td>
+						<td>
+						<!--Search tool-->
+						<form class="navbar-form pull-right" action="">
+                        <input type="text" class="form-control col-lg-8" placeholder="Search" style="height: 26px; width: 300px;">
+                        </form>
+                        </td>
 						<td style="vertical-align: center; text-align: right;">
-				<!--Contact-->
-				<a class="btn btn-default" href="contact.html">Contact</a>
-				<!--button type="button" class="btn btn-default">Contact</button>-->
-				<!--linkedn-->
-				<a href="http://www.linkedin.com/in/nicolenova" class="logo"><img style="width: 42px; height: 35px;" alt="Linkedin." src="Images/linkedin.png">
-				<!--github-->
-				<a href="https://github.com/novanator" class="logo"><img style="width: 42px; height: 35px;" alt="Github." src="Images/git.png"><br>
+				        <!--Contact-->
+				        <a class="btn btn-default" id="contact-nav" href="#">Contact</a>
+				        <!--button type="button" class="btn btn-default">Contact</button>-->
+				        <!--linkedn-->
+				        <a href="http://www.linkedin.com/in/nicolenova" class="logo"><img style="width: 42px; height: 35px;" alt="Linkedin." src="Images/linkedin.png">
+				        <!--github-->
+				        <a href="https://github.com/novanator" class="logo"><img style="width: 42px; height: 35px;" alt="Github." src="Images/git.png">
 						</td>
 					</tr>
 					</tbody>
 				</table>
-				</td><br>
-			</tr> <!-- END nav -->
+			</div> <!-- END nav -->
+		</div>
+	</div>
+	</div>
+			<div style="width: 1100px; margin-left: auto; margin-right: auto; text-align: center; border-radius: 5px; background-color: rgb(250,250,250);">
+			<table style="width: 1100px; margin-left: auto; margin-right: auto;">
+            <tbody>
+			<tr> <!-- HEADER -->
+			<td style="vertical-align: top;">
+			<a href="#"> <!-- TODO fix later -->
+			<img style="width: 497px; height: 146px;" alt="Banner."
+			src="Images/banner3.png">
+			</td>
+
+			<td style="vertical-align: bottom; text-align: right;">
+			<img id="biotech-img" class="header-img" alt="Biotechnology" src="Images/biotech.jpg">
+			</td>
+
+			<td style="vertical-align: bottom; text-align: right;">
+			<img id="cs-img" class="header-img" alt="Computer Science."
+			src="Images/cs.png">
+			</td>
 			
+			<td style="vertical-align: bottom; text-align: right;">
+			<img  id="med-img" class="header-img" alt="X-Ray."
+			src="Images/OPG.jpg">
+			</td>
+		
+			<td style="vertical-align: bottom; text-align: right;">
+			<img id="ee-img" class="header-img" alt="Electrical Engineering."
+			src="Images/el.png">
+			</td>
+		</tr> <!-- END header -->
 			
 			<tr> <!-- main-content -->
 			    <td id="main-content" colspan="5"></td>
 			</tr> <!-- END main-content -->
 			
-			<tr align="center"> <!-- Footer -->
+			<tr align="center" style="background-color: #c7d9e8"> <!-- Footer -->
 			    <td colspan="5" rowspan="1" style="vertical-align: top;">
 			        <small>Copyright 2013</small>
 			    </td>
 			</tr> <!-- END Footer -->
-		</tbody>
-	</table>
+</tbody>
+</table>
+</div>
 
+<!-- HIDDEN CONTENT-->
 <div id="hidden-content" style="display:none;">
 
-    <div class="tabbable tabs-left" id="home-content" colspan="1" rowspan="1" style="vertical-align: top;"> <!-- Home -->
+    <!-- Home -->
+    <div id="home-content" colspan="1" rowspan="1" style="vertical-align: top;"> 
 		<!--Pills-->
-	    <ul class="nav nav-pills nav-stacked nav-justified">
+	    <ul class="nav nav-pills">
 		    <li class="active"><a href="#education-panel" data-toggle="pill">Education</a></li>
 		    <li><a href="#clinical-panel" data-toggle="pill">Clinical practice</a></li>
 		    <li><a href="#awards-panel" data-toggle="pill">Awards</a></li>
@@ -204,7 +226,92 @@ border="0" cellpadding="4" cellspacing="0">
             </div>
         </div>
     </div> <!-- End Home -->
+    
+    <!-- Research -->
+    <div id="research-content" colspan="1" rowspan="1" style="vertical-align: top;"> 
+		<!--Pills-->
+	    <ul class="nav nav-pills">
+		    <li class="active"><a href="#ki-panel" data-toggle="pill">Education</a></li>
+		    <li><a href="#rsi-panel" data-toggle="pill">Clinical practice</a></li>
+		    <li><a href="#kth-panel" data-toggle="pill">Awards</a></li>
+	    </ul>
 
+        <div class="pill-content">
+            <div class="pill-pane fade in active" id="ki-panel">
+              <p>Karolinska Institute</p>
+            </div>
+            <div class="pill-pane fade" id="rsi-panel">
+              <p>Research Science Institute</p>
+            </div>
+            <div class="pill-pane fade" id="kth-panel">
+              <p>Royal Institute of Technology</p>
+            </div>
+        </div>
+    </div> <!-- End Research -->
+
+    <!-- Leadership -->
+    <div id="leadership-content" colspan="1" rowspan="1" style="vertical-align: top;"> 
+		<!--Pills-->
+	    <ul class="nav nav-pills">
+		    <li class="active"><a href="#education-panel" data-toggle="pill">Education</a></li>
+		    <li><a href="#clinical-panel" data-toggle="pill">Clinical practice</a></li>
+		    <li><a href="#awards-panel" data-toggle="pill">Awards</a></li>
+	    </ul>
+
+        <div class="pill-content">
+            <div class="pill-pane fade in active" id="education-panel">
+              <p>Research Academy for Young Scientists</p>
+            </div>
+            <div class="pill-pane fade" id="clinical-panel">
+              <p>Federation of Young Scientists</p>
+            </div>
+            <div class="pill-pane fade" id="awards-panel">
+              <p>European Dental Students Association</p>
+            </div>
+        </div>
+    </div> <!-- End Leadership -->
+    
+    <!-- Projects -->
+    <div id="projects-content" colspan="1" rowspan="1" style="vertical-align: top;"> 
+		<!--Pills-->
+	    <ul class="nav nav-pills">
+		    <li class="active"><a href="#education-panel" data-toggle="pill">Education</a></li>
+		    <li><a href="#clinical-panel" data-toggle="pill">Clinical practice</a></li>
+		    <li><a href="#awards-panel" data-toggle="pill">Awards</a></li>
+	    </ul>
+
+        <div class="pill-content">
+            <div class="pill-pane fade in active" id="education-panel">
+              <p>Robotics</p>
+            </div>
+            <div class="pill-pane fade" id="clinical-panel">
+              <p>Bioengineering</p>
+            </div>
+        </div>
+    </div> <!-- End Projects --> 
+    
+    <!-- Contact -->
+    <div id="contact-content" colspan="1" rowspan="1" style="vertical-align: top;"> 
+		<!--Pills-->
+	    <ul class="nav nav-pills">
+		    <li class="active"><a href="#education-panel" data-toggle="pill">Education</a></li>
+		    <li><a href="#clinical-panel" data-toggle="pill">Clinical practice</a></li>
+		    <li><a href="#awards-panel" data-toggle="pill">Awards</a></li>
+	    </ul>
+
+        <div class="pill-content">
+            <div class="pill-pane fade in active" id="education-panel">
+              <p>Education!</p>
+            </div>
+            <div class="pill-pane fade" id="clinical-panel">
+              <p>Clinical!</p>
+            </div>
+            <div class="pill-pane fade" id="awards-panel">
+              <p>Awards!</p>
+            </div>
+        </div>
+    </div> <!-- End Contact -->   
+    
 </div>
 
 </body>
