@@ -2683,27 +2683,27 @@ button.close {
   padding-top: 15px;
   padding-bottom: 15px;
   line-height: 20px;
-  color: #777777;
+  color: #a3c3de;
   border-radius: 4px;
 }
 
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus {
-  color: #333333;
-  background-color: transparent;
+  color: #ffffff;
+  background-color: #658dab;
 }
 
 .navbar-nav > .active > a,
 .navbar-nav > .active > a:hover,
 .navbar-nav > .active > a:focus {
-  color: #555555;
-  background-color: #d5d5d5;
+  color: #a3c3de;
+  background-color: #144163;
 }
 
 .navbar-nav > .disabled > a,
 .navbar-nav > .disabled > a:hover,
 .navbar-nav > .disabled > a:focus {
-  color: #cccccc;
+  color: #c7d9e8;
   background-color: transparent;
 }
 
@@ -2742,13 +2742,13 @@ button.close {
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
-  color: #777777;
+  color: #a3c3de;
   text-align: center;
 }
 
 .navbar-brand:hover,
 .navbar-brand:focus {
-  color: #5e5e5e;
+  color: #ffffff;
   text-decoration: none;
   background-color: transparent;
 }
