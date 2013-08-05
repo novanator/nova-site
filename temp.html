@@ -49,7 +49,7 @@ TAB_PAIRINGS = {
     "about-nav": "#about-content",
     "research-nav": "#research-content",
     "leadership-nav": "#leadership-content",
-    "projects-nav": "#projects-content"
+    "projects-nav": "#projects-content",
 };
 
 $(document).ready(function(){
@@ -68,6 +68,11 @@ $(document).ready(function(){
 	$("#header-banner, #nicolenova-nav").on("click", function(){ 
 	    $("#top-nav").find("li").removeClass("active"); 
 	    $("#main-content").html("").append($("#nicolenova-content").html()); 
+	});
+	
+	$("#contact-nav").on("click", function(){ 
+	    $("#top-nav").find("li").removeClass("active"); 
+	    $("#main-content").html("").append($("#contact-content").html()); 
 	});
 	
 	$("#nicolenova-nav").click();
@@ -202,6 +207,8 @@ $(document).ready(function(){
                 </tr>
             </tbody>
         </table>
+        <br>
+        <br>
     </div>
     <!--END Nicole Nova-->
 
@@ -232,7 +239,7 @@ $(document).ready(function(){
                             <h4>Karolinska Institute (KI)</h4>
                             <p><b>Doctor of Dental Surgery (DDS)</b><br>
                             <b>Master of Science in Dental Surgery (MSc)</b><br>
-                            <i><b>Master's Thesis:</b></i> Chronic inflammation and pain: Assessment of c-Fos and ATF-3
+                            <i><b>Master's Thesis:</b></i> Chronic inflammation and pain: Assessment of c-Fos and ATF-3 <br>
                             as markers of spinal neuronal activity in a pain model of rheumatoid arthritis 
                             </p>
                             </td>
@@ -263,10 +270,68 @@ $(document).ready(function(){
             <br>
             </div>
             <div class="pill-pane fade" id="clinical-panel">
-              <p>Clinical!</p>
+                <h1 style="text-align: center;">Extra Clinical Practice</h2>
+                <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td style="width: 700px;">
+                            <h4>International Federation of Medical Students' Association (IFMSA)</h4>
+                            <h5>Medical University of Vienna and the General Hospital (AKH), Austria</h5>
+                            <p>Admitted to a four week medical program organized by the Medical University of Vienna for international students to shadow/assist physicians/surgeons at the General Hospital (AKH). <br>
+            Internship at the Department of Cranio-, Maxillofacial and Oral Surgery. <br>
+            Supervisor: Prof. Dr. Dr. Rolf Ewers.</p>
+                            </td>
+                            <td style="width: 300px; vertical-align: center; text-align: right;">
+                            <img alt="Surgery." style="height: 260px;" src="Images/surgery.jpg"></img>
+                            <img alt="Surgical outfit." style="height: 260px;" src="Images/surgery2.jpg"></img>
+                            </td>
+                        </tr>
+                        <tr style="height: 40px;">
+                        </tr>
+                        <tr>
+                            <td style="width: 700px;">
+                            <h4>International Student Training Course in Dental Implantology</h4>
+                            <h5>Maxillofacial Federation (MFF)</h5>
+                            <p>Chiemsee Akademie, Seebruck, Germany</p>
+                            </td>
+                            <td style="width: 300px; vertical-align: center; text-align: right;">
+                            <img alt="IFMSA." style="height: 100px;" src="Images/ifmsa.png"></img>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            <br><br>
             </div>
             <div class="pill-pane fade" id="awards-panel">
-              <p>Awards!</p>
+                <h1 style="text-align: center;">Awards</h2>
+                <table style="text-align: justify; vertical-align: top; width: 900px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td>
+                            <h4>ERASMUS Scholarship (2011)</h4>
+                            <h5>Exchange studies in Europe provided by the European Union</h5>
+                            <p>Recipient of the scholarship during my fourth year of dental studies</p>
+                            <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <h4>Valedictorian (2007)</h4>
+                            <h5>International English Gymnasium</h5>
+                            <p>Valedictorian of 2007: best student of the year out of all programs</p>
+                            <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <h4>First Prize in a National Science Fair (2007)</h4>
+                            <h5>Federation of Young Scientists</h5>
+                            <p> The <i>Knut and Alice Wallenbergs Scholarship</i> to attend a research program at MIT (Research Science Institute).</p><br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
             </div>
         </div>
     </div> <!-- End about -->
@@ -335,12 +400,38 @@ $(document).ready(function(){
     </div> <!-- End Projects --> 
     
     <!-- Contact -->
-    <div id="contact-content" style="vertical-align: top;"> 
+    <div id="contact-content" style="vertical-align: center; text-align: center;"> 
+    <br><br><br><br>
+        
 		<!--Form-->
-		
-	    
+		<form class="form-horizontal col-offset-3" style="width: 500px;">
+          <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Name</label>
+            <div class="col-lg-10">
+              <input type="text" class="form-control" id="inputEmail">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-10">
+              <input type="password" class="form-control" id="inputPassword">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Message</label>
+            <textarea class="form-control" rows="3" placeholder="Write your message here..."></textarea>
+          </div>
+          <div class="form-group">
+            <div class="col-offset-2 col-lg-10">
+              <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+          </div>
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
     </div> <!-- End Contact -->   
-    
 </div>
 
 </body>
