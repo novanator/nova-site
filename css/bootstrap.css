@@ -62,6 +62,7 @@ a:hover {
 h1 {
   margin: 0.67em 0;
   font-size: 2em;
+  color: #1d6398;
 }
 
 abbr[title] {
@@ -473,21 +474,25 @@ h1,
 h2,
 .h2 {
   font-size: 32px;
+  color: #0f4168;
 }
 
 h3,
 .h3 {
   font-size: 24px;
+  color: #0f4168;
 }
 
 h4,
 .h4 {
   font-size: 18px;
+  color: #0f4168;
 }
 
 h5,
 .h5 {
   font-size: 14px;
+  color: #0f4168;
 }
 
 h6,

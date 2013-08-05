@@ -130,12 +130,12 @@ $(document).ready(function(){
 </div>
 
 <!--WHITE TABLE-->
-<div style="width: 1100px; margin-left: auto; margin-right: auto; text-align: center; background-color: rgb(250,250,250);">
-    <table style="width: 1100px; margin-left: auto; margin-right: auto;">
+<div style="width: 1100px; margin-left: auto; margin-right: auto; background-color: rgb(250,250,250);">
+    <table style="width: 1100px; margin-left: auto; margin-right: auto;" colspan="5" rowspan="3">
         <tbody>
             <tr> <!-- HEADER -->
                 <td style="vertical-align: top;">
-                <a id="header-banner" href="#"> <!-- TODO fix later -->
+                <a id="header-banner" href="#"> <!-- TODO fix later - DONE -->
                 <img style="width: 497px; height: 146px;" alt="Banner."
                 src="Images/banner3.png">
                 </td>
@@ -167,8 +167,11 @@ $(document).ready(function(){
             </tr> <!-- END Main-content -->
             <!-- Footer -->
             <tr align="center"> 
-                <td colspan="5" rowspan="1" style="vertical-align: top; background-color: #c7d9e8;">
-                    <small>Copyright 2013</small>
+                <td colspan="5" style="vertical-align: top; background-color: #c7d9e8;">
+                <br>
+                    <small>Copyright &copy; 2013 &diams; Nicole Nova</small>
+                    <br>
+                    <br>
                 </td>
             </tr> <!-- END Footer -->
         </tbody>
@@ -179,13 +182,31 @@ $(document).ready(function(){
 <div id="hidden-content" style="display:none;">
 
     <!--Nicole Nova-->
-    <div id="nicolenova-content" colspan="1" rowspan="1" style="vertical-align: top;">
-    <p>Yolo</p>
+    <div id="nicolenova-content" style="vertical-align: top;">
+        <table style="width: 1060px; margin-left: auto; margin-right: auto;" border="0" cellpadding="4" cellspacing="10">
+            <tbody>
+                <tr>
+                    <td>
+                    <img alt="Photo of Nicole Nova." src="Images/nicole-nova.jpg" style="text-align: left; vertical-align: top; height: 300px;"></img>
+                    </td>
+                    <td style="text-align: justify; width: 800px;">
+                        <h2><i>"My goal is to make pain go away..."</i></h2>
+                        <p>
+                        My name Dr. Nicole Nova and I'm 24 years old. I earned my degree in <b>Dental Surgery (DDS)</b> last year, and my <b>Master's Thesis</b> dealt with chronic pain in rheumatoid arthritis. This type of academic research is important in order to develop effective pharmaceutics for pain relief. However, it takes approximately 20 years from research to a drug on the market! That is a very long time for someone in constant agony. Most pain relieving drugs on the market today have side-effects and that is a problem especially for chronic pain patients.
+                        <br><br>
+                         Another approach is to use technological devices (e.g. TENS - Transcutaneous Electrical Nerve Stimulation) to influence nerve stimulation. However, this particular device is not as efficient as taking drugs, but I believe there is a technological solution that might be quicker than the development of a pharmaceutical drug. This is one of the reasons why I'm currently studying <b>Electrical Engineering</b>.
+                         <br><br>
+                        Another main one is that I have firsthand experience working with patients and surgical procedures, and I've been very observant on things to improve using new technology. My ambition is to do <b>research</b> and <b>innovation</b> in an <i>interdisciplinary field</i>. Fields of interest are: <i>Biomedical Sciences</i> (especially Neurobiology or Genetics), <i>Bioengineering</i>, <i>Medical Engineering</i> (especially in surgery), <i>Systems Biology</i>, <i>Computational Biology</i>, or any kind of technological research applied in biology/medicine.  
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <!--END Nicole Nova-->
 
     <!-- About -->
-    <div id="about-content" colspan="1" rowspan="1" style="vertical-align: top;">
+    <div id="about-content" style="vertical-align: top;">
 		<!--Pills-->
 	    <ul class="nav nav-pills">
 		    <li class="active"><a href="#education-panel" data-toggle="pill">Education</a></li>
@@ -195,7 +216,51 @@ $(document).ready(function(){
 
         <div class="pill-content">
             <div class="pill-pane fade in active" id="education-panel">
-              <p>Education!</p>
+            <h1 style="text-align: center;">Education</h1>
+            <table style="vertical-align: top; width: 900px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td style="width: 700px;">
+                            <h4>Royal Institute of Technology (KTH)</h4><h5>Kungliga Tekniska H&ouml;gskolan</h5>
+                            <p>Enrolled in the <b>Civil Engineering program in Electrical Engineering</b></p>
+                            </td>
+                            <td style="width: 200px; vertical-align: center; text-align: center;">
+                            <img alt="KTH." style="width: 110px;" src="Images/kth-logo.png"></img>
+                            </td>
+                        <tr> 
+                            <td>   
+                            <h4>Karolinska Institute (KI)</h4>
+                            <p><b>Doctor of Dental Surgery (DDS)</b><br>
+                            <b>Master of Science in Dental Surgery (MSc)</b><br>
+                            <i><b>Master's Thesis:</b></i> Chronic inflammation and pain: Assessment of c-Fos and ATF-3
+                            as markers of spinal neuronal activity in a pain model of rheumatoid arthritis 
+                            </p>
+                            </td>
+                            <td style="width: 200px; vertical-align: bottom; text-align: center;">
+                            <img alt="KI." style="width: 220px;" src="Images/ki.png"></img>
+                            </td>
+                        <tr>
+                            <td>
+                            <h4>Queen Mary's School of Medicine and Dentistry</h4><h5>Exchange Studies</h5>
+                            <p>ERASMUS Exchange Scholarship fourth year of dental school at KI</p>
+                            </td>
+                            <td style="width: 200px; vertical-align: top; text-align: center;">
+                            <img alt="Queen Mary's University." style="width: 180px;" src="Images/qm.png"></img> <!--hitta logga-->
+                            </td>
+                        <tr>
+                            <td>
+                            <h4>International English Gymnasium (Lyceum)</h4><h5>Internationella Engelska Gymnasiet</h5>
+                            <p><b>Natural Science Program:</b> GPA 20.0/20.0 (bonus 2.5/2.5). <br>
+                            Highest grade in all subjects, including the extended 300 credits (total 2800 credits out of 2500).
+                            </p>
+                            </td>
+                            <td style="width: 200px; vertical-align: center; text-align: center;">
+                            <img alt="IEG." style="width: 150px;" src="Images/ieg.png"></img>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            <br>
             </div>
             <div class="pill-pane fade" id="clinical-panel">
               <p>Clinical!</p>
@@ -207,7 +272,7 @@ $(document).ready(function(){
     </div> <!-- End about -->
     
     <!-- Research -->
-    <div id="research-content" colspan="1" rowspan="1" style="vertical-align: top;"> 
+    <div id="research-content" style="vertical-align: top;"> 
 		<!--Pills-->
 	    <ul class="nav nav-pills">
 		    <li class="active"><a href="#ki-panel" data-toggle="pill">Karolinska Institute</a></li>
@@ -229,7 +294,7 @@ $(document).ready(function(){
     </div> <!-- End Research -->
 
     <!-- Leadership -->
-    <div id="leadership-content" colspan="1" rowspan="1" style="vertical-align: top;"> 
+    <div id="leadership-content" style="vertical-align: top;"> 
 		<!--Pills-->
 	    <ul class="nav nav-pills">
 		    <li class="active"><a href="#rays-panel" data-toggle="pill">Research Academy for Young Scientists</a></li>
@@ -251,7 +316,7 @@ $(document).ready(function(){
     </div> <!-- End Leadership -->
     
     <!-- Projects -->
-    <div id="projects-content" colspan="1" rowspan="1" style="vertical-align: top;"> 
+    <div id="projects-content" style="vertical-align: top;"> 
 		<!--Pills-->
 	    <ul class="nav nav-pills">
 		    <li class="active"><a href="#robotics-panel" data-toggle="pill">Robotics</a></li>
@@ -270,7 +335,7 @@ $(document).ready(function(){
     </div> <!-- End Projects --> 
     
     <!-- Contact -->
-    <div id="contact-content" colspan="1" rowspan="1" style="vertical-align: top;"> 
+    <div id="contact-content" style="vertical-align: top;"> 
 		<!--Form-->
 		
 	    
