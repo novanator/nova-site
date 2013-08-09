@@ -16,25 +16,34 @@
 <script src="js/respond.js"></script>
 
 <style>
-.trans
-  {
-  opacity:0.75; 
-  filter:alpha(opacity=75); /* For IE8 and earlier */
-  }
-
-a.logo:hover {
-  background-color: #4e6f89;
-  opacity:0.5; 
-  filter:alpha(opacity=50);
-  width: 42px;
-  height: 35px;
-}
 
 .header-img {
 	width: 143px; 
 	height: 143px;
 	border-radius: 10px;
+	cursor: pointer;
 }
+
+.radiant {
+  background: #175483;
+  background: url('linear-gradient.png') 0 0 repeat-x;
+  background: -webkit-linear-gradient(#3270a0, #103857);
+  background:    -moz-linear-gradient(#3270a0, #103857);
+  background:     -ms-linear-gradient(#3270a0, #103857);
+  background:      -o-linear-gradient(#3270a0, #103857);
+  background:         linear-gradient(#3270a0, #103857);Awards
+}
+
+.back-radiant {
+  background: #f3f8fb;
+  background: url('linear-gradient.png') 0 0 repeat-x;
+  background: -webkit-linear-gradient(#f3f8fb, #046b7e);
+  background:    -moz-linear-gradient(#f3f8fb, #046b7e);
+  background:     -ms-linear-gradient(#f3f8fb, #046b7e);
+  background:      -o-linear-gradient(#f3f8fb, #046b7e);
+  background:         linear-gradient(#f3f8fb, #046b7e);
+}
+
 </style>
 
 <script>
@@ -42,7 +51,9 @@ HEADER_IMGS = {
 	'biotech-img': ['Images/green.png', 'Images/biotech.jpg'],
 	'cs-img': ['Images/yellow.png', 'Images/cs.png'],
 	'med-img': ['Images/red.png', 'Images/OPG.jpg'],
-	'ee-img': ['Images/blue.png', 'Images/el.png']
+	'ee-img': ['Images/blue.png', 'Images/el.png'],
+	'linkedin-img': ['Images/linkedin-dark.png', 'Images/linkedin.png'],
+	'git-img': ['Images/git-dark.png', 'Images/git.png'],
 };
 
 TAB_PAIRINGS = {
@@ -75,15 +86,54 @@ $(document).ready(function(){
 	    $("#main-content").html("").append($("#contact-content").html()); 
 	});
 	
+	$("#biotech-img").on("click", function(){ 
+	    $("#top-nav").find("li").removeClass("active"); 
+	    $("#main-content").html("").append($("#biotech-content").html()); 
+	});
+	
+	$("#cs-img").on("click", function(){ 
+	    $("#top-nav").find("li").removeClass("active"); 
+	    $("#main-content").html("").append($("#cs-content").html()); 
+	});
+	
+	$("#med-img").on("click", function(){ 
+	    $("#top-nav").find("li").removeClass("active"); 
+	    $("#main-content").html("").append($("#med-content").html()); 
+	});
+	
+	$("#ee-img").on("click", function(){ 
+	    $("#top-nav").find("li").removeClass("active"); 
+	    $("#main-content").html("").append($("#ee-content").html()); 
+	});
+	
+	$("#view").on("click", function(){ 
+	    $("#top-nav").find("li").removeClass("active"); 
+	    $("#main-content").html("").append($("#research-content").html()); 
+	});
+	
 	$("#nicolenova-nav").click();
 });
+
+$('#example').popover(data-placement="bottom")
+$('#myPopover').on('hidden.bs.popover', function () {
+  $('#element').popover('show');
+  $('#element').popover('hide');
+  $('#element').popover('toggle');
+  
+  
+})
+
+$('#myCarousel').on('slide.bs.carousel', function () {
+  // do something…
+})
+
 </script>
 
 </head>
-<body style="background-color: #c7d9e8">
+<body class="back-radiant">
 
 <!--Navbar-->
-<div class="navbar navbar-fixed-top" style="background-color: #175483; border-radius: 0px; color: #fffff; margin-bottom: 0px;">
+<div class="navbar navbar-fixed-top radiant" style="background-color: #175483; border-radius: 0px; color: #fffff; margin-bottom: 0px;">
     <a class="navbar-brand" id="nicolenova-nav" href="#">Nicole Nova</a>
       <ul id="top-nav" class="nav navbar-nav">
         <li class="active"><a id="about-nav" href="#">About</a></li>
@@ -94,16 +144,17 @@ $(document).ready(function(){
           <table style="height: 48px; width: 800x;" border="0" cellpadding="0" cellspacing="0">
 	        <tbody>
 		        <tr>
-		        <td style="text-align: right; width: 350px;">
+		        <td style="text-align: center; width: 425px;">
 		            <!--Search tool-->
-			        <form class="navbar-form pull-right" action="">
+			        <!--form class="navbar-form pull-right" action="">
                         <input type="text" class="form-control col-lg-8" placeholder="Search" style="height: 26px; width: 260px;">
-                    </form>
+                    </form-->
+                    <font size="6" face="Rechtman-Script" style="color: #97c1e1;">New frontiers in interdisciplinary research</font>
                 </td>
-		        <td style="vertical-align: center; text-align: right; width: 75px;">
-			        <button type="submit" class="btn btn-default">Submit</button>
+		        <td style="vertical-align: center; text-align: right; width: 0px;">
+			        <!--button type="submit" class="btn btn-default">Submit</button-->
 			     </td>
-			     <td style="vertical-align: center; text-align: right; width: 280px;">
+			     <td style="vertical-align: center; text-align: center; width: 280px;">
                     <!-- Links -->
                     <div class="btn-group">
                       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -117,13 +168,12 @@ $(document).ready(function(){
                     </div>
 			        <!--Contact-->
 			        <a class="btn btn-default" id="contact-nav" href="#">Contact</a>
-				            
 			        <!--linkedn-->
-		            <a href="http://www.linkedin.com/in/nicolenova" class="logo">
-		            <img style="width: 42px; height: 35px;" alt="Linkedin." src="Images/linkedin.png">
+		            <a href="http://www.linkedin.com/in/nicolenova">
+		            <img id="linkedin-img" class="header-img" style="width: 38px; height: 36px;" alt="Linkedin." src="Images/linkedin.png"></a>
 			        <!--github-->
-			        <a href="https://github.com/novanator" class="logo">
-			        <img style="width: 42px; height: 35px;" alt="Github." src="Images/git.png">
+			        <a href="https://github.com/novanator">
+			        <img id="git-img" class="header-img" style="width: 42px; height: 36px;" alt="Github." src="Images/git.png"></a>
 		          </td>
 	            </tr>
             </tbody>
@@ -135,7 +185,7 @@ $(document).ready(function(){
 </div>
 
 <!--WHITE TABLE-->
-<div style="width: 1100px; margin-left: auto; margin-right: auto; background-color: rgb(250,250,250);">
+<div style="width: 1100px; margin-left: auto; margin-right: auto;">
     <table style="width: 1100px; margin-left: auto; margin-right: auto;" colspan="5" rowspan="3">
         <tbody>
             <tr> <!-- HEADER -->
@@ -147,6 +197,12 @@ $(document).ready(function(){
 
                 <td style="vertical-align: bottom; text-align: left;">
                 <img id="biotech-img" class="header-img" alt="Biotechnology" src="Images/biotech.jpg">
+                <!--div data-container="body" data-toggle="popover" title data-content="Biotechnology is exciting!" data-original-title="Biotechnology">
+                    <div class="popover fade bottom in" style="top: 210px; left: 249px; display: block;">
+                    <div class="arrow"></div>
+                    <h3 class="popover-title">Biotechnology<h3>
+                    <div class="popover-content">Biotechnology is exciting!</div>
+                    </div-->
                 </td>
 
                 <td style="vertical-align: bottom; text-align: left;">
@@ -172,9 +228,8 @@ $(document).ready(function(){
             </tr> <!-- END Main-content -->
             <!-- Footer -->
             <tr align="center"> 
-                <td colspan="5" style="vertical-align: top; background-color: #c7d9e8;">
-                <br>
-                    <small>Copyright &copy; 2013 &diams; Nicole Nova</small>
+                <td colspan="5" style="vertical-align: top;">
+                    <small style="color: rgb(250, 250, 250);">Copyright &copy; 2013 &diams; Nicole Nova</small>
                     <br>
                     <br>
                 </td>
@@ -187,7 +242,42 @@ $(document).ready(function(){
 <div id="hidden-content" style="display:none;">
 
     <!--Nicole Nova-->
+
+    <!--Carousel-->
+    <div id="carousel-example-generic" class="carousel slide">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="Images/nicole-nova.jpg" alt="Nicole.">
+          <div class="carousel-caption">
+            <h3>Welcome to my personal site!</h3>
+            <p>Nicole Nova, DDS</p>
+            </div>
+        </div>
+    </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="icon-prev"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="icon-next"></span>
+      </a>
+    </div>
+    <!--END Carousel-->
+    
     <div id="nicolenova-content" style="vertical-align: top;">
+        <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h2 class="panel-title">Welcome!</h2>
+                  </div>
         <table style="width: 1060px; margin-left: auto; margin-right: auto;" border="0" cellpadding="4" cellspacing="10">
             <tbody>
                 <tr>
@@ -195,20 +285,24 @@ $(document).ready(function(){
                     <img alt="Photo of Nicole Nova." src="Images/nicole-nova.jpg" style="text-align: left; vertical-align: top; height: 300px;"></img>
                     </td>
                     <td style="text-align: justify; width: 800px;">
-                        <h2><i>"My goal is to make pain go away..."</i></h2>
-                        <p>
-                        My name Dr. Nicole Nova and I'm 24 years old. I earned my degree in <b>Dental Surgery (DDS)</b> last year, and my <b>Master's Thesis</b> dealt with chronic pain in rheumatoid arthritis. This type of academic research is important in order to develop effective pharmaceutics for pain relief. However, it takes approximately 20 years from research to a drug on the market! That is a very long time for someone in constant agony. Most pain relieving drugs on the market today have side-effects and that is a problem especially for chronic pain patients.
+                        <h1><i>"My goal is to make pain go away..."</i></h1>
+                        <p>My name Dr. Nicole Nova and I'm 24 years old. I earned my degree in <b>Dental Surgery (DDS)</b> last year, and my <b>Master's Thesis</b> dealt with chronic pain in rheumatoid arthritis. This type of academic research is important in order to develop effective pharmaceutics for pain relief. However, it takes approximately 20 years from research to a drug on the market! That is a very long time for someone in constant agony. Most pain relieving drugs on the market today have side-effects and that is a problem especially for chronic pain patients.
                         <br><br>
                          Another approach is to use technological devices (e.g. TENS - Transcutaneous Electrical Nerve Stimulation) to influence nerve stimulation. However, this particular device is not as efficient as taking drugs, but I believe there is a technological solution that might be quicker than the development of a pharmaceutical drug. This is one of the reasons why I'm currently studying <b>Electrical Engineering</b>.
                          <br><br>
-                        Another main one is that I have firsthand experience working with patients and surgical procedures, and I've been very observant on things to improve using new technology. My ambition is to do <b>research</b> and <b>innovation</b> in an <i>interdisciplinary field</i>. Fields of interest are: <i>Biomedical Sciences</i> (especially Neurobiology or Genetics), <i>Bioengineering</i>, <i>Medical Engineering</i> (especially in surgery), <i>Systems Biology</i>, <i>Computational Biology</i>, or any kind of technological research applied in biology/medicine.  
-                        </p>
+                        Another main one is that I have firsthand experience working with patients and surgical procedures, and I've been very observant on things to improve using new technology. My ambition is to do <b>research</b> and <b>innovation</b> in an <i>interdisciplinary field</i>. Fields of interest are: <i>Biomedical Sciences</i> (especially Neurobiology or Genetics), <i>Bioengineering</i>, <i>Medical Engineering</i> (especially in surgery), <i>Systems Biology</i>, <i>Computational Biology</i>, or any kind of technological research applied in biology/medicine. </p>
+                        <!--div class="bs-example" style="padding-bottom: 24px;">
+      <a href="#" class="btn btn-lg btn-danger" data-container="body" data-toggle="popover" data-placement="bottom" title="Bio" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Click to toggle popover</a><div class="popover fade right in" style="top: 19px; left: 249px; display: block;"><div class="arrow"></div><h3 class="popover-title">A Title</h3><div class="popover-content">And here's some amazing content. It's very engaging. right?</div></div>
+    </div>
+    
+    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+          Popover on bottom
+        </button-->
                     </td>
                 </tr>
             </tbody>
         </table>
-        <br>
-        <br>
+        </div>
     </div>
     <!--END Nicole Nova-->
 
@@ -223,7 +317,10 @@ $(document).ready(function(){
 
         <div class="pill-content">
             <div class="pill-pane fade in active" id="education-panel">
-            <h1 style="text-align: center;">Education</h1>
+            <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h2 class="panel-title">Education</h2>
+                  </div>
             <table style="vertical-align: top; width: 900px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
@@ -267,10 +364,13 @@ $(document).ready(function(){
                         </tr>
                     </tbody>
                 </table>
-            <br>
+            </div>
             </div>
             <div class="pill-pane fade" id="clinical-panel">
-                <h1 style="text-align: center;">Extra Clinical Practice</h2>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h2 class="panel-title">Extra Clinical Practice</h2>
+                  </div>
                 <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
@@ -306,9 +406,13 @@ $(document).ready(function(){
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
             <div class="pill-pane fade" id="awards-panel">
-                <h1 style="text-align: center;">Awards</h2>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h2 class="panel-title">Awards</h2>
+                  </div>
                 <table style="text-align: justify; vertical-align: top; width: 900px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
@@ -336,7 +440,7 @@ $(document).ready(function(){
                         </tr>
                     </tbody>
                 </table>
-                <br>
+                </div>
             </div>
         </div>
     </div> <!-- End about -->
@@ -347,31 +451,34 @@ $(document).ready(function(){
 	    <ul class="nav nav-pills">
 		    <li class="active"><a href="#ki-panel" data-toggle="pill">Karolinska Institute</a></li>
 		    <li><a href="#rsi-panel" data-toggle="pill">Research Science Institute</a></li>
-		    <li><a href="#kth-panel" data-toggle="pill">Royal Institute of Technology</a></li>
+		    <!--li><a href="#kth-panel" data-toggle="pill">Royal Institute of Technology</a></li-->
 	    </ul>
 
         <div class="pill-content">
             <div class="pill-pane fade in active" id="ki-panel">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h2 class="panel-title">Karolinska Institute</h2>
+                  </div>
                 <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
                         <td>
-                            <h1 style="text-align: center;">Karolinska Institute</h1><h3 style="text-align: center;">The university that selects the <b>Nobel Prize</b> in Medicine and Physiology</h3>
+                            <h3 style="text-align: center;">The university that selects the <b>Nobel Prize</b> in Medicine and Physiology</h3>
                             <br>
-                            <h4>Master's Thesis (2012)</h4><h5>Chronic inflammation and pain: Assessment of c-Fos and ATF-3 as markers of spinal neuronal activity in a pain model of rheumatoid arthritis</h5>
+                            <h4><a name="view1">Master's Thesis (2012)</h4></a><h5>Chronic inflammation and pain: Assessment of c-Fos and ATF-3 as markers of spinal neuronal activity in a pain model of rheumatoid arthritis</h5>
                           <p>I conducted the research project at the Department of Physiology and Pharmacology in the lab of Dr. Camilla Svensson. The whole project was sporadically spread over a period of two years. I was basically working on the side of my dental studies, mostly being in the lab on the other side of the capital city (north campus) on weekends and late nights. Whenever I could skip lectures to instead be working on my research - I'd do that and gain the knowledge through other students' notes and books. However, especially in the last two years of dental school, most lectures are mandatory (as they are very treatment specific with a lot of patient case studies). Also, the clinical internship was baked in in the third to fifth year, treating my own patients, and that schedule was pretty inflexible. So, whenever I could find the time to be in the lab outside of school hours, I'd go for it. </p><br>
                           <button class="btn btn-danger" href="master.pdf">Paper</button>
                           <button class="btn btn-warning" href="master-ppp.pdf">Presentation</button>
                           <br><br><br><br>
                           
-                          <h4>Research Program in Medical Sciences (2010)</h4><h5>Assessment of c-fos as a marker of spinal neuronal activity in a pain model of rheumatoid arthritis</h5>
+                          <h4><a name="view2">Research Program in Medical Sciences (2010)</a></h4><h5>Assessment of c-fos as a marker of spinal neuronal activity in a pain model of rheumatoid arthritis</h5>
                           <p>This was a summer research program for talented KI students who got funding for doing research in a lab for two months. This was when I started working with Dr. Camilla Svensson (great mentor!) on a project that later became a part of my Master's Thesis. I learned doing antibody probing and immunohistochemistry, and analyzing microscopic images using the software ImageJ. It was a really exciting summer.</p>
                           <button class="btn btn-danger" href="med.pdf">Paper</button>
                           <button class="btn btn-warning" href="med-ppp.pdf">Presentation</button>
                           <br><br><br><br>
                           
-                        <h4>Research Program in Biomedical Sciences (2006)</h4><h5>Activation of Liver X Receptor affects the function and 
-            differentiation of osteoclasts</h5>
+                        <h4><a name="view3">Research Program in Biomedical Sciences (2006)</a></h4><h5>Activation of Liver X Receptor affects the function and differentiation of osteoclasts</h5>
                           <p>This was a six week summer research program for the top 20 smartest high school students in the country (Sweden). This was how I first got acquainted with real research at the age of 16. The first week consisted of lectures, and the remaining part was spent working in a lab. I was working with Dr. Kirsten Robertson in the Adopted Orphan Receptors Lab at the Department of Biosciences and Nutrition. The nuclear receptor that we were investigating was Liver X Recepter (LXR). Little was known about it at the time, and my project was investigating what the receptor does to bone tissue. It was a cell study, and we were looking at the bone resorption cells, namely<i>osteoclasts</i>. I learned various lab techniques, such as pipetting, electrophoresis, PCR (Polymerase Chain Reaction), Real-Time PCR, and doing statistical analysis in the software Prism. I remember that summer being so overwhelming that I was determined to pursue a career in research.</p><br>
                           <button class="btn btn-danger" href="med.pdf">Paper</button>
                           <button class="btn btn-warning" href="med-ppp.pdf">Presentation</button>
@@ -380,19 +487,23 @@ $(document).ready(function(){
                         </tr>
                     <tbody>
                 </table>
+                </div>
             </div>
             <div class="pill-pane fade" id="rsi-panel">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h2 class="panel-title">Research Science Institute</h2>
+                  </div>
                 <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
                         <td style="width: 620px;">
-                        <br><br>
                             <h4>Research Science Institute (2007)</h4><h5>What does performance on one visual search task tell you about 
             performance on another?</h5>
                           <p>This was a six week international summer research program for talented high school students. It was held at <a href="http://www.mit.edu/">Massachusetts Institute of Technology (MIT)</a> and organized by the <a href="http://cee.org/">Center for Excellence in Education (CEE)</a>. The first week of the program consisted of classes in two science subjects of interest (in my case <i>biology</i> and <i>chemistry</i>), math, and humanities. Also we learned how to write a scientific paper in LaTeX and hold a professional presentation. The rest of the summer was spent on working in a lab. <br><br>
                           I was working with Dr. Jeremy Wolfe in the Visual Attention Lab at the Department of Brain and Cognitive Sciences, Harvard Medical School, and Brigham and Women's Hospital. The project dealt with investigating whether simple search tasks (looking for a green line among red lines) was correlated with the complicated real-world scenes. I looked especially if it correlated with searching for weapons in baggage x-ray pictures. I was working with a grad student called Michael Van Wert, and the work got later published. <br><br>
                           Besides working in a lab, us students also went to listen to famous guest speakers (even Nobel Laureates) at MIT in various topics in science and engineering. It was truly the best summer a science-loving 17 year old could ever had. 
-            </p><br>
+            </p>
                         <a href="http://www.journalofvision.org/content/8/6/312">
                         <button class="btn btn-info">Publication</button></a>
                         <br><br><br><br>
@@ -405,9 +516,13 @@ $(document).ready(function(){
                         </tr>
                     <tbody>
                 </table>
+                </div>
             </div>
-            <div class="pill-pane fade" id="kth-panel">
-              <h1 style="text-align: center;">Royal Institute of Technology</h1>
+            <!--div class="pill-pane fade" id="kth-panel">
+              <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h2 class="panel-title">Royal Institute of Technology</h2>
+                  </div>
               <h3 style="text-align: center;">Sweden's top University in Engineering</h3>
                 <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="30" cellspacing="0">
                     <tbody>
@@ -431,7 +546,8 @@ $(document).ready(function(){
                         </tr>
                     </tbody>
                 </table>
-            </div>
+                </div>
+            </div-->
         </div>
     </div> <!-- End Research -->
 
@@ -446,8 +562,10 @@ $(document).ready(function(){
 
         <div class="pill-content">
             <div class="pill-pane fade in active" id="rays-panel">
-              <h1 style="text-align: center;">Rays*</h1>
-              <h3 style="text-align: center;">Research Academy for Young Scientists</h3>
+              <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h2 class="panel-title">Rays</h2>
+                  </div>
                 <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
@@ -461,32 +579,37 @@ $(document).ready(function(){
                         </tr>
                     </tbody>
                 </table>
-                <img alt="Rays." style="width: 271px; height: 185px;" src="Images/rays5.jpg"></img>
-                <img alt="Rays." style="width: 271px; height: 185px;" src="Images/rays6.jpg"></img>
-                <img alt="Rays." style="width: 271px; height: 185px;" src="Images/rays3.JPG"></img>
-                <img alt="Rays." style="width: 273px; height: 185px;" src="Images/rays4.JPG"></img>
+                <img alt="Rays." style="width: 263px; height: 180px;" src="Images/rays5.jpg"></img>
+                <img alt="Rays." style="width: 263px; height: 180px;" src="Images/rays6.jpg"></img>
+                <img alt="Rays." style="width: 263px; height: 180px;" src="Images/rays3.JPG"></img>
+                <img alt="Rays." style="width: 263px; height: 180px;" src="Images/rays4.JPG"></img>
+                </div>
             </div>
             <div class="pill-pane fade" id="fuf-panel">
-              <h1 style="text-align: center;">Federation for Young Scientists</h1>
-              <h3 style="text-align: center;">F&ouml;rbundet Unga Forskare (FUF)</h3>
+              <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h2 class="panel-title">F&ouml;rbundet Unga Forskare (FUF)</h2>
+                  </div>
                 <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
                         <td style="width: 500px;">
                             <h4>2007 - 2009</h4><h5>Organization run by Young Scientists for High School Students</h5>
                             <p>This is a well established organization that has been running for decades. It is functioning on a national level and has suborganizations in different regions. The main office is in Stockholm though. I was offered to join the team right after I received the First Prize in the National Science Fair. I then started working in the executive committee of Utst&auml;llningsgruppen (UG) running the fair. I was in charge of lectures and event logistics at the Museum of Technology (Tekniska museet). This took place before and during my first and second year of dental school. It was a great experience to get involved in management and working in a team.
-</p>
+</p><br><br><br><br><br>
                         <td style="width: 500px; text-align: right;">
                             <img alt="FUF." style="width: 470px;" src="Images/forbundet.png"></img>
                         </td>
                         </tr>
-                        <br><br>
                     </tbody>
                 </table>
+                </div>
             </div>
             <div class="pill-pane fade" id="edsa-panel">
-              <h1 style="text-align: center;">EDSA</h1>
-              <h3 style="text-align: center;">European Dental Students' Association</h3>
+              <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h2 class="panel-title">EDSA</h2>
+                  </div>
                 <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
@@ -501,6 +624,7 @@ $(document).ready(function(){
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
     </div> <!-- End Leadership -->
@@ -511,13 +635,14 @@ $(document).ready(function(){
 	    <ul class="nav nav-pills">
 		    <li class="active"><a href="#robotics-panel" data-toggle="pill">Robotics</a></li>
 		    <li><a href="#bioeng-panel" data-toggle="pill">Bioengineering</a></li>
-		    
 	    </ul>
 
         <div class="pill-content">
             <div class="pill-pane fade in active" id="robotics-panel">
-              <h1 style="text-align: center;">Robotics</h1>
-              <h3 style="text-align: center;">Autonomous Systems</h3>
+              <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h2 class="panel-title">Robotics</h2>
+                  </div>
                 <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
@@ -541,10 +666,14 @@ $(document).ready(function(){
                     </tbody>
                 </table>
                 <img alt="Algorithm." style="width: 1000px;" src="Images/algo.png"></img>
+                </div>
             </div>
             <div class="pill-pane fade" id="bioeng-panel">
-              <h1 style="text-align: center;">Bioengineering</h1>
-              <h3 style="text-align: center;">Problems to work on in the future</h3>
+              <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h2 class="panel-title">Bioengineering</h2>
+                  </div>
+            <h3 style="text-align: center;">Problems to work on in the future</h3>
                 <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="10" cellspacing="0">
                     <tbody>
                         <tr>
@@ -568,26 +697,33 @@ $(document).ready(function(){
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
     </div> <!-- End Projects --> 
     
     <!-- Contact -->
     <div id="contact-content" style="vertical-align: center; text-align: center;"> 
-    <br><br><br><br>
-        
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 class="panel-title">Contact</h2>
+      </div>
 		<!--Form-->
+		<br>
+		<p style="text-align:center;">If you want to get in touch with me regarding the website, or if you have any questions or comments - send me a message!</p>
+		<br>
 		<form class="form-horizontal col-offset-3" style="width: 500px;">
           <div class="form-group">
             <label for="inputEmail" class="col-lg-2 control-label">Name</label>
             <div class="col-lg-10">
-              <input type="text" class="form-control" id="inputEmail">
+              <input type="text" class="form-control" id="inputEmail" placeholder="Your name...">
             </div>
           </div>
           <div class="form-group">
             <label for="inputEmail" class="col-lg-2 control-label">Email</label>
             <div class="col-lg-10">
-              <input type="password" class="form-control" id="inputPassword">
+              <input type="password" class="form-control" id="inputPassword" placeholder="Your email...">
             </div>
           </div>
           <div class="form-group">
@@ -596,15 +732,120 @@ $(document).ready(function(){
           </div>
           <div class="form-group">
             <div class="col-offset-2 col-lg-10">
-              <button type="submit" class="btn btn-default">Submit</button>
+              <button type="submit" class="btn btn-default">Submit</button><br><br><br>
             </div>
           </div>
         </form>
-        <br>
-        <br>
-        <br>
-        <br>
+      </div>
     </div> <!-- End Contact -->   
+    
+    <!-- Header Pictures-->
+    <!-- Biotechnology-->
+    <div id="biotech-content" style="vertical-align: top;"> 
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h2 class="panel-title">Biotechnology</h2>
+          </div>
+          <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="10" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 600px; vertical-align: top;">
+                            <h3>My main area of interest in future research</h3>
+                            <h4>Previous research experience:</h4><br>
+                          <h5>Chronic inflammation and pain: Assessment of c-Fos and ATF-3 as markers of spinal neuronal activity in a pain model of rheumatoid arthritis </h5><br>
+                          <h5>Assessment of c-fos as a marker of spinal neuronal activity in a pain model of rheumatoid arthritis</h5><br>
+                          <h5>Activation of Liver X Receptor affects the function and differentiation of osteoclasts</h5><br>
+                          <h5>What does performance on one visual search task tell you about performance on another?</h5><br>
+                        </td>
+                        <td style="width: 60px; text-align: right;">
+                            <br><br><br>
+                            <a href="#view1"><button class="btn btn-info">View</button></a><br><br> <!--HASHTAG STUFF NOT WORKING-->
+                            <a href="#view2"><button class="btn btn-info">View</button></a><br><br>
+                            <a href="#view3"><button class="btn btn-info">View</button></a><br><br>
+                            
+                            <button id="view" class="btn btn-info">View</button></a><br><br>
+                        </td>
+                        <td style="width: 340px; text-align: right;">
+                        <img alt="Biotechnology." style="width: 340px;" src="Images/biotech2.jpg"></img><br><br>
+                        <p style="text-align: justify;">This is a section of the spinal cord (the <i>dorsal horn</i>) taken under a fluorescence microscope. The green dots are cell bodies of neurons that have the protein <i>c-Fos</i> in the cytoplasm. Accumulation of this protein signifies that there has been an afferent pain signal from the periphery.</p>   
+                        </td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- END Biotechnology-->
+    
+    <!-- Computer Science-->
+    <div id="cs-content" style="vertical-align: top;"> 
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <h2 class="panel-title">Computer Science</h2>
+          </div>
+          <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 700px; vertical-align: top;">
+                            <h4>Heading</h4><h5>Sub</h5>
+                          <p>Text</p>
+                        </td>
+                        <td style="width: 300px; text-align: right;">
+                        <img alt="#." style="width: 250px;" src="Images/#.png"></img>
+                        </td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--END Computer Science-->
+    
+    <!-- Medicine Dentistry-->
+    <div id="med-content" style="vertical-align: top;"> 
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h2 class="panel-title">Medicine &amp; Dentistry</h2>
+          </div>
+          <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 700px; vertical-align: top;">
+                            <h4>Heading</h4><h5>Sub</h5>
+                          <p>Text</p>
+                        </td>
+                        <td style="width: 300px; text-align: right;">
+                        <img alt="#." style="width: 250px;" src="Images/#.png"></img>
+                        </td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- END Medicine Dentistry>
+    
+    <!-- Electrical Engineering-->
+    <div id="ee-content" style="vertical-align: top;"> 
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h2 class="panel-title">Electrical Engineering</h2>
+          </div>
+          <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 700px; vertical-align: top;">
+                            <h4>Heading</h4><h5>Sub</h5>
+                          <p>Text</p>
+                        </td>
+                        <td style="width: 300px; text-align: right;">
+                        <img alt="#." style="width: 250px;" src="Images/#.png"></img>
+                        </td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--END Electrical Engineering-->
+    <!-- END Header Pictures-->
+    
 </div>
 
 </body>
