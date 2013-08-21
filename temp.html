@@ -24,6 +24,16 @@
 	cursor: pointer;
 }
 
+.blackradiant {
+  background: #000000;
+  background: url('linear-gradient.png') 0 0 repeat-x;
+  background: -webkit-linear-gradient(#adaeb0, #000000);
+  background:    -moz-linear-gradient(#adaeb0, #000000);
+  background:     -ms-linear-gradient(#adaeb0, #000000);
+  background:      -o-linear-gradient(#adaeb0, #000000);
+  background:         linear-gradient(#adaeb0, #000000);
+}
+
 .radiant {
   background: #175483;
   background: url('linear-gradient.png') 0 0 repeat-x;
@@ -31,7 +41,7 @@
   background:    -moz-linear-gradient(#3270a0, #103857);
   background:     -ms-linear-gradient(#3270a0, #103857);
   background:      -o-linear-gradient(#3270a0, #103857);
-  background:         linear-gradient(#3270a0, #103857);Awards
+  background:         linear-gradient(#3270a0, #103857);
 }
 
 .back-radiant {
@@ -44,9 +54,20 @@
   background:         linear-gradient(#f3f8fb, #046b7e);
 }
 
+.blackback-radiant {
+  background: #fbfbfb;
+  background: url('linear-gradient.png') 0 0 repeat-x;
+  background: -webkit-linear-gradient(#fbfbfb, #e7eaec);
+  background:    -moz-linear-gradient(#fbfbfb, #e7eaec);
+  background:     -ms-linear-gradient(#fbfbfb, #e7eaec);
+  background:      -o-linear-gradient(#fbfbfb, #e7eaec);
+  background:         linear-gradient(#fbfbfb, #e7eaec);
+}
+
 </style>
 
 <script>
+//shifting images
 HEADER_IMGS = {
 	'biotech-img': ['Images/green.png', 'Images/biotech.jpg'],
 	'cs-img': ['Images/yellow.png', 'Images/cs.png'],
@@ -63,57 +84,60 @@ TAB_PAIRINGS = {
     "projects-nav": "#projects-content",
 };
 
+//shifting images in header
 $(document).ready(function(){
 	$(".header-img").hover(
 		function() { $(this).attr('src', HEADER_IMGS[$(this).attr("id")][0]); }, //in
 		function() { $(this).attr('src', HEADER_IMGS[$(this).attr("id")][1]); } //out
 	);
-	
-	$("#top-nav").on("click", "li a", function() {
-	    $("#top-nav").find("li").removeClass("active");
-	    $(this).parent().addClass("active");
-	    var id = $(this).attr("id");
-	    $("#main-content").html("").append($(TAB_PAIRINGS[id]).html());
-	});
-	
-	$("#header-banner, #nicolenova-nav").on("click", function(){ 
-	    $("#top-nav").find("li").removeClass("active"); 
-	    $("#main-content").html("").append($("#nicolenova-content").html()); 
-	});
-	
-	$("#contact-nav").on("click", function(){ 
-	    $("#top-nav").find("li").removeClass("active"); 
-	    $("#main-content").html("").append($("#contact-content").html()); 
-	});
-	
-	$("#biotech-img").on("click", function(){ 
-	    $("#top-nav").find("li").removeClass("active"); 
-	    $("#main-content").html("").append($("#biotech-content").html()); 
-	});
-	
-	$("#cs-img").on("click", function(){ 
-	    $("#top-nav").find("li").removeClass("active"); 
-	    $("#main-content").html("").append($("#cs-content").html()); 
-	});
-	
-	$("#med-img").on("click", function(){ 
-	    $("#top-nav").find("li").removeClass("active"); 
-	    $("#main-content").html("").append($("#med-content").html()); 
-	});
-	
-	$("#ee-img").on("click", function(){ 
-	    $("#top-nav").find("li").removeClass("active"); 
-	    $("#main-content").html("").append($("#ee-content").html()); 
-	});
-	
-	$("#view").on("click", function(){ 
-	    $("#top-nav").find("li").removeClass("active"); 
-	    $("#main-content").html("").append($("#research-content").html()); 
-	});
-	
-	$("#nicolenova-nav").click();
+
+//Switching contents of the page
+$("#top-nav").on("click", "li a", function() {
+    $("#top-nav").find("li").removeClass("active");
+    $(this).parent().addClass("active");
+    var id = $(this).attr("id");
+    $("#main-content").html("").append($(TAB_PAIRINGS[id]).html());
 });
 
+$("#header-banner, #nicolenova-nav").on("click", function(){ 
+    $("#top-nav").find("li").removeClass("active"); 
+    $("#main-content").html("").append($("#nicolenova-content").html()); 
+});
+
+$("#contact-nav").on("click", function(){ 
+    $("#top-nav").find("li").removeClass("active"); 
+    $("#main-content").html("").append($("#contact-content").html()); 
+});
+
+$("#biotech-img").on("click", function(){ 
+    $("#top-nav").find("li").removeClass("active"); 
+    $("#main-content").html("").append($("#biotech-content").html()); 
+});
+
+$("#cs-img").on("click", function(){ 
+    $("#top-nav").find("li").removeClass("active"); 
+    $("#main-content").html("").append($("#cs-content").html()); 
+});
+
+$("#med-img").on("click", function(){ 
+    $("#top-nav").find("li").removeClass("active"); 
+    $("#main-content").html("").append($("#med-content").html()); 
+});
+
+$("#ee-img").on("click", function(){ 
+    $("#top-nav").find("li").removeClass("active"); 
+    $("#main-content").html("").append($("#ee-content").html()); 
+});
+
+$("#viewone").on("click", function(){ 
+    $("#top-nav").find("li").removeClass("active"); 
+    $("#main-content").html("").append($("#research-content").html()); 
+});
+
+$("#nicolenova-nav").click();
+});
+
+//Carousel
 $('#example').popover(data-placement="bottom")
 $('#myPopover').on('hidden.bs.popover', function () {
   $('#element').popover('show');
@@ -244,16 +268,16 @@ $('#myCarousel').on('slide.bs.carousel', function () {
     <!--Nicole Nova-->
 
     <!--Carousel-->
-    <div id="carousel-example-generic" class="carousel slide">
+    <!--div id="carousel-example-generic" class="carousel slide">
       <!-- Indicators -->
-      <ol class="carousel-indicators">
+      <!--ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
       </ol>
 
       <!-- Wrapper for slides -->
-      <div class="carousel-inner">
+      <!--div class="carousel-inner">
         <div class="item active">
           <img src="Images/nicole-nova.jpg" alt="Nicole.">
           <div class="carousel-caption">
@@ -264,7 +288,7 @@ $('#myCarousel').on('slide.bs.carousel', function () {
     </div>
 
       <!-- Controls -->
-      <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+      <!--a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
         <span class="icon-prev"></span>
       </a>
       <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
@@ -286,11 +310,11 @@ $('#myCarousel').on('slide.bs.carousel', function () {
                     </td>
                     <td style="text-align: justify; width: 800px;">
                         <h1><i>"My goal is to make pain go away..."</i></h1>
-                        <p>My name Dr. Nicole Nova and I'm 24 years old. I earned my degree in <b>Dental Surgery (DDS)</b> last year, and my <b>Master's Thesis</b> dealt with chronic pain in rheumatoid arthritis. This type of academic research is important in order to develop effective pharmaceutics for pain relief. However, it takes approximately 20 years from research to a drug on the market! That is a very long time for someone in constant agony. Most pain relieving drugs on the market today have side-effects and that is a problem especially for chronic pain patients.
+                        <p>My name is Dr. Nicole Nova and I'm 24 years old. I earned my degree in <b>Dental Surgery (DDS)</b> last year, and my <b>Master's Thesis</b> dealt with chronic pain in rheumatoid arthritis. This type of academic research is important in order to develop effective pharmaceutics for pain relief. However, it takes approximately 20 years from academic research to a drug on the market! That is a very long time for someone in constant agony. Most pain relieving drugs on the market today have side-effects and that is a major problem, especially for chronic pain patients.
                         <br><br>
                          Another approach is to use technological devices (e.g. TENS - Transcutaneous Electrical Nerve Stimulation) to influence nerve stimulation. However, this particular device is not as efficient as taking drugs, but I believe there is a technological solution that might be quicker than the development of a pharmaceutical drug. This is one of the reasons why I'm currently studying <b>Electrical Engineering</b>.
                          <br><br>
-                        Another main one is that I have firsthand experience working with patients and surgical procedures, and I've been very observant on things to improve using new technology. My ambition is to do <b>research</b> and <b>innovation</b> in an <i>interdisciplinary field</i>. Fields of interest are: <i>Biomedical Sciences</i> (especially Neurobiology or Genetics), <i>Bioengineering</i>, <i>Medical Engineering</i> (especially in surgery), <i>Systems Biology</i>, <i>Computational Biology</i>, or any kind of technological research applied in biology/medicine. </p>
+                        I have firsthand experience working with patients and surgical procedures, and I've been very observant on things to improve using new technology. My ambition is to do <b>research</b> and <b>innovation</b> in an <i>interdisciplinary field</i>. Fields of interest are: <i>Biomedical Sciences</i> (especially Neurobiology or Genetics), <i>Bioengineering</i>, <i>Medical Engineering</i> (especially in surgery), <i>Systems Biology</i>, <i>Computational Biology</i>, or any kind of technological research applied in biology/medicine. </p>
                         <!--div class="bs-example" style="padding-bottom: 24px;">
       <a href="#" class="btn btn-lg btn-danger" data-container="body" data-toggle="popover" data-placement="bottom" title="Bio" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Click to toggle popover</a><div class="popover fade right in" style="top: 19px; left: 249px; display: block;"><div class="arrow"></div><h3 class="popover-title">A Title</h3><div class="popover-content">And here's some amazing content. It's very engaging. right?</div></div>
     </div>
@@ -374,34 +398,35 @@ $('#myCarousel').on('slide.bs.carousel', function () {
                 <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
-                            <td style="width: 500px;">
+                            <td style="width: 600px;">
                             <h4>International Federation of Medical Students' Association (IFMSA)</h4>
                             <h5>Medical University of Vienna and the General Hospital (AKH), Austria</h5>
                             <p>Admitted to a four week medical program organized by the Medical University of Vienna for international students to shadow/assist physicians/surgeons at the General Hospital (AKH). <br>
             Internship at the Department of Cranio-, Maxillofacial and Oral Surgery. <br>
-            Supervisor: Prof. Dr. Dr. Rolf Ewers.</p><br>
-                            <img alt="IFMSA." style="height: 100px;" src="Images/ifmsa.png"></img>
+            Supervisor: Prof. Dr. Dr. Rolf Ewers. <br><br>
+            I learned a lot spending every day at the AKH for a month. On my first day of internship I witnessed a craniofacial procedure, were a benign bone tumor had to be removed (located on the patient's forehead). As a plastic surgery procedure, the incision was made on the top of the head behind the hairline (from ear to ear), out of esthetic reasons to "hide" the wound of incision. But the cost was to pull the whole flap down, or rather loosen the skin, all the way down to the forehead. It was pretty extreme! Other procedures that I've seen were orthognatic surgery (jaw correction), removal of cysts, cancer surgery, and reconstructive surgery (sometimes with transplants from other parts of the body, like a part of the fibula for bone reconstruction). When assisting the two head surgeons I usually held the "hooks" attached to the flaps, or removed fluids through suction. This whole experience got me thinking of ways to improve surgical procedures.</p><br>
+                            <img alt="IFMSA." style="height: 80px; text-align: right;" src="Images/ifmsa.png"></img>
                             <br>
                             <br>
                             <br>
                             <br>
                             </td>
-                            <td style="width: 500px; vertical-align: center; text-align: right;">
-                            <img alt="Surgery." style="height: 320px;" src="Images/surgery.jpg"></img>
-                            <img alt="Surgical outfit." style="height: 320px;" src="Images/surgery2.jpg"></img>
+                            <td style="width: 400px; vertical-align: center; text-align: right;">
+                            <img alt="Surgery." style="width: 350px;" src="Images/surgery.jpg"></img>
+                            <!--img alt="Surgical outfit." style="height: 320px;" src="Images/surgery2.jpg"></img-->
                             </td>
                         </tr>
                         <tr>
                             <td>
                             <h4>International Student Training Course in Dental Implantology</h4>
                             <h5>Maxillofacial Federation (MFF)</h5>
-                            <p>Chiemsee Akademie, Seebruck, Germany</p><br>
-                            <img alt="MFF." style="height: 90px;" src="Images/mff.png"></img>
-                            <img alt="Meisinger." style="height: 190px;" src="Images/skull.png"></img>
+                            <p>This took place in Chiemsee Akademie, Seebruck, Germany. The whole week was scheduled with lectures and workshops. The speakers were mainly Oral and Maxillofacial Surgeons and professors, and the workshops consisted of bone grafting, sinus lifts, drilling and insertion of implant screws, etc. It was very helpful when I in my senior year of dental school had my own implant patient case.</p><br>
+                            <img alt="MFF." style="height: 80px;" src="Images/mff.png"></img>
+                            <img alt="Meisinger." style="height: 140px;" src="Images/skull.png"></img>
                             <br>
                             </td>
                             <td style="vertical-align: center; text-align: right;">
-                            <img alt="Implantology." style="height: 250px;" src="Images/imp.JPG"></img>
+                            <img alt="Implantology." style="width: 350px;" src="Images/imp.JPG"></img>
                             </td>
                         </tr>
                     </tbody>
@@ -435,7 +460,7 @@ $('#myCarousel').on('slide.bs.carousel', function () {
                             <td>
                             <h4>First Prize in a National Science Fair (2007)</h4>
                             <h5>Federation of Young Scientists</h5>
-                            <p> The <i>Knut and Alice Wallenbergs Scholarship</i> to attend a research program at MIT (Research Science Institute).</p>
+                            <p> The <i>Knut and Alice Wallenbergs Scholarship</i> to attend a research program at MIT (Research Science Institute)</p><br>
                             </td>
                         </tr>
                     </tbody>
@@ -466,22 +491,22 @@ $('#myCarousel').on('slide.bs.carousel', function () {
                         <td>
                             <h3 style="text-align: center;">The university that selects the <b>Nobel Prize</b> in Medicine and Physiology</h3>
                             <br>
-                            <h4><a name="view1">Master's Thesis (2012)</h4></a><h5>Chronic inflammation and pain: Assessment of c-Fos and ATF-3 as markers of spinal neuronal activity in a pain model of rheumatoid arthritis</h5>
-                          <p>I conducted the research project at the Department of Physiology and Pharmacology in the lab of Dr. Camilla Svensson. The whole project was sporadically spread over a period of two years. I was basically working on the side of my dental studies, mostly being in the lab on the other side of the capital city (north campus) on weekends and late nights. Whenever I could skip lectures to instead be working on my research - I'd do that and gain the knowledge through other students' notes and books. However, especially in the last two years of dental school, most lectures are mandatory (as they are very treatment specific with a lot of patient case studies). Also, the clinical internship was baked in in the third to fifth year, treating my own patients, and that schedule was pretty inflexible. So, whenever I could find the time to be in the lab outside of school hours, I'd go for it. </p><br>
-                          <button class="btn btn-danger" href="master.pdf">Paper</button>
-                          <button class="btn btn-warning" href="master-ppp.pdf">Presentation</button>
+                            <h4><a name="viewone">Master's Thesis (2012)</a></h4>
+                            <h5>Chronic inflammation and pain: Assessment of c-Fos and ATF-3 as markers of spinal neuronal activity in a pain model of rheumatoid arthritis</h5>
+                          <p>I conducted the research project at the <i>Department of Physiology and Pharmacology</i> in the lab of Dr. Camilla Svensson. The whole project was sporadically spread over a period of two years. I was basically working on the side of my dental studies, mostly being in the lab on the other side of the capital city (north campus) on weekends and late nights. Whenever I could skip lectures to instead be working on my research - I'd do that, and catch up on studies through books and other students' lecture notes. However, especially in the last two years of dental school, most lectures were mandatory (as they are very treatment specific with a lot of patient case studies). Also, the clinical internship was baked in in the third to fifth year, treating my own patients, and that schedule was pretty inflexible. So, whenever I could find the time to be in the lab outside of school hours, I'd go for it. </p><br>
+                          <a href="Files/master.pdf"><button class="btn btn-danger">Paper</button></a>
+                          <a href="Files/MasterPPP.pdf"><button class="btn btn-warning">Presentation</button></a>
                           <br><br><br><br>
                           
-                          <h4><a name="view2">Research Program in Medical Sciences (2010)</a></h4><h5>Assessment of c-fos as a marker of spinal neuronal activity in a pain model of rheumatoid arthritis</h5>
-                          <p>This was a summer research program for talented KI students who got funding for doing research in a lab for two months. This was when I started working with Dr. Camilla Svensson (great mentor!) on a project that later became a part of my Master's Thesis. I learned doing antibody probing and immunohistochemistry, and analyzing microscopic images using the software ImageJ. It was a really exciting summer.</p>
-                          <button class="btn btn-danger" href="med.pdf">Paper</button>
-                          <button class="btn btn-warning" href="med-ppp.pdf">Presentation</button>
+                          <h4><a name="viewtwo">Research Program in Medical Sciences (2010)</a></h4><h5>Assessment of c-fos as a marker of spinal neuronal activity in a pain model of rheumatoid arthritis</h5>
+                          <p>This was a summer research program for talented KI students who got funding for doing research in a lab for two months. This was when I started working with Dr. Camilla Svensson (great mentor!) on a project that later became a part of my <i>Master's Thesis</i>. I learned doing antibody probing and immunohistochemistry, and analyzing microscopic images using the software <i>ImageJ</i>. It was a really exciting summer.</p><br>
+                          <a href="Files/KIsom.pdf"><button class="btn btn-danger">Paper</button></a>
+                          <a href="Files/poster.pdf"><button class="btn btn-warning">Presentation</button></a>
                           <br><br><br><br>
                           
-                        <h4><a name="view3">Research Program in Biomedical Sciences (2006)</a></h4><h5>Activation of Liver X Receptor affects the function and differentiation of osteoclasts</h5>
-                          <p>This was a six week summer research program for the top 20 smartest high school students in the country (Sweden). This was how I first got acquainted with real research at the age of 16. The first week consisted of lectures, and the remaining part was spent working in a lab. I was working with Dr. Kirsten Robertson in the Adopted Orphan Receptors Lab at the Department of Biosciences and Nutrition. The nuclear receptor that we were investigating was Liver X Recepter (LXR). Little was known about it at the time, and my project was investigating what the receptor does to bone tissue. It was a cell study, and we were looking at the bone resorption cells, namely<i>osteoclasts</i>. I learned various lab techniques, such as pipetting, electrophoresis, PCR (Polymerase Chain Reaction), Real-Time PCR, and doing statistical analysis in the software Prism. I remember that summer being so overwhelming that I was determined to pursue a career in research.</p><br>
-                          <button class="btn btn-danger" href="med.pdf">Paper</button>
-                          <button class="btn btn-warning" href="med-ppp.pdf">Presentation</button>
+                        <h4><a name="viewthree">Research Program in Biomedical Sciences (2006)</a></h4><h5>Activation of Liver X Receptor affects the function and differentiation of osteoclasts</h5>
+                          <p>This was a six week summer research program for the top 20 smartest high school students in the country (Sweden). This was how I first got acquainted with real research at the age of 16. The first week consisted of lectures, and the remaining part was spent working in a lab. I was working with Dr. Kirsten Robertson in the Adopted Orphan Receptors Lab at the <i>Department of Biosciences and Nutrition</i>. The nuclear receptor that we were investigating was <i>Liver X Recepter</i> (LXR). Little was known about it at the time, and my project was investigating what the receptor does to bone tissue. It was a cell study, and we were looking at the bone resorption cells, namely <i>osteoclasts</i>. I learned various lab techniques, such as pipetting, electrophoresis, PCR (Polymerase Chain Reaction), Real-Time PCR, and doing statistical analysis in the software <i>Prism</i>. I remember that summer being so overwhelming that I was determined to pursue a career in research.</p><br>
+                          <a href="Files/LXR.pdf"><button class="btn btn-danger">Paper</button></a>
                           <br><br><br><br>
                         </td>
                         </tr>
@@ -498,7 +523,7 @@ $('#myCarousel').on('slide.bs.carousel', function () {
                     <tbody>
                         <tr>
                         <td style="width: 620px;">
-                            <h4>Research Science Institute (2007)</h4><h5>What does performance on one visual search task tell you about 
+                            <h4><a name="viewfour">Research Science Institute (2007)</a></h4><h5>What does performance on one visual search task tell you about 
             performance on another?</h5>
                           <p>This was a six week international summer research program for talented high school students. It was held at <a href="http://www.mit.edu/">Massachusetts Institute of Technology (MIT)</a> and organized by the <a href="http://cee.org/">Center for Excellence in Education (CEE)</a>. The first week of the program consisted of classes in two science subjects of interest (in my case <i>biology</i> and <i>chemistry</i>), math, and humanities. Also we learned how to write a scientific paper in LaTeX and hold a professional presentation. The rest of the summer was spent on working in a lab. <br><br>
                           I was working with Dr. Jeremy Wolfe in the Visual Attention Lab at the Department of Brain and Cognitive Sciences, Harvard Medical School, and Brigham and Women's Hospital. The project dealt with investigating whether simple search tasks (looking for a green line among red lines) was correlated with the complicated real-world scenes. I looked especially if it correlated with searching for weapons in baggage x-ray pictures. I was working with a grad student called Michael Van Wert, and the work got later published. <br><br>
@@ -619,7 +644,7 @@ $('#myCarousel').on('slide.bs.carousel', function () {
                             <img alt="EDSA." style="width: 460px;" src="Images/edsa.png"></img>
                         </td>
                         <td style="width: 380px; text-align: right;">
-                        <img alt="EDSA Research Program." style="width: 350px;" src="Images/edsa-logo.jpg"></img>
+                        <img alt="EDSA Research Program." style="width: 350px;" src="Images/edsa-logo.jpg"></img><br><br>
                         </td>
                         </tr>
                     </tbody>
@@ -713,7 +738,8 @@ $('#myCarousel').on('slide.bs.carousel', function () {
 		<br>
 		<p style="text-align:center;">If you want to get in touch with me regarding the website, or if you have any questions or comments - send me a message!</p>
 		<br>
-		<form class="form-horizontal col-offset-3" style="width: 500px;">
+		<h3 style="text-align:center;"><a href="mailto:nicole@raysforexcellence.se">nicole@raysforexcellence.se</a></h3><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<!--form class="form-horizontal col-offset-3" style="width: 500px;" action="#" method="POST">
           <div class="form-group">
             <label for="inputEmail" class="col-lg-2 control-label">Name</label>
             <div class="col-lg-10">
@@ -732,10 +758,10 @@ $('#myCarousel').on('slide.bs.carousel', function () {
           </div>
           <div class="form-group">
             <div class="col-offset-2 col-lg-10">
-              <button type="submit" class="btn btn-default">Submit</button><br><br><br>
+              <button id="send" type="submit" class="btn btn-default">Submit</button><br><br><br>
             </div>
           </div>
-        </form>
+        </form-->
       </div>
     </div> <!-- End Contact -->   
     
@@ -759,11 +785,11 @@ $('#myCarousel').on('slide.bs.carousel', function () {
                         </td>
                         <td style="width: 60px; text-align: right;">
                             <br><br><br>
-                            <a href="#view1"><button class="btn btn-info">View</button></a><br><br> <!--HASHTAG STUFF NOT WORKING-->
-                            <a href="#view2"><button class="btn btn-info">View</button></a><br><br>
-                            <a href="#view3"><button class="btn btn-info">View</button></a><br><br>
+                             <a class="btn btn-info" id="viewone" href="#">View</a><br><br> <!--HASHTAG STUFF NOT WORKING-->
+                            <a href="#viewtwo"><button class="btn btn-info">View</button></a><br><br>
+                            <a href="#viewthree"><button class="btn btn-info">View</button></a><br><br>
                             
-                            <button id="view" class="btn btn-info">View</button></a><br><br>
+                            <a href="#viewfour"><button id="view" class="btn btn-info">View</button></a><br><br>
                         </td>
                         <td style="width: 340px; text-align: right;">
                         <img alt="Biotechnology." style="width: 340px;" src="Images/biotech2.jpg"></img><br><br>
