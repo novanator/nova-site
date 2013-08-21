@@ -6,32 +6,18 @@
 	<title>Nicole Nova</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Bootstrap -->
 <link href="css/bootstrap.css" rel="stylesheet" media="screen" />
 
-<!-- JavaScript plugins (requires jQuery) -->
 <script src="http://code.jquery.com/jquery.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.js"></script><!-- Optionally enable responsive features in IE8 -->
+<script src="js/bootstrap.js"></script>
 <script src="js/respond.js"></script>
 
 <style>
-
 .header-img {
 	width: 143px; 
 	height: 143px;
 	border-radius: 10px;
 	cursor: pointer;
-}
-
-.blackradiant {
-  background: #000000;
-  background: url('linear-gradient.png') 0 0 repeat-x;
-  background: -webkit-linear-gradient(#adaeb0, #000000);
-  background:    -moz-linear-gradient(#adaeb0, #000000);
-  background:     -ms-linear-gradient(#adaeb0, #000000);
-  background:      -o-linear-gradient(#adaeb0, #000000);
-  background:         linear-gradient(#adaeb0, #000000);
 }
 
 .radiant {
@@ -53,17 +39,6 @@
   background:      -o-linear-gradient(#f3f8fb, #046b7e);
   background:         linear-gradient(#f3f8fb, #046b7e);
 }
-
-.blackback-radiant {
-  background: #fbfbfb;
-  background: url('linear-gradient.png') 0 0 repeat-x;
-  background: -webkit-linear-gradient(#fbfbfb, #e7eaec);
-  background:    -moz-linear-gradient(#fbfbfb, #e7eaec);
-  background:     -ms-linear-gradient(#fbfbfb, #e7eaec);
-  background:      -o-linear-gradient(#fbfbfb, #e7eaec);
-  background:         linear-gradient(#fbfbfb, #e7eaec);
-}
-
 </style>
 
 <script>
@@ -164,23 +139,9 @@ $("#main-content").on("click", "#here-robot", function(){
     $("#main-content").html("").append($("#projects-content").html()); 
 });
 
-$("#nicolenova-nav").click();
+//IMPORTANT
+$("#nicolenova-nav").click();  
 });
-
-//Carousel
-$('#example').popover(data-placement="bottom")
-$('#myPopover').on('hidden.bs.popover', function () {
-  $('#element').popover('show');
-  $('#element').popover('hide');
-  $('#element').popover('toggle');
-  
-  
-})
-
-$('#myCarousel').on('slide.bs.carousel', function () {
-  // do something…
-})
-
 </script>
 
 </head>
@@ -199,14 +160,9 @@ $('#myCarousel').on('slide.bs.carousel', function () {
 	        <tbody>
 		        <tr>
 		        <td style="text-align: center; width: 425px;">
-		            <!--Search tool-->
-			        <!--form class="navbar-form pull-right" action="">
-                        <input type="text" class="form-control col-lg-8" placeholder="Search" style="height: 26px; width: 260px;">
-                    </form-->
                     <font size="6" face="Rechtman-Script" style="color: #97c1e1;">New frontiers in interdisciplinary research</font>
                 </td>
 		        <td style="vertical-align: center; text-align: right; width: 0px;">
-			        <!--button type="submit" class="btn btn-default">Submit</button-->
 			     </td>
 			     <td style="vertical-align: center; text-align: center; width: 280px;">
                     <!-- Links -->
@@ -235,8 +191,7 @@ $('#myCarousel').on('slide.bs.carousel', function () {
 </div>
 <!--End Navbar-->
 
-<div style="width:1200px;height:50px;border:1px solid #fffff;">
-</div>
+<div style="width:1200px;height:50px;border:1px solid #fffff;"></div>
 
 <!--WHITE TABLE-->
 <div style="width: 1100px; margin-left: auto; margin-right: auto;">
@@ -244,19 +199,13 @@ $('#myCarousel').on('slide.bs.carousel', function () {
         <tbody>
             <tr> <!-- HEADER -->
                 <td style="vertical-align: top;">
-                <a id="header-banner" href="#"> <!-- TODO fix later - DONE -->
+                <a id="header-banner" href="#">
                 <img style="width: 497px; height: 146px;" alt="Banner."
                 src="Images/banner3.png">
                 </td>
 
                 <td style="vertical-align: bottom; text-align: left;">
                 <img id="biotech-img" class="header-img" alt="Biotechnology" src="Images/biotech.jpg">
-                <!--div data-container="body" data-toggle="popover" title data-content="Biotechnology is exciting!" data-original-title="Biotechnology">
-                    <div class="popover fade bottom in" style="top: 210px; left: 249px; display: block;">
-                    <div class="arrow"></div>
-                    <h3 class="popover-title">Biotechnology<h3>
-                    <div class="popover-content">Biotechnology is exciting!</div>
-                    </div-->
                 </td>
 
                 <td style="vertical-align: bottom; text-align: left;">
@@ -277,9 +226,9 @@ $('#myCarousel').on('slide.bs.carousel', function () {
 
             <tr> <!-- Main-content -->
                 <td id="main-content" colspan="5">
-                
                 </td>
             </tr> <!-- END Main-content -->
+            
             <!-- Footer -->
             <tr align="center"> 
                 <td colspan="5" style="vertical-align: top;">
@@ -295,38 +244,7 @@ $('#myCarousel').on('slide.bs.carousel', function () {
 <!-- HIDDEN CONTENT-->
 <div id="hidden-content" style="display:none;">
 
-    <!--Nicole Nova-->
-
-    <!--Carousel-->
-    <!--div id="carousel-example-generic" class="carousel slide">
-      <!-- Indicators -->
-      <!--ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <!--div class="carousel-inner">
-        <div class="item active">
-          <img src="Images/nicole-nova.jpg" alt="Nicole.">
-          <div class="carousel-caption">
-            <h3>Welcome to my personal site!</h3>
-            <p>Nicole Nova, DDS</p>
-            </div>
-        </div>
-    </div>
-
-      <!-- Controls -->
-      <!--a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-        <span class="icon-prev"></span>
-      </a>
-      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-        <span class="icon-next"></span>
-      </a>
-    </div>
-    <!--END Carousel-->
-    
+    <!--Nicole Nova-->    
     <div id="nicolenova-content" style="vertical-align: top;">
         <div class="panel panel-primary">
                   <div class="panel-heading">
@@ -345,13 +263,6 @@ $('#myCarousel').on('slide.bs.carousel', function () {
                          Another approach is to use technological devices (e.g. TENS - Transcutaneous Electrical Nerve Stimulation) to influence nerve stimulation. However, this particular device is not as efficient as taking drugs, but I believe there is a technological solution that might be quicker than the development of a pharmaceutical drug. This is one of the reasons why I'm currently studying <b>Electrical Engineering</b>.
                          <br><br>
                         I have firsthand experience working with patients and surgical procedures, and I've been very observant on things to improve using new technology. My ambition is to do <b>research</b> and <b>innovation</b> in an <i>interdisciplinary field</i>. Fields of interest are: <i>Biomedical Sciences</i> (especially Neurobiology or Genetics), <i>Bioengineering</i>, <i>Medical Engineering</i> (especially in surgery), <i>Systems Biology</i>, <i>Computational Biology</i>, or any kind of technological research applied in biology/medicine. </p>
-                        <!--div class="bs-example" style="padding-bottom: 24px;">
-      <a href="#" class="btn btn-lg btn-danger" data-container="body" data-toggle="popover" data-placement="bottom" title="Bio" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Click to toggle popover</a><div class="popover fade right in" style="top: 19px; left: 249px; display: block;"><div class="arrow"></div><h3 class="popover-title">A Title</h3><div class="popover-content">And here's some amazing content. It's very engaging. right?</div></div>
-    </div>
-    
-    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
-          Popover on bottom
-        </button-->
                     </td>
                 </tr>
             </tbody>
@@ -443,7 +354,6 @@ $('#myCarousel').on('slide.bs.carousel', function () {
                             </td>
                             <td style="width: 400px; vertical-align: center; text-align: right;">
                             <img alt="Surgery." style="width: 350px;" src="Images/surgery.jpg"></img>
-                            <!--img alt="Surgical outfit." style="height: 320px;" src="Images/surgery2.jpg"></img-->
                             </td>
                         </tr>
                         <tr>
@@ -506,7 +416,6 @@ $('#myCarousel').on('slide.bs.carousel', function () {
 	    <ul class="nav nav-pills">
 		    <li class="active"><a href="#ki-panel" data-toggle="pill">Karolinska Institute</a></li>
 		    <li><a href="#rsi-panel" data-toggle="pill">Research Science Institute</a></li>
-		    <!--li><a href="#kth-panel" data-toggle="pill">Royal Institute of Technology</a></li-->
 	    </ul>
 
         <div class="pill-content">
@@ -573,36 +482,6 @@ $('#myCarousel').on('slide.bs.carousel', function () {
                 </table>
                 </div>
             </div>
-            <!--div class="pill-pane fade" id="kth-panel">
-              <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <h2 class="panel-title">Royal Institute of Technology</h2>
-                  </div>
-              <h3 style="text-align: center;">Sweden's top University in Engineering</h3>
-                <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="30" cellspacing="0">
-                    <tbody>
-                        <tr>
-                        <td>
-                          <p>In progress.</p>
-                          <br>
-                          <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                        </td>
-                        </tr>
-                    </tbody>
-                </table>
-                </div>
-            </div-->
         </div>
     </div> <!-- End Research -->
 
@@ -769,29 +648,6 @@ $('#myCarousel').on('slide.bs.carousel', function () {
 		<p style="text-align:center;">If you want to get in touch with me regarding the website, or if you have any questions or comments - send me a message!</p>
 		<br>
 		<h3 style="text-align:center;"><a href="mailto:nicole@raysforexcellence.se">nicole@raysforexcellence.se</a></h3><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		<!--form class="form-horizontal col-offset-3" style="width: 500px;" action="#" method="POST">
-          <div class="form-group">
-            <label for="inputEmail" class="col-lg-2 control-label">Name</label>
-            <div class="col-lg-10">
-              <input type="text" class="form-control" id="inputEmail" placeholder="Your name...">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-            <div class="col-lg-10">
-              <input type="password" class="form-control" id="inputPassword" placeholder="Your email...">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputEmail" class="col-lg-2 control-label">Message</label>
-            <textarea class="form-control" rows="3" placeholder="Write your message here..."></textarea>
-          </div>
-          <div class="form-group">
-            <div class="col-offset-2 col-lg-10">
-              <button id="send" type="submit" class="btn btn-default">Submit</button><br><br><br>
-            </div>
-          </div>
-        </form-->
       </div>
     </div> <!-- End Contact -->   
     
@@ -815,7 +671,7 @@ $('#myCarousel').on('slide.bs.carousel', function () {
                         </td>
                         <td style="width: 60px; text-align: right;">
                             <br><br><br>
-                            <a class="btn btn-info" id="view1" href="#see1">View</a><br><br> <!--HASHTAG STUFF NOT WORKING-->
+                            <a class="btn btn-info" id="view1" href="#see1">View</a><br><br> 
                             <a class="btn btn-info" id="view2" href="#see2">View</a><br><br>
                             <a class="btn btn-info" id="view3" href="#see2">View</a><br><br>
                             <a class="btn btn-info" id="view4" href="#see4">View</a><br><br>
@@ -904,9 +760,7 @@ $('#myCarousel').on('slide.bs.carousel', function () {
     </div>
     <!--END Electrical Engineering-->
     <!-- END Header Pictures-->
-    
 </div>
 
 </body>
 </html>
-
