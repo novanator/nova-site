@@ -1,0 +1,355 @@
+<!--Nicole Nova Website, July 2013-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nicole Nova - Blank</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet" media="screen" />
+
+<!-- JavaScript plugins (requires jQuery) -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.js"></script><!-- Optionally enable responsive features in IE8 -->
+<script src="js/respond.js"></script>
+
+<style>
+.trans
+  {
+  opacity:0.75; 
+  filter:alpha(opacity=75); /* For IE8 and earlier */
+  }
+
+a.logo:hover {
+  background-color: #4e6f89;
+  opacity:0.5; 
+  filter:alpha(opacity=50);
+  width: 42px;
+  height: 35px;
+}
+
+.header-img {
+	width: 143px; 
+	height: 143px;
+	border-radius: 10px;
+}
+</style>
+
+<script>
+HEADER_IMGS = {
+	'biotech-img': ['Images/green.png', 'Images/biotech.jpg'],
+	'cs-img': ['Images/yellow.png', 'Images/cs.png'],
+	'med-img': ['Images/red.png', 'Images/OPG.jpg'],
+	'ee-img': ['Images/blue.png', 'Images/el.png']
+}
+
+$(document).ready(function(){
+	$(".header-img").hover(
+		function() { $(this).attr('src', HEADER_IMGS[$(this).attr("id")][0]); }, //in
+		function() { $(this).attr('src', HEADER_IMGS[$(this).attr("id")][1]); } //out
+	);
+	
+	$("#home-nav").on("click", function() {
+	    console.log("Yolo");
+	    $("#main-content").html("").append($("#home-content").html());
+	});
+	$("#home-nav").click();
+	
+	$("#research-nav").on("click", function() {
+	    console.log("Yolo");
+	    $("#main-content").html("").append($("#research-content").html());
+	});
+	$("#research-nav").click();
+	
+	$("#leadership-nav").on("click", function() {
+	    console.log("Yolo");
+	    $("#main-content").html("").append($("#leadership-content").html());
+	});
+	$("#leadership-nav").click();
+	
+	$("#projects-nav").on("click", function() {
+	    console.log("Yolo");
+	    $("#main-content").html("").append($("#projects-content").html());
+	});
+	$("#projects-nav").click();
+});
+</script>
+
+</head>
+<body style="background-color: #c7d9e8">
+
+<!--Navbar-->
+<div class="navbar" style="background-color: #175483; border-radius: 0px; color: #fffff;">
+    <a class="navbar-brand" href="#">Nicole Nova</a>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">About</a></li>
+        <li><a href="#">Research</a></li>
+        <li><a href="#">Leadership</a></li>
+        <li><a href="#">Projects</a></li>
+      </ul>
+          <table style="text-align: right; height: 48px; width: 700x;" border="0" cellpadding="0" cellspacing="0">
+	        <tbody>
+		        <tr>
+		        <td style="text-align: right; width: 350px;">
+		            <!--Search tool-->
+			        <form class="navbar-form pull-right" action="">
+                        <input type="text" class="form-control col-lg-8" placeholder="Search" style="height: 26px; width: 260px;">
+                    </form>
+                </td>
+		        <td style="vertical-align: center; text-align: right; width: 326px;">
+			        <button type="submit" class="btn btn-default">Submit</button>
+			     </td>
+			     <td style="">
+                    <!-- Links -->
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Links <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" style="text-align: left;">
+                        <li><a href="#">Research Science Institute</a></li>
+                        <li><a href="#">Karolinska Institute</a></li>
+                        <li><a href="#">Royal Institute of Technology</a></li>
+                      </ul>
+                    </div>
+			        <!--Contact-->
+			        <a class="btn btn-default" id="contact-nav" href="#">Contact</a>
+				            
+			        <!--linkedn-->
+		            <a href="http://www.linkedin.com/in/nicolenova" class="logo">
+		            <img style="width: 42px; height: 35px;" alt="Linkedin." src="Images/linkedin.png">
+			        <!--github-->
+			        <a href="https://github.com/novanator" class="logo">
+			        <img style="width: 42px; height: 35px;" alt="Github." src="Images/git.png">
+		          </td>
+	            </tr>
+            </tbody>
+        </table>
+</div>
+<!--End Navbar-->
+
+<div style="width: 1100px; margin-left: auto; margin-right: auto;">
+		<!-- Nav -->
+			<div colspan="5" rowspan="1" style="vertical-align: center; text-align: center; height: 44px; border-radius: 7px; background-color: #175483;">
+			<div style="width:1100px;height:2px;"></div>
+			<table style="text-align: right; height: 40px; width: 1095px;"
+				border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<td style="vertical-align: center; text-align: center;">
+				
+                        <!-- Split buttons -->
+                        <!--Home-->
+                        <div class="btn-group">
+                          <a class="btn btn-default" id="home-nav" href="#">Home</a> <!--had problems linking the button - bug fixed-->
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#education-panel">Education</a></li>
+                            <li><a href="#clinical-panel">Clinical practice</a></li>
+                            <li><a href="#awards-panel">Awards</a></li>
+                          </ul>
+                        </div>
+                        <!--Research-->
+                        <div class="btn-group">
+                          <a class="btn btn-default" id="research-nav" href="#">Research</a>
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a href="ki.html">Karolinska Institute</a></li>
+                            <li><a href="rsi.html">Research Science Institute</a></li>
+                            <li><a href="kth.html">Royal Institute of Technology</a></li>
+                          </ul>
+                        </div>
+                        <!--Leadership-->
+                        <div class="btn-group">
+                          <a class="btn btn-default" id="leadership-nav" href="#">Leadership</a>
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a href="rays.html">Research Academy for Young Scientists</a></li>
+                            <li><a href="fuf.html">Federation of Young Scientists</a></li>
+                            <li><a href="edsa.html">European Dental Students' Association</a></li>
+                          </ul>
+                        </div>
+                        <!--Projects-->
+                        <div class="btn-group">
+                          <a class="btn btn-default" id="projects-nav" href="#">Projects</a>
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a href="robotics.html">Robotics</a></li>
+                            <li><a href="bioeng.html">Bioengineering</a></li>
+                          </ul>
+                        </div>    
+						</td>
+						<td>
+						<!--Search tool-->
+						<form class="navbar-form pull-right" action="">
+                        <input type="text" class="form-control col-lg-8" placeholder="Search" style="height: 26px; width: 300px;">
+                        </form>
+                        </td>
+						<td style="vertical-align: center; text-align: right;">
+				        <!--Contact-->
+				        <a class="btn btn-default" id="contact-nav" href="#">Contact</a>
+				        <!--button type="button" class="btn btn-default">Contact</button>-->
+				        <!--linkedn-->
+				        <a href="http://www.linkedin.com/in/nicolenova" class="logo"><img style="width: 42px; height: 35px;" alt="Linkedin." src="Images/linkedin.png">
+				        <!--github-->
+				        <a href="https://github.com/novanator" class="logo"><img style="width: 42px; height: 35px;" alt="Github." src="Images/git.png">
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div> <!-- END nav -->
+		</div>
+	</div>
+	</div>
+			<div style="width: 1100px; margin-left: auto; margin-right: auto; text-align: center; border-radius: 5px; background-color: rgb(250,250,250);">
+			<table style="width: 1100px; margin-left: auto; margin-right: auto;">
+            <tbody>
+			<tr> <!-- HEADER -->
+			<td style="vertical-align: top;">
+			<a href="#"> <!-- TODO fix later -->
+			<img style="width: 497px; height: 146px;" alt="Banner."
+			src="Images/banner3.png">
+			</td>
+
+			<td style="vertical-align: bottom; text-align: right;">
+			<img id="biotech-img" class="header-img" alt="Biotechnology" src="Images/biotech.jpg">
+			</td>
+
+			<td style="vertical-align: bottom; text-align: right;">
+			<img id="cs-img" class="header-img" alt="Computer Science."
+			src="Images/cs.png">
+			</td>
+			
+			<td style="vertical-align: bottom; text-align: right;">
+			<img  id="med-img" class="header-img" alt="X-Ray."
+			src="Images/OPG.jpg">
+			</td>
+		
+			<td style="vertical-align: bottom; text-align: right;">
+			<img id="ee-img" class="header-img" alt="Electrical Engineering."
+			src="Images/el.png">
+			</td>
+		</tr> <!-- END header -->
+			
+			<tr> <!-- main-content -->
+			    <td id="main-content" colspan="5"></td>
+			</tr> <!-- END main-content -->
+			
+			<tr align="center" style="background-color: #c7d9e8"> <!-- Footer -->
+			    <td colspan="5" rowspan="1" style="vertical-align: top;">
+			        <small>Copyright 2013</small>
+			    </td>
+			</tr> <!-- END Footer -->
+</tbody>
+</table>
+</div>
+
+<!-- HIDDEN CONTENT-->
+<div id="hidden-content" style="display:none;">
+
+    <!-- Home -->
+    <div id="home-content" colspan="1" rowspan="1" style="vertical-align: top;"> 
+		<!--Pills-->
+	    <ul class="nav nav-pills">
+		    <li class="active"><a href="#education-panel" data-toggle="pill">Education</a></li>
+		    <li><a href="#clinical-panel" data-toggle="pill">Clinical practice</a></li>
+		    <li><a href="#awards-panel" data-toggle="pill">Awards</a></li>
+	    </ul>
+
+        <div class="pill-content">
+            <div class="pill-pane fade in active" id="education-panel">
+              <p>Education!</p>
+            </div>
+            <div class="pill-pane fade" id="clinical-panel">
+              <p>Clinical!</p>
+            </div>
+            <div class="pill-pane fade" id="awards-panel">
+              <p>Awards!</p>
+            </div>
+        </div>
+    </div> <!-- End Home -->
+    
+    <!-- Research -->
+    <div id="research-content" colspan="1" rowspan="1" style="vertical-align: top;"> 
+		<!--Pills-->
+	    <ul class="nav nav-pills">
+		    <li class="active"><a href="#ki-panel" data-toggle="pill">Karolinska Institute</a></li>
+		    <li><a href="#rsi-panel" data-toggle="pill">Research Science Institute</a></li>
+		    <li><a href="#kth-panel" data-toggle="pill">Royal Institute of Technology</a></li>
+	    </ul>
+
+        <div class="pill-content">
+            <div class="pill-pane fade in active" id="ki-panel">
+              <p>Karolinska Institute</p>
+            </div>
+            <div class="pill-pane fade" id="rsi-panel">
+              <p>Research Science Institute</p>
+            </div>
+            <div class="pill-pane fade" id="kth-panel">
+              <p>Royal Institute of Technology</p>
+            </div>
+        </div>
+    </div> <!-- End Research -->
+
+    <!-- Leadership -->
+    <div id="leadership-content" colspan="1" rowspan="1" style="vertical-align: top;"> 
+		<!--Pills-->
+	    <ul class="nav nav-pills">
+		    <li class="active"><a href="#rays-panel" data-toggle="pill">Research Academy for Young Scientists</a></li>
+		    <li><a href="#fuf-panel" data-toggle="pill">Federation of Young Scientists</a></li>
+		    <li><a href="#edsa-panel" data-toggle="pill">European Dental Students' Association</a></li>
+	    </ul>
+
+        <div class="pill-content">
+            <div class="pill-pane fade in active" id="rays-panel">
+              <p>Research Academy for Young Scientists</p>
+            </div>
+            <div class="pill-pane fade" id="fuf-panel">
+              <p>Federation of Young Scientists</p>
+            </div>
+            <div class="pill-pane fade" id="edsa-panel">
+              <p>European Dental Students' Association</p>
+            </div>
+        </div>
+    </div> <!-- End Leadership -->
+    
+    <!-- Projects -->
+    <div id="projects-content" colspan="1" rowspan="1" style="vertical-align: top;"> 
+		<!--Pills-->
+	    <ul class="nav nav-pills">
+		    <li class="active"><a href="#robotics-panel" data-toggle="pill">Robotics</a></li>
+		    <li><a href="#bioeng-panel" data-toggle="pill">Bioengineering</a></li>
+		    
+	    </ul>
+
+        <div class="pill-content">
+            <div class="pill-pane fade in active" id="robotics-panel">
+              <p>Robotics</p>
+            </div>
+            <div class="pill-pane fade" id="bioeng-panel">
+              <p>Bioengineering</p>
+            </div>
+        </div>
+    </div> <!-- End Projects --> 
+    
+    <!-- Contact -->
+    <div id="contact-content" colspan="1" rowspan="1" style="vertical-align: top;"> 
+		<!--Form-->
+		
+	    
+    </div> <!-- End Contact -->   
+    
+</div>
+
+</body>
+</html>
+
