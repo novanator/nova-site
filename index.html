@@ -30,18 +30,48 @@
 }
 
 .back-radiant {
-  background: #f3f8fb;
+  background: #d1e2e5;
   background: url('linear-gradient.png') 0 0 repeat-x;
-  background: -webkit-linear-gradient(#f3f8fb, #046b7e);
-  background:    -moz-linear-gradient(#f3f8fb, #046b7e);
-  background:     -ms-linear-gradient(#f3f8fb, #046b7e);
-  background:      -o-linear-gradient(#f3f8fb, #046b7e);
-  background:         linear-gradient(#f3f8fb, #046b7e);
+  background: -webkit-linear-gradient(#d1e2e5, #046b7e);
+  background:    -moz-linear-gradient(#d1e2e5, #046b7e);
+  background:     -ms-linear-gradient(#d1e2e5, #046b7e);
+  background:      -o-linear-gradient(#d1e2e5, #046b7e);
+  background:         linear-gradient(#d1e2e5, #046b7e);
+}
+
+.footer-radiant {
+  background: #046b7e;
+  background: url('linear-gradient.png') 0 0 repeat-x;
+  background: -webkit-linear-gradient(#046b7e, #03424d);
+  background:    -moz-linear-gradient(#046b7e, #03424d);
+  background:     -ms-linear-gradient(#046b7e, #03424d);
+  background:      -o-linear-gradient(#046b7e, #03424d);
+  background:         linear-gradient(#046b7e, #03424d);
 }
 
 .float-table {
 float:right;
 }
+
+*{
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -3em;
+}
+
+.footer, .push {
+    height: 3em;
+}
+
 
 </style>
 
@@ -149,8 +179,7 @@ $("#nicolenova-nav").click();
 </script>
 
 </head>
-<body class="back-radiant" style="margin-bottom: 0px;">
-
+<body style="height: 100%; background-color: #d1e2e5;">
 <!--Navbar-->
 <div class="navbar navbar-fixed-top radiant" style="background-color: #175483; border-radius: 0px; color: #fffff; margin-bottom: 0px; margin-left: auto; margin-right: auto;">
     <a class="navbar-brand" id="nicolenova-nav" href="#">Nicole Nova</a>
@@ -195,54 +224,53 @@ $("#nicolenova-nav").click();
 <!--End Navbar-->
 
 <div style="width:1200px;height:50px;border:1px solid #fffff;"></div>
+    <div class="wrapper back-radiant">
+        <!--WHITE TABLE-->
+        <div style="width: 1100px; margin-left: auto; margin-right: auto; margin-bottom: 0px;">
+            <table style="width: 1100px; margin-left: auto; margin-right: auto; margin-bottom: 0px;" colspan="5" rowspan="3">
+                <tbody>
+                    <tr> <!-- HEADER -->
+                        <td style="vertical-align: top;">
+                        <a id="header-banner" href="#">
+                        <img style="width: 497px; height: 146px;" alt="Banner."
+                        src="Images/banner3.png">
+                        </td>
 
-<!--WHITE TABLE-->
-<div style="width: 1100px; margin-left: auto; margin-right: auto; margin-bottom: 0px;">
-    <table style="width: 1100px; margin-left: auto; margin-right: auto; margin-bottom: 0px;" colspan="5" rowspan="3">
-        <tbody>
-            <tr> <!-- HEADER -->
-                <td style="vertical-align: top;">
-                <a id="header-banner" href="#">
-                <img style="width: 497px; height: 146px;" alt="Banner."
-                src="Images/banner3.png">
-                </td>
+                        <td style="vertical-align: bottom; text-align: left;">
+                        <img id="biotech-img" class="header-img" alt="Biotechnology" src="Images/biotech.jpg">
+                        </td>
 
-                <td style="vertical-align: bottom; text-align: left;">
-                <img id="biotech-img" class="header-img" alt="Biotechnology" src="Images/biotech.jpg">
-                </td>
+                        <td style="vertical-align: bottom; text-align: left;">
+                        <img id="cs-img" class="header-img" alt="Computer Science."
+                        src="Images/cs.png">
+                        </td>
 
-                <td style="vertical-align: bottom; text-align: left;">
-                <img id="cs-img" class="header-img" alt="Computer Science."
-                src="Images/cs.png">
-                </td>
+                        <td style="vertical-align: bottom; text-align: left;">
+                        <img  id="med-img" class="header-img" alt="X-Ray."
+                        src="Images/OPG.jpg">
+                        </td>
 
-                <td style="vertical-align: bottom; text-align: left;">
-                <img  id="med-img" class="header-img" alt="X-Ray."
-                src="Images/OPG.jpg">
-                </td>
+                        <td style="vertical-align: bottom; text-align: left;">
+                        <img id="ee-img" class="header-img" alt="Electrical Engineering."
+                        src="Images/el.png">
+                        </td>
+                    </tr> <!-- END Header -->
 
-                <td style="vertical-align: bottom; text-align: left;">
-                <img id="ee-img" class="header-img" alt="Electrical Engineering."
-                src="Images/el.png">
-                </td>
-            </tr> <!-- END Header -->
-
-            <tr> <!-- Main-content -->
-                <td id="main-content" colspan="5">
-                </td>
-            </tr> <!-- END Main-content -->
-            
-            <!-- Footer -->
-            <tr align="center"> 
-                <td colspan="5" style="vertical-align: top;">
-                    <small style="color: rgb(250, 250, 250);">Copyright &copy; 2013 &diams; Nicole Nova</small>
-                    <br>
-                    <br>
-                </td>
-            </tr> <!-- END Footer -->
-        </tbody>
-    </table>
+                    <tr> <!-- Main-content -->
+                        <td id="main-content" colspan="5">
+                        </td>
+                    </tr> <!-- END Main-content -->
+                </tbody>
+            </table>
+        </div>
+        <div class="push"></div>
+    </div>
+    <!-- Footer -->
+    <div align="center" class="footer"> 
+            <small style="color: rgb(250, 250, 250);">Copyright &copy; 2013 &diams; Nicole Nova</small>
+    </div> <!-- END Footer -->
 </div>
+
 
 <!-- HIDDEN CONTENT-->
 <div id="hidden-content" style="display:none;">
