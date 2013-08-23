@@ -147,15 +147,11 @@
         $("#main-content").html("").append($("#rsi-panel").html()); 
     });
 
-    $("#main-content").on("click", "#here-education", function(){
+    $("#main-content").on("click", "#here-education", "#here-ee", function(){
         $("#top-nav").find("li").removeClass("active"); 
         $("#main-content").html("").append($("#about-content").html()); 
     });
 
-    $("#main-content").on("click", "#here-ee", function(){
-        $("#top-nav").find("li").removeClass("active"); 
-        $("#main-content").html("").append($("#about-content").html()); 
-    });
 
     $("#main-content").on("click", "#here-robot", function(){
         $("#top-nav").find("li").removeClass("active"); 
@@ -279,9 +275,9 @@
                             <h1><i>"My goal is to make pain go away..."</i></h1>
                             <p>My name is Dr. Nicole Nova and I'm 24 years old. I earned my degree in <b>Dental Surgery (DDS)</b> last year, and my <b>Master's Thesis</b> dealt with chronic pain in rheumatoid arthritis. This type of academic research is important in order to develop effective pharmaceutics for pain relief. However, it takes approximately 20 years from academic research to a drug on the market! That is a very long time for someone in constant agony. Most pain relieving drugs on the market today have side-effects and that is a major problem, especially for chronic pain patients.
                             <br><br>
-                             Another approach is to use technological devices (e.g. TENS - Transcutaneous Electrical Nerve Stimulation) to influence nerve stimulation. However, this particular device is not as efficient as taking drugs, but I believe there is a technological solution that might be quicker than the development of a pharmaceutical drug. This is one of the reasons why I'm currently studying <b>Electrical Engineering</b>.
+                             Another approach is to use technological devices (e.g. TENS - Transcutaneous Electrical Nerve Stimulation) to ease pain from the periphery. However, this particular device is not as efficient as taking drugs, but I believe the idea of electric stimulation can be further developed. This is one of the reasons why I'm currently studying <b>Electrical Engineering</b>.
                              <br><br>
-                            I have firsthand experience working with patients and surgical procedures, and I've been very observant on things to improve using new technology. My ambition is to do <b>research</b> and <b>innovation</b> in an <i>interdisciplinary field</i>. Fields of interest are: <i>Biomedical Sciences</i> (especially Neurobiology or Genetics), <i>Bioengineering</i>, <i>Medical Engineering</i> (especially in surgery), <i>Systems Biology</i>, <i>Computational Biology</i>, or any kind of technological research applied in biology/medicine. </p>
+                            I have firsthand experience with patients and surgical procedures, which is valuable in a career in engineering. My ambition is to do <b>research</b> and <b>innovation</b> in an <i>interdisciplinary field</i>. Fields of interest are: <i>Biomedical Sciences</i> (especially Neurobiology and Genetics), <i>Bioengineering</i>, <i>Medical Engineering</i> (especially in surgery), <i>Systems Biology</i>, <i>Computational Biology</i>, or any kind of technological research applied in biology/medicine. </p>
                         </td>
                     </tr>
                 </tbody>
@@ -363,7 +359,7 @@
                                     <p>Admitted to a four week medical program organized by the Medical University of Vienna for international students to shadow/assist physicians/surgeons at the General Hospital (AKH). <br>
                     Internship at the Department of Cranio-, Maxillofacial and Oral Surgery. <br>
                     Supervisor: Prof. Dr. Dr. Rolf Ewers. <br><br>
-                    I learned a lot spending every day at the AKH for a month. On my first day of internship I witnessed a craniofacial procedure, were a benign bone tumor had to be removed (located on the patient's forehead). As a plastic surgery procedure, the incision was made on the top of the head behind the hairline (from ear to ear), out of esthetic reasons to "hide" the wound of incision. But the cost was to pull the whole flap down, or rather loosen the skin, all the way down to the forehead. It was pretty extreme! Other procedures that I've seen were orthognatic surgery (jaw correction), removal of cysts, cancer surgery, and reconstructive surgery (sometimes with transplants from other parts of the body, like a part of the fibula for bone reconstruction). When assisting the two head surgeons I usually held the "hooks" attached to the flaps, or removed fluids through suction. This whole experience got me thinking of ways to improve surgical procedures.</p><br>
+                    I learned a lot spending a month at the General Hospital AKH. On my first day of internship I witnessed a craniofacial procedure, were a benign bone tumor had to be removed (located on the patient's forehead). The incision was made behind the hairline (from ear to ear), out of esthetic reasons to "hide" the wound of incision. But the cost was to pull the whole flap down, or rather loosen the skin, all the way down to the forehead. It was pretty extreme. Other procedures that I've seen were orthognatic surgery (jaw correction), removal of cysts, cancer surgery, and reconstructive surgery (sometimes with transplants from other parts of the body, like a part of the fibula for bone reconstruction for the jaw). When assisting the two head surgeons I usually held the "hooks" attached to the flaps, or removed fluids through suction. This whole experience got me thinking of ways to improve surgical procedures.</p><br>
                                     <img alt="IFMSA." style="height: 80px; text-align: right;" src="Images/ifmsa.png"></img>
                                     <br>
                                     <br>
@@ -378,7 +374,7 @@
                                     <td>
                                     <h4>International Student Training Course in Dental Implantology</h4>
                                     <h5>Maxillofacial Federation (MFF)</h5>
-                                    <p>This took place in Chiemsee Akademie, Seebruck, Germany. The whole week was scheduled with lectures and workshops. The speakers were mainly Oral and Maxillofacial Surgeons and professors, and the workshops consisted of bone grafting, sinus lifts, drilling and insertion of implant screws, etc. It was very helpful when I in my senior year of dental school had my own implant patient case.</p><br>
+                                    <p>This took place in Chiemsee Akademie, Seebruck, Germany. The whole week was scheduled with lectures and workshops. The speakers were mainly oral and maxillofacial surgeons and professors, and the workshops consisted of bone grafting, sinus lifts, drilling and insertion of implant screws, etc. It was very helpful when I in my senior year of dental school had my own implant patient case.</p><br>
                                     <img alt="MFF." style="height: 80px;" src="Images/mff.png"></img>
                                     <img alt="Meisinger." style="height: 140px;" src="Images/skull.png"></img>
                                     <br>
@@ -453,13 +449,13 @@
                                       <a href="Files/master.pdf"><button class="btn btn-danger">Paper</button></a>
                                       <a href="Files/MasterPPP.pdf"><button class="btn btn-warning">Presentation</button></a>
                                       <br><br><br><br>
-                                      <h4>Research Program in Medical Sciences (2010)</h4><a name="see2"></a><h5>Assessment of c-fos as a marker of spinal neuronal activity in a pain model of rheumatoid arthritis</h5>
-                                      <p>This was a summer research program for talented KI students who got funding for doing research in a lab for two months. This was when I started working with Dr. Camilla Svensson (great mentor!) on a project that later became a part of my <i>Master's Thesis</i>. I learned doing antibody probing and immunohistochemistry, and analyzing microscopic images using the software <i>ImageJ</i>. It was a really exciting summer.</p><br>
+                                      <h4>Research Program in Medical Sciences (2010)</h4><a name="see2"></a><h5>Assessment of c-fos as a Marker of Spinal Neuronal Activity in a Pain model of Rheumatoid Arthritis</h5>
+                                      <p>This was a summer research program for talented KI students who got funding for doing research in a lab for two months. This was when I started working with Dr. Camilla Svensson on a project that later became a part of my <i>Master's Thesis</i>. I learned doing antibody probing and immunohistochemistry, and analyzing microscopic images using the software <i>ImageJ</i>. It was a really exciting summer.</p><br>
                                       <a href="Files/KIsom.pdf"><button class="btn btn-danger">Paper</button></a>
                                       <a href="Files/poster.pdf"><button class="btn btn-warning">Presentation</button></a>
                                       <br><br><br><br>
-                                    <h4>Research Program in Biomedical Sciences (2006)</h4><h5>Activation of Liver X Receptor affects the function and differentiation of osteoclasts</h5>
-                                      <p>This was a six week summer research program for the top 20 smartest high school students in the country (Sweden). This was how I first got acquainted with real research at the age of 16. The first week consisted of lectures, and the remaining part was spent working in a lab. I was working with Dr. Kirsten Robertson in the Adopted Orphan Receptors Lab at the <i>Department of Biosciences and Nutrition</i>. The nuclear receptor that we were investigating was <i>Liver X Recepter</i> (LXR). Little was known about it at the time, and my project was investigating what the receptor does to bone tissue. It was a cell study, and we were looking at the bone resorption cells, namely <i>osteoclasts</i>. I learned various lab techniques, such as pipetting, electrophoresis, PCR (Polymerase Chain Reaction), Real-Time PCR, and doing statistical analysis in the software <i>Prism</i>. I remember that summer being so overwhelming that I was determined to pursue a career in research.</p><br>
+                                    <h4>Research Program in Biomedical Sciences (2006)</h4><h5>Activation of Liver X Receptor Affects the Function and Differentiation of Osteoclasts</h5>
+                                      <p>This was a six week summer research program for the top 20 smartest high school students in the country (Sweden). This was how I first got acquainted with real research at the age of 16. The first week consisted of lectures, and the remaining part was spent working in a lab. I was working with Dr. Kirsten Robertson in the Adopted Orphan Receptors Lab at the <i>Department of Biosciences and Nutrition</i>. The nuclear receptor that we were investigating was <i>Liver X Recepter</i> (LXR). Little was known about it at the time, and my project was investigating what the receptor does to bone tissue. It was a cell study, and we were looking at the bone resorption cells, namely <i>osteoclasts</i>. I learned various lab techniques, such as pipetting correctly, electrophoresis, PCR (Polymerase Chain Reaction), Real-Time PCR, and doing statistical analysis in the software <i>Prism</i>. I remember that summer being so overwhelming that I was determined to pursue a career in research.</p><br>
                                       <a href="Files/LXR.pdf"><button class="btn btn-danger">Paper</button></a>
                                       <br><br><br><br>
                                     </td>
@@ -478,12 +474,9 @@
                                 <tr>
                                     <td style="width: 620px;">
                                     <a name="see4"></a>
-                                        <h4>Research Science Institute (2007)</h4><h5>What does performance on one visual search task tell you about 
-                        performance on another?</h5>
-                                      <p>This was a six week international summer research program for talented high school students. It was held at <a href="http://www.mit.edu/">Massachusetts Institute of Technology (MIT)</a> and organized by the <a href="http://cee.org/">Center for Excellence in Education (CEE)</a>. The first week of the program consisted of classes in two science subjects of interest (in my case <i>biology</i> and <i>chemistry</i>), math, and humanities. Also we learned how to write a scientific paper in LaTeX and hold a professional presentation. The rest of the summer was spent on working in a lab. <br><br>
-                                      I was working with Dr. Jeremy Wolfe in the Visual Attention Lab at the Department of Brain and Cognitive Sciences, Harvard Medical School, and Brigham and Women's Hospital. The project dealt with investigating whether simple search tasks (looking for a green line among red lines) was correlated with the complicated real-world scenes. I looked especially if it correlated with searching for weapons in baggage x-ray pictures. I was working with a grad student called Michael Van Wert, and the work got later published. <br><br>
-                                      Besides working in a lab, us students also went to listen to famous guest speakers (even Nobel Laureates) at MIT in various topics in science and engineering. It was truly the best summer a science-loving 17 year old could ever had. 
-                        </p>
+                                        <h4>Research Science Institute (2007)</h4><h5>What does performance on one visual search task tell you about performance on another?</h5>
+                                      <p>This was a six week international summer research program for talented high school students. It was held at <a href="http://www.mit.edu/">Massachusetts Institute of Technology (MIT)</a> and organized by the <a href="http://cee.org/">Center for Excellence in Education (CEE)</a>. The first week of the program consisted of classes in two science subjects of interest (in my case <i>biology</i> and <i>chemistry</i>), math, and humanities. Also we learned how to write a scientific paper in LaTeX and hold a professional presentation. The rest of the summer was spent on working in a lab and attending great evening lectures. <br><br>
+                                      I was working with Dr. Jeremy Wolfe in the Visual Attention Lab at the <i>Department of Brain and Cognitive Sciences</i> at Harvard Medical School and Brigham and Women's Hospital. The project dealt with investigating whether simple search tasks (looking for a green line among red lines) was correlated with the complicated real-world scenes. I looked especially if it correlated with searching for weapons in baggage x-ray pictures. I was working with a grad student and the work got later published.</p><br><br>
                                     <a href="http://www.journalofvision.org/content/8/6/312">
                                     <button class="btn btn-info">Publication</button></a>
                                     <br><br><br><br>
@@ -521,7 +514,7 @@
                                     <td style="width: 500px;">
                                     <h4>Since 2011</h4><h5>Summer Research Program for Swedish High School Students</h5>
                                     <p>Rays is a summer research program that was founded by a Swedish RSI'06 alumn Daniel Langkilde. Rays is basically a similar program like RSI, but in Sweden. Jenny Sul (RSI'08) was also helping out in the commencement. Another alumn (me, RSI'07) helped Jenny with mentorships at KI for the first summer in 2011. However, I was unable to be a staff member that summer as I already received the ERASMUS Scholarship for studies abroad. In the fall of 2011 I joined the committee to organize mentorships at prestigious universities in Stockholm. It's so rewarding to help the next generation of talented students, especially since I've been to similar research programs myself and I know that those were the best summers of my life.</p>
-                                    <img alt="Rays Logo." style="height: 100px;" src="Images/rays.jpg"></img>
+                                    <a href="http://www.raysforexcellence.se/"><img alt="Rays Logo." style="height: 100px;" src="Images/rays.jpg"></img></a>
                                     <td style="width: 500px; text-align: right;">
                                     <img alt="Rays." style="width: 470px;" src="Images/rays2.JPG"></img>
                                     </td>
@@ -544,8 +537,7 @@
                                 <tr>
                                     <td style="width: 500px;">
                                     <h4>2007 - 2009</h4><h5>Organization run by Young Scientists for High School Students</h5>
-                                    <p>This is a well established organization that has been running for decades. It is functioning on a national level and has suborganizations in different regions. The main office is in Stockholm though. I was offered to join the team right after I received the First Prize in the National Science Fair. I then started working in the executive committee of Utst&auml;llningsgruppen (UG) running the fair. I was in charge of lectures and event logistics at the Museum of Technology (Tekniska museet). This took place before and during my first and second year of dental school. It was a great experience to get involved in management and working in a team.
-        </p><br>
+                                    <p>This is a well established organization that has been running for decades. It is functioning on a national level and has suborganizations in different regions. The main office is in Stockholm though. I was offered to join the team right after I received the First Prize in the National Science Fair. I then started working in the executive committee of Utst&auml;llningsgruppen (UG) running the fair. I was in charge of lectures and event logistics at the <a href="http://www.tekniskamuseet.se/1/start_en.html">Museum of Technology</a> (Tekniska museet). This took place before and during my first and second year of dental school. It was a great experience to get involved in management and working in a team.</p><br>
                                     <td style="width: 500px; text-align: right;">
                                     <img alt="FUF." style="width: 470px;" src="Images/forbundet.png"></img>
                                     </td>
@@ -683,8 +675,8 @@
                                 <h3>My main area of interest in future research</h3>
                                 <h4>Previous research experience:</h4><br>
                               <h5>Chronic inflammation and pain: Assessment of c-Fos and ATF-3 as markers of spinal neuronal activity in a pain model of rheumatoid arthritis </h5><br>
-                              <h5>Assessment of c-fos as a marker of spinal neuronal activity in a pain model of rheumatoid arthritis</h5><br>
-                              <h5>Activation of Liver X Receptor affects the function and differentiation of osteoclasts</h5><br>
+                              <h5>Assessment of c-fos as a Marker of Spinal Neuronal Activity in a Pain Model of Rheumatoid Arthritis</h5><br>
+                              <h5>Activation of Liver X Receptor Affects the Function and Differentiation of Osteoclasts</h5><br>
                               <h5>What does performance on one visual search task tell you about performance on another?</h5>
                             </td>
                             <td style="width: 60px; text-align: right;">
