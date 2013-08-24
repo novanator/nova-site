@@ -7,7 +7,7 @@
 <html class=" linux firefox firefox23 gecko gecko23 js fontface generatedcontent video audio"><!--<![endif]-->
 <head>
 	<title>Nicole Nova</title>
-	
+	<link rel="icon" type="icon" href="http://nicolenova.com/Images/icon.png"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 	<meta content="" name="description"></meta>
@@ -63,11 +63,11 @@
         min-height: 100%;
         height: auto !important;
         height: 100%;
-        margin: 0 auto -3em;
+        margin: 0 auto -6.5em;
     }
 
     .footer, .push {
-        height: 3em;
+        height: 6.5em;
     }
     </style>
 
@@ -258,8 +258,10 @@
             <div class="push"></div>
         </div>
         <!-- Footer -->
-        <div align="center" class="footer"> 
-                <small style="color: rgb(250, 250, 250);">Copyright &copy; 2013 &diams; Nicole Nova</small>
+        <div align="center" class="footer">
+            <small style="color: rgb(250, 250, 250);">Copyright &copy; 2013</small>
+            <img alt="icon" src="Images/icon.png" style="height: 40px;"></img> 
+            <small style="color: rgb(250, 250, 250);">Nicole Nova</small>
         </div> <!-- END Footer -->
     </div>
 
