@@ -178,7 +178,7 @@
 	            <tbody>
 		            <tr>
 		            <td style="text-align: center; width: 425px;">
-                        <font size="4" face="comic sans ms" style="color: #97c1e1;">New frontiers in interdisciplinary research</font>
+                        <img alt="slogan" style="text-align: center; height: 40px;" src="Images/slogan.png"></img>
                     </td>
 		            <td style="vertical-align: center; text-align: right; width: 0px;">
 			         </td>
@@ -709,8 +709,8 @@
                         <tr>
                             <td style="width: 700px; vertical-align: top;">
                                 <h4>Programming experience</h4><h5>Skills/Languages</h5>
-                              <p>Python, MATLAB, Java, ROBOTC, HTML/JS/CSS, ActionScript and LaTeX.<br>
-                              I made this website! Hope you like it.
+                              <p>Python, MATLAB, Java, ROBOTC, HTML/JS/CSS, ActionScript and LaTeX.<br><br>
+                              I made this website! Hope you like it.<br><br>
                               To see more examples of what I've done, checkout my <a href="https://github.com/novanator">GitHub</a> page.</p>
                             </td>
                             <td style="width: 300px; text-align: center;">
