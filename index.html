@@ -69,6 +69,73 @@
     .footer, .push {
         height: 6.5em;
     }
+    
+    .prezi-keratosis {
+        background-image: url("Images/keratosis-diagram.png");
+        width: 1100px;
+        height: 700px;
+        background-size: contain; 
+    }
+
+    #ker1 {
+        position:relative;
+		left: 188px;
+		top: 575px;
+    }
+    
+    #ker2 {
+        position:relative;
+		left: 388px;
+		top: 375px;
+    }
+    
+    #ker-ref1 {
+        position:relative;
+		left: 560px;
+		top: 322px;
+    }
+    
+    #ker-ref2 {
+        position:relative;
+		left: 560px;
+		top: 322px;
+    }
+    
+    #ker-ref3 {
+        position:relative;
+		left: 560px;
+		top: 322px;
+    }
+    
+    #ker-ref4 {
+        position:relative;
+		left: 560px;
+		top: 322px;
+    }
+    
+    #pem1 {
+        position:relative;
+		left: 790px;
+		top: 695px;
+    }
+    
+    .prezi-pemphigus {
+        background-image: url("Images/pemphigus-diagram.png");
+        width: 1100px;
+        height: 780px;
+        background-size: contain; 
+        background-size: cover;
+        background-repeat: no-repeat; 
+    }
+    
+        .prezi-lupus {
+        background-image: url("Images/lupus-diagram.png");
+        width: 1100px;
+        height: 635px;
+        background-size: contain; 
+        background-repeat: no-repeat; 
+    }
+    
     </style>
 
     <script>
@@ -168,7 +235,22 @@
     //IMPORTANT
     $("#nicolenova-nav").click();  
     });
+    
+    //popover
+    $('#example').popover(options)
+    $('#element').popover('toggle')
     </script>
+    <script type="text/javascript">
+    $(function () {
+        $('body').popover({
+            selector: '[data-toggle="popover"]'
+        });
+
+        $('body').tooltip({
+            selector: 'a[rel="tooltip"], [data-toggle="tooltip"]'
+        });
+    });
+</script>
 </head>
 
 <body style="height: 100%; background-color: #d1e2e5;">
@@ -259,7 +341,7 @@
         </div>
         <!-- Footer -->
         <div align="center" class="footer">
-            <small style="color: rgb(250, 250, 250);">Copyright &copy; 2013</small>
+            <small style="color: rgb(250, 250, 250);">Copyright &copy; 2014</small>
             <img alt="icon" src="Images/icon.png" style="height: 40px;"></img> 
             <small style="color: rgb(250, 250, 250);">Nicole Nova</small>
         </div> <!-- END Footer -->
@@ -593,9 +675,12 @@
 		    <!--Pills-->
 	        <ul class="nav nav-pills">
 		        <li class="active"><a href="#robotics-panel" data-toggle="pill">Robotics</a></li>
-		        <li><a href="#bioeng-panel" data-toggle="pill">Bioengineering</a></li>
+		        <li><a href="#surgery-panel" data-toggle="pill">Surgery</a></li>
+		        <li><a href="#imaging-panel" data-toggle="pill">Imaging</a></li>
+		        <li><a href="#lesions-panel" data-toggle="pill">Oral lesions</a></li>
 	        </ul>
             <div class="pill-content">
+                <!--ROBOTICS-->
                 <div class="pill-pane fade in active" id="robotics-panel">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
@@ -631,12 +716,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="pill-pane fade" id="bioeng-panel">
+                <!--END ROBOTICS-->
+                
+                <!--SURGERY-->
+                <div class="pill-pane fade" id="surgery-panel">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                        <h2 class="panel-title">Bioengineering</h2>
+                            <h2 class="panel-title">Surgery - Problems to work on in the future</h2>
                         </div>
-                        <h3 style="text-align: center;">Problems to work on in the future</h3>
                         <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="10" cellspacing="0">
                             <tbody>
                                 <tr>
@@ -648,6 +735,29 @@
                                         <img alt="Dentistry." style="width: 350px;" src="Images/dent.jpg"></img>
                                     </td> 
                                 </tr>
+                                
+                                <tr>
+                                    <td style="width: 600px;">
+                                        <h4>Drop the hooks!</h4><h5>Old-fashioned way of stabilizing flaps in surgery</h5>
+                                        <p>The key thing in surgery is clear vision of the site in question. Peripheral tissues (e.g. skin/muscles) need to be cut and the flaps folded to the side to open up. While the leading surgeon is active (i.e. cutting and removing pathological tissues such as tumors and cysts, etc.) the other surgeons assist with suction (of water/blood) and holding the flaps apart with hooks. I had the experience of holding the hooks for 6 hours straight! The physical exhaustion of my arms and shoulders was burdensome. Especially because you have to be completely still most of the time. Sometimes you'll move the hooks in a manner to favor the work of the active surgeon, which requires the skill of being one step ahead. You also have to constantly weigh the two opposing actions: not taking up a lot of space, and maximizing the opening. So even though holding the hooks seems to be a static activity, it's not that simple to just replace the assisting surgeon with a passive tool with fixed hooks. A machine with some level of intelligence is needed. The machine is crucial here because A) it can be programmed to be completely still, and B) it doesn't experience muscle fatigue and pain.</p>
+                                    </td>
+                                    <td style="width: 400px; text-align: right;">
+                                    </td> 
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--END SURGERY-->
+                
+                <!--IMAGING-->
+                <div class="pill-pane fade" id="imaging-panel">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">Imaging - Problems to work on in the future</h2>
+                        </div>
+                        <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="10" cellspacing="0">
+                            <tbody>
                                 <tr>
                                     <td style="width: 600px;">
                                         <h4>Ultimate X-Ray Precision <i>During</i> Surgery</h4>
@@ -660,24 +770,56 @@
                                 </tr>
                                 <tr>
                                     <td style="width: 600px;">
-                                        <h4>Drop the hooks!</h4><h5>Old-fashioned way of stabilizing flaps in surgery</h5>
-                                        <p>The key thing in surgery is clear vision of the site in question. Peripheral tissues (e.g. skin/muscles) need to be cut and the flaps folded to the side to open up. While the leading surgeon is active (i.e. cutting and removing pathological tissues such as tumors and cysts, etc.) the other surgeons assist with suction (of water/blood) and holding the flaps apart with hooks. I had the experience of holding the hooks for 6 hours straight! The physical exhaustion of my arms and shoulders was burdensome. Especially because you have to be completely still most of the time. Sometimes you'll move the hooks in a manner to favor the work of the active surgeon, which requires the skill of being one step ahead. You also have to constantly weigh the two opposing actions: not taking up a lot of space, and maximizing the opening. So even though holding the hooks seems to be a static activity, it's not that simple to just replace the assisting surgeon with a passive tool with fixed hooks. A machine with some level of intelligence is needed. The machine is crucial here because A) it can be programmed to be completely still, and B) it doesn't experience muscle fatigue and pain.</p>
-                                    </td>
-                                    <td style="width: 400px; text-align: right;">
-<!--                                        <img alt="Dentistry." style="width: 350px;" src="Images/dent.jpg"></img>-->
-                                    </td> 
-                                </tr>
-                                <tr>
-                                    <td style="width: 600px;">
                                         <h4>Counting cells in microscopy</h4><h5>There is a need for a reliable program to count cells in immunohistochemistry</h5>
                                         <p>Imagine counting dots on images where the range is hundreds to thousands, and the number of images ranges between 10 - 100. That's a lot of dots to count! Prone for human error! That's why the process is repeated by the same person and also by someone else. Tedious, yes, but also very time-consuming. There is software that can make counting cells under a microscope a little easier. You can take a magnified picture of the slide showing the fluorescent dots from the immunohistochemistry procedure. To know exactly which dots are actual cells, you can take another picture of the same slide but lit with a "control light wavelength". Using an image editing software you can superimpose the two images and see which dots are active cells - the targets for counting. But the actual cell counting procedure is not automated yet (at least that was still the case when I was working on my Master's Thesis). <i>ImageJ</i> provides you with the tool to label each counted cell with a number to keep track. That's good, but the manual counting is something that needs to be improved! There's also the option of having the program counting the dots of a certain color for you, but not all dots are cells, and there is a lot of noise. This makes the results pretty unreliable. My intention is to tackle this problem and find a reliable algorithm.</p>
                                     </td>
                                     <td style="width: 400px; text-align: right;">
-<!--                                        <img alt="Dentistry." style="width: 350px;" src="Images/dent.jpg"></img>-->
                                     </td> 
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+                <!--END IMAGING-->
+                
+                <!--ORAL LESIONS-->                
+                <div class="pill-pane fade" id="lesions-panel">    <!--BEFORE bioeng-panel-->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                        <h2 class="panel-title">Oral lesions - Problems to work on in the future</h2>
+                        </div>
+                        <!-- NEW -->
+                        <div class="tabbable tabs-left">
+                            <ul class="nav nav-tabs">
+                                 <li class="active"><a href="#keratosis" data-toggle="tab">Frictional keratosis</a></li>
+                                 <li><a href="#pemphigus" data-toggle="tab">Pemphigus vulgaris</a></li>
+                                 <li><a href="#lupus" data-toggle="tab">Lichen & Lupus</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <!--KERATOSIS-->
+                                <div class="tab-pane active prezi-keratosis" id="keratosis">
+                                <!--iframe src="http://prezi.com/embed/7h7y39zsmchq/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined" width="1100" height="800" frameBorder="0" webkitAllowFullScreen mozAllowFullscreen allowfullscreen></iframe-->
+                                    <!--button data-toggle="tooltip" data-title="My tooltip">Button</button-->
+                                    <!--img alt="Keratosis Diagram" style="width: 1100px;" src="Images/keratosis-diagram.png"></img-->
+                                    <a id="ker-ref1" rel="tooltip" title="Tanaka T, Tanaka M, Tanaka T. Oral carcinogenesis and oral cancer chemoprevention: a review. Patholog Res Int. 2011;2011:431246">[1]</a>
+                                    <a id="ker-ref2"rel="tooltip" title="Silverman S Jr, Gorsky M, Lozada F. Oral leukoplakia and malignant transformation. A follow-up study of 257 patients. Cancer. 1984 Feb;53(3):563-8">[2]</a>
+                                    <a id="ker-ref3"rel="tooltip" title="Waldron CA, Shafer WG. Leukoplakia revisited. A clinicopathologic study 3256 oral leukoplakias. 1975 Oct;36(4):1386-92">[3]</a>
+                                    <a id="ker-ref4" rel="tooltip" title="Woo SB, Lin D. Morsicatio mucosae oris -- a chronic oral frictional keratosis, not a leukoplakia. J Oral Maxillofac Surg. 2009 Jan;67(1):140-6">[4]</a>
+                                    
+                                    <button id="ker1" class="btn btn-danger" data-toggle="popover" data-content="These are subconscious bad habits of pressing the tongue and inner side of the cheeks against the teeth arch. It happens most frequently at night when the patient is sleeping, or really focused at daytime. The etiology of these bad habits is unknown, but one theory is that psychological stress leads to hyperactivity in the oral muscles.">More</button>
+                                    <button id="ker2" class="btn btn-danger" data-toggle="popover" data-content="In some literature, such white lesions are classified as leukoplakia [1], which means “white patch” and has been used for diagnostic purposes when all other diagnoses have been eliminated. However, as the diagnosis doesn’t really provide any further information, it should only be used as a clinical term [1]. Keratosis is usually benign, but people with leukoplakia have a greater risk of developing oral cancer if it develops into dysplasia [1, 2, 3]. However, some studies suggest that the risk of developing oral cancer from cheek biting is close to nothing [4]. In my opinion, more studies need to confirm this before ruling out the possibility of developing cancer. Especially since case studies and clinical studies have a lower scientific reliability. There’s always the possibility that some of the lesions would have become malignant at a later stage in the patient’s lifetime.  
+">More</button>
+                                </div>
+                                 <!--PEMPHIGUS-->
+                                <div class="tab-pane prezi-pemphigus" id="pemphigus">
+                                    <button id="pem1" class="btn btn-danger" data-toggle="popover" data-content="The patch cannot replace the current treatment of corticosteroids, as those target the whole body affected by the disease. However, the mouth is a harsh environment for the mucosa with constant tongue movements and intake of food and beverages, so the patch could serve as an extra layer of protection.">More</button>
+                                </div>
+                                 <!--LUPUS & LICHEN-->
+                                <div class="tab-pane prezi-lupus" id="lupus">
+                                </div>
+                            </div>
+                        </div>
+                        <!--END NEW-->
                     </div>
                 </div>
             </div>
