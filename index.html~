@@ -240,8 +240,9 @@
         $('#element').popover('toggle');
     });
  
-/*   
+
 window.location.hash = 'yolo';
+/*
 x = window.location.hash
 x == "yolo"
 if x == 'yolo' {
