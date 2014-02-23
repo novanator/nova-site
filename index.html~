@@ -163,83 +163,128 @@
 		    function() { $(this).attr('src', HEADER_IMGS[$(this).attr("id")][1]); } //out
 	    );
 
-    //Switching contents of the page
-    $("#top-nav").on("click", "li a", function() {
-        $("#top-nav").find("li").removeClass("active");
-        $(this).parent().addClass("active");
-        var id = $(this).attr("id");
-        $("#main-content").html("").append($(TAB_PAIRINGS[id]).html());
-    });
+        //Switching contents of the page
+        $("#top-nav").on("click", "li a", function() {
+            $("#top-nav").find("li").removeClass("active");
+            $(this).parent().addClass("active");
+            var id = $(this).attr("id");
+            $("#main-content").html("").append($(TAB_PAIRINGS[id]).html());
+        });
 
-    $("#header-banner, #nicolenova-nav").on("click", function(){ 
-        $("#top-nav").find("li").removeClass("active"); 
-        $("#main-content").html("").append($("#nicolenova-content").html()); 
-    });
+        $("#header-banner, #nicolenova-nav").on("click", function(){ 
+            $("#top-nav").find("li").removeClass("active"); 
+            $("#main-content").html("").append($("#nicolenova-content").html()); 
+        });
 
-    $("#contact-nav").on("click", function(){ 
-        $("#top-nav").find("li").removeClass("active"); 
-        $("#main-content").html("").append($("#contact-content").html()); 
-    });
+        $("#contact-nav").on("click", function(){ 
+            $("#top-nav").find("li").removeClass("active"); 
+            $("#main-content").html("").append($("#contact-content").html()); 
+        });
 
-    $("#biotech-img").on("click", function(){ 
-        $("#top-nav").find("li").removeClass("active"); 
-        $("#main-content").html("").append($("#biotech-content").html()); 
-    });
+        $("#biotech-img").on("click", function(){ 
+            $("#top-nav").find("li").removeClass("active"); 
+            $("#main-content").html("").append($("#biotech-content").html()); 
+        });
 
-    $("#cs-img").on("click", function(){ 
-        $("#top-nav").find("li").removeClass("active"); 
-        $("#main-content").html("").append($("#cs-content").html()); 
-    });
+        $("#cs-img").on("click", function(){ 
+            $("#top-nav").find("li").removeClass("active"); 
+            $("#main-content").html("").append($("#cs-content").html()); 
+        });
 
-    $("#med-img").on("click", function(){ 
-        $("#top-nav").find("li").removeClass("active"); 
-        $("#main-content").html("").append($("#med-content").html()); 
-    });
+        $("#med-img").on("click", function(){ 
+            $("#top-nav").find("li").removeClass("active"); 
+            $("#main-content").html("").append($("#med-content").html()); 
+        });
 
-    $("#ee-img").on("click", function(){ 
-        $("#top-nav").find("li").removeClass("active"); 
-        $("#main-content").html("").append($("#ee-content").html()); 
-    });
+        $("#ee-img").on("click", function(){ 
+            $("#top-nav").find("li").removeClass("active"); 
+            $("#main-content").html("").append($("#ee-content").html()); 
+        });
 
-    $("#main-content").on("click", "#view1", function(){
-        $("#top-nav").find("li").removeClass("active"); 
-        $("#main-content").html("").append($("#research-content").html()); 
-    });
+        $("#main-content").on("click", "#view1", function(){
+            $("#top-nav").find("li").removeClass("active"); 
+            $("#main-content").html("").append($("#research-content").html()); 
+        });
 
-    $("#main-content").on("click", "#view2", function(){
-        $("#top-nav").find("li").removeClass("active"); 
-        $("#main-content").html("").append($("#research-content").html()); 
-    });
+        $("#main-content").on("click", "#view2", function(){
+            $("#top-nav").find("li").removeClass("active"); 
+            $("#main-content").html("").append($("#research-content").html()); 
+        });
 
-    $("#main-content").on("click", "#view3", function(){
-        $("#top-nav").find("li").removeClass("active"); 
-        $("#main-content").html("").append($("#research-content").html()); 
-    });
+        $("#main-content").on("click", "#view3", function(){
+            $("#top-nav").find("li").removeClass("active"); 
+            $("#main-content").html("").append($("#research-content").html()); 
+        });
 
-    $("#main-content").on("click", "#view4", function(){
-        $("#top-nav").find("li").removeClass("active"); 
-        $("#main-content").html("").append($("#rsi-panel").html()); 
-    });
+        $("#main-content").on("click", "#view4", function(){
+            $("#top-nav").find("li").removeClass("active"); 
+            $("#main-content").html("").append($("#rsi-panel").html()); 
+        });
 
-    $("#main-content").on("click", "#here-education", "#here-ee", function(){
-        $("#top-nav").find("li").removeClass("active"); 
-        $("#main-content").html("").append($("#about-content").html()); 
-    });
+        $("#main-content").on("click", "#here-education", "#here-ee", function(){
+            $("#top-nav").find("li").removeClass("active"); 
+            $("#main-content").html("").append($("#about-content").html()); 
+        });
 
 
-    $("#main-content").on("click", "#here-robot", function(){
-        $("#top-nav").find("li").removeClass("active"); 
-        $("#main-content").html("").append($("#projects-content").html()); 
-    });
+        $("#main-content").on("click", "#here-robot", function(){
+            $("#top-nav").find("li").removeClass("active"); 
+            $("#main-content").html("").append($("#projects-content").html()); 
+        });
 
-    //IMPORTANT
-    $("#nicolenova-nav").click();  
+        //IMPORTANT
+        $("#nicolenova-nav").click();  
+        
+        //popover
+        $('#example').popover(options);
+        $('#element').popover('toggle');
     });
+ 
+/*   
+window.location.hash = 'yolo';
+x = window.location.hash
+x == "yolo"
+if x == 'yolo' {
+displayPage('yolo');
+}
+*/
+    /*hashtag location
     
-    //popover
-    $('#example').popover(options)
-    $('#element').popover('toggle')
+    
+    function homeHandler() {
+//Do stuff--e.g. get via AJAX -> render template (optional) -> append HTML to an element
+}
+
+function aboutHandler() {
+  //Do stuff
+}
+
+function researchHandler() {
+  //Do stuff
+}
+
+function leadershipHandler() {
+  //Do stuff
+}
+
+function projectsHandler() {
+  //Do stuff
+}
+
+function locationHashChanged() {  
+    (location.hash === "#/home/") &&  homeHandler();
+    (location.hash === "#/about/") &&  aboutHandler();
+    (location.hash === "#/research/") && researchHandler();
+    (location.hash === "#/leadership/") &&  leadershipHandler();
+    (location.hash === "#/projects/") && projectsHandler();  
+  }  
+}  
+
+window.onhashchange = locationHashChanged;
+*/
+    
     </script>
+    
     <script type="text/javascript">
     $(function () {
         $('body').popover({
@@ -250,6 +295,7 @@
             selector: 'a[rel="tooltip"], [data-toggle="tooltip"]'
         });
     });
+
 </script>
 </head>
 
