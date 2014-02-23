@@ -155,7 +155,10 @@
         "leadership-nav": "#leadership-content",
         "projects-nav": "#projects-content",
     };
+    
+    
 
+    //jQuery
     //shifting images in header
     $(document).ready(function(){
 	    $(".header-img").hover(
@@ -163,77 +166,54 @@
 		    function() { $(this).attr('src', HEADER_IMGS[$(this).attr("id")][1]); } //out
 	    );
 
-        //Switching contents of the page
+        //Switching contents on the page
         $("#top-nav").on("click", "li a", function() {
             $("#top-nav").find("li").removeClass("active");
             $(this).parent().addClass("active");
             var id = $(this).attr("id");
             $("#main-content").html("").append($(TAB_PAIRINGS[id]).html());
         });
-
-        $("#header-banner, #nicolenova-nav").on("click", function(){ 
-            $("#top-nav").find("li").removeClass("active"); 
-            $("#main-content").html("").append($("#nicolenova-content").html()); 
+        
+        //Displaying content on each page
+        $(function displayPage(pageID) {
+            $("#top-nav").find("li").removeClass("active");
+            $("#main-content").html("").append($("#" + pageID).html());
+            $(window.location.hash = pageID);
         });
+        
+        $("#header-banner, #nicolenova-nav").on("click", displayPage(nicolenova-content));
 
-        $("#contact-nav").on("click", function(){ 
-            $("#top-nav").find("li").removeClass("active"); 
-            $("#main-content").html("").append($("#contact-content").html()); 
+        $("#contact-nav").on("click", displayPage(contact-content));
+
+        $("#biotech-img").on("click", displayPage(biotech-content));
+
+        $("#cs-img").on("click", displayPage(cs-content));
+
+        $("#med-img").on("click", displayPage(med-content));
+
+        $("#ee-img").on("click", displayPage(ee-content));
+
+        $("#main-content").on("click", "#view1", "#view2", "#view3", displayPage(research-content));
+
+        /*
+        $("#main-content").on("click", "#view2", displayPage(research-content));
+
+        $("#main-content").on("click", "#view3", displayPage(research-content));
+        */
+
+        $("#main-content").on("click", "#view4", displayPage(rsi-panel));
+
+        $("#main-content").on("click", "#here-education", "#here-ee", displayPage(about-content));
+
+        $("#main-content").on("click", "#here-robot", displayPage(projects-content));
+
+        
+        $(if (window.location.hash) {
+            displayPage(window.location.hash);
+        } 
+        else {
+            $("#nicolenova-nav").click();
         });
-
-        $("#biotech-img").on("click", function(){ 
-            $("#top-nav").find("li").removeClass("active"); 
-            $("#main-content").html("").append($("#biotech-content").html()); 
-        });
-
-        $("#cs-img").on("click", function(){ 
-            $("#top-nav").find("li").removeClass("active"); 
-            $("#main-content").html("").append($("#cs-content").html()); 
-        });
-
-        $("#med-img").on("click", function(){ 
-            $("#top-nav").find("li").removeClass("active"); 
-            $("#main-content").html("").append($("#med-content").html()); 
-        });
-
-        $("#ee-img").on("click", function(){ 
-            $("#top-nav").find("li").removeClass("active"); 
-            $("#main-content").html("").append($("#ee-content").html()); 
-        });
-
-        $("#main-content").on("click", "#view1", function(){
-            $("#top-nav").find("li").removeClass("active"); 
-            $("#main-content").html("").append($("#research-content").html()); 
-        });
-
-        $("#main-content").on("click", "#view2", function(){
-            $("#top-nav").find("li").removeClass("active"); 
-            $("#main-content").html("").append($("#research-content").html()); 
-        });
-
-        $("#main-content").on("click", "#view3", function(){
-            $("#top-nav").find("li").removeClass("active"); 
-            $("#main-content").html("").append($("#research-content").html()); 
-        });
-
-        $("#main-content").on("click", "#view4", function(){
-            $("#top-nav").find("li").removeClass("active"); 
-            $("#main-content").html("").append($("#rsi-panel").html()); 
-        });
-
-        $("#main-content").on("click", "#here-education", "#here-ee", function(){
-            $("#top-nav").find("li").removeClass("active"); 
-            $("#main-content").html("").append($("#about-content").html()); 
-        });
-
-
-        $("#main-content").on("click", "#here-robot", function(){
-            $("#top-nav").find("li").removeClass("active"); 
-            $("#main-content").html("").append($("#projects-content").html()); 
-        });
-
-        //IMPORTANT
-        $("#nicolenova-nav").click();  
         
         //popover
         $('#example').popover(options);
@@ -241,7 +221,8 @@
     });
  
 
-window.location.hash = 'home';
+
+//window.location.hash = 'home';
 /*
 x = window.location.hash
 x == "home"
