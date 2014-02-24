@@ -148,95 +148,113 @@
 	    'linkedin-img': ['Images/linkedin-dark.png', 'Images/linkedin.png'],
 	    'git-img': ['Images/git-dark.png', 'Images/git.png'],
     };
-
-    TAB_PAIRINGS = {
-        "about-nav": "#about-content",
-        "research-nav": "#research-content",
-        "leadership-nav": "#leadership-content",
-        "projects-nav": "#projects-content",
-    };
     
+    TAB_PAIRINGS = {
+        "about-nav": "#about",
+        "research-nav": "#research",
+        "leadership-nav": "#leadership",
+        "projects-nav": "#projects",
+    };
 
     //jQuery
-    //shifting images in header
     $(document).ready(function(){
+        //shifting images in header
 	    $(".header-img").hover(
 		    function() { $(this).attr('src', HEADER_IMGS[$(this).attr("id")][0]); }, //in
 		    function() { $(this).attr('src', HEADER_IMGS[$(this).attr("id")][1]); } //out
 	    );
 
-        //Switching contents on the page
+        //Switching contents on the page, displaying pages on navigation bar
         $("#top-nav").on("click", "li a", function() {
-            $("#top-nav").find("li").removeClass("active");
             $(this).parent().addClass("active");
             var id = $(this).attr("id");
+            $("#top-nav").find("li").removeClass("active");
             $("#main-content").html("").append($(TAB_PAIRINGS[id]).html());
+            window.location.hash = TAB_PAIRINGS[id];
         });
         
-        //Displaying pages
+        //Displaying pages in header
         function displayPage(pageID){ 
             $("#top-nav").find("li").removeClass("active"); 
             $("#main-content").html("").append($("#" + pageID).html()); 
             window.location.hash = pageID;
-        }
+        };
         
+        /*
+        $("#about-nav").on("click", function(){
+            displayPage("about-content");
+        });
         
-        $("#header-banner, #nicolenova-nav").on("click", function(){ 
-            displayPage("nicolenova-content")
+        $("#research-nav").on("click", function(){
+            displayPage("research-content");
+        });
+        
+        $("#leadership-nav").on("click", function(){
+            displayPage("leadership-content");
+        });
+        
+        $("#projects-nav").on("click", function(){
+            displayPage("projects-content");
+        });
+        */
+        
+   
+        //Nothing after # after refreshing (took out #home-nav)
+        $("#header-banner, #home-nav").on("click", function(){ 
+            displayPage("home");
         });
 
         $("#contact-nav").on("click", function(){
-            displayPage("contact-content")
+            displayPage("contact");
         });
-
+        
+        //Those who don't work are all in the navigation bar, and header-banner, so all with turqouise content, have in common href=#.
+        //These all work with hash.location
         $("#biotech-img").on("click", function(){ 
-            displayPage("biotech-content")
+            displayPage("biotech");
         });
 
         $("#cs-img").on("click", function(){ 
-            displayPage("cs-content")
+            displayPage("cs");
         });
 
         $("#med-img").on("click", function(){ 
-            displayPage("med-content")
+            displayPage("med");
         });
 
         $("#ee-img").on("click", function(){ 
-            displayPage("ee-content")
+            displayPage("ee");
         });
 
-        $("#main-content").on("click", "#view1", function(){
-            displayPage("research-content")
-        });
-
-        $("#main-content").on("click", "#view2", function(){
-            displayPage("research-content")
-        });
-
-        $("#main-content").on("click", "#view3", function(){
-            displayPage("research-content")
+        $("#main-content").on("click", "#view1, #view2, #view3", function(){
+            displayPage("research");
         });
 
         $("#main-content").on("click", "#view4", function(){
-            displayPage("rsi-panel")
+            displayPage("rsi-panel");
         });
 
-        $("#main-content").on("click", "#here-education", "#here-ee", function(){
-            displayPage("about-content")
+        // Nothing after #
+        $("#main-content").on("click", "#here-education, #here-ee", function(){
+            displayPage("about");
         });
 
         $("#main-content").on("click", "#here-robot", function(){
-            displayPage("projects-content") 
+            displayPage("projects"); 
         });
         
         //IMPORTANT
-        //$("#nicolenova-nav").click();
+        $("#home-nav").click();
+        // IF stays on same page when refreshing (but no content shows up) ELSE goes to homepage when refreshing
+        /*
         if (window.location.hash) {
             displayPage(window.location.hash);
         } 
         else {
-            $("#nicolenova-nav").click();
+            $("#home-nav").click(); //important
         }
+        */
+        
         
         //popover
         $('#example').popover('options');
@@ -261,14 +279,14 @@
 </head>
 
 <body style="height: 100%; background-color: #d1e2e5;">
-    <!--Navbar-->
+    <!--Navbar-->                                           <!--added matching names after # in href="#" on all nav buttons-->
     <div class="navbar navbar-fixed-top radiant" style="background-color: #175483; border-radius: 0px; color: #fffff; margin-bottom: 0px; margin-left: auto; margin-right: auto;">
-        <a class="navbar-brand" id="nicolenova-nav" href="#">Nicole Nova</a>
+        <a class="navbar-brand" id="home-nav" href="#home">Nicole Nova</a>
           <ul id="top-nav" class="nav navbar-nav">
-            <li class="active"><a id="about-nav" href="#">About</a></li>
-            <li><a id="research-nav" href="#">Research</a></li>
-            <li><a id="leadership-nav" href="#">Leadership</a></li>
-            <li><a id="projects-nav" href="#">Projects</a></li>
+            <li class="active"><a id="about-nav" href="#about">About</a></li>
+            <li><a id="research-nav" href="#research">Research</a></li>
+            <li><a id="leadership-nav" href="#leadership">Leadership</a></li>
+            <li><a id="projects-nav" href="#projects">Projects</a></li>
           </ul>
               <table class="float-table" style="height: 48px; width: 800x;" border="0" cellpadding="0" cellspacing="0">
 	            <tbody>
@@ -290,7 +308,7 @@
                           </ul>
                         </div>
 			            <!--Contact-->
-			            <a class="btn btn-default" id="contact-nav" href="#">Contact</a>
+			            <a class="btn btn-default" id="contact-nav">Contact</a>   <!--deleted href="#"-->
 			            <!--linkedn-->
 		                <a href="http://www.linkedin.com/in/nicolenova">
 		                <img id="linkedin-img" class="header-img" style="width: 38px; height: 36px;" alt="Linkedin." src="Images/linkedin.png"></a>
@@ -312,13 +330,13 @@
                     <tbody>
                         <tr> <!-- HEADER -->
                             <td style="vertical-align: top;">
-                            <a id="header-banner" href="#">
-                            <img style="width: 497px; height: 146px;" alt="Banner."
+                            <a id="header-banner" href="#home"> <!--Works even without href, but cursor does not change-->
+                            <img alt="Dr. Nicole Nova" style="width: 497px; height: 146px;"
                             src="Images/banner3.png">
                             </td>
 
                             <td style="vertical-align: bottom; text-align: left;">
-                            <img id="biotech-img" class="header-img" alt="Biotechnology" src="Images/biotech.jpg">
+                            <img id="biotech-img" class="header-img" alt="Biotechnology." src="Images/biotech.jpg">
                             </td>
 
                             <td style="vertical-align: bottom; text-align: left;">
@@ -356,9 +374,9 @@
 
     <!-- HIDDEN CONTENT-->
     <div id="hidden-content" style="display:none;">
-
-        <!--Nicole Nova-->    
-        <div id="nicolenova-content" style="vertical-align: top;">
+    
+        <!--HOME Nicole Nova-->    
+        <div id="home" style="vertical-align: top;">
             <div class="panel panel-primary">
                       <div class="panel-heading">
                         <h2 class="panel-title">Welcome!</h2>
@@ -385,7 +403,7 @@
         <!--END Nicole Nova-->
 
         <!-- About -->
-        <div id="about-content" style="vertical-align: top;">
+        <div id="about" style="vertical-align: top;">
 		    <!--Pills-->
 	        <ul class="nav nav-pills">
 		        <li class="active"><a href="#education-panel" data-toggle="pill">Education</a></li>
@@ -532,7 +550,7 @@
         </div> <!-- End about -->
         
         <!-- Research -->
-        <div id="research-content" style="vertical-align: top;"> 
+        <div id="research" style="vertical-align: top;"> 
 		    <!--Pills-->
 	        <ul class="nav nav-pills">
 		        <li class="active"><a href="#ki-panel" data-toggle="pill">Karolinska Institute</a></li>
@@ -602,7 +620,7 @@
         </div> <!-- End Research -->
 
         <!-- Leadership -->
-        <div id="leadership-content" style="vertical-align: top;"> 
+        <div id="leadership" style="vertical-align: top;"> 
 		    <!--Pills-->
 	        <ul class="nav nav-pills">
 		        <li class="active"><a href="#rays-panel" data-toggle="pill">Research Academy for Young Scientists</a></li>
@@ -678,52 +696,57 @@
         </div> <!-- End Leadership -->
         
         <!-- Projects -->
-        <div id="projects-content" style="vertical-align: top;"> 
+        <div id="projects" style="vertical-align: top;"> 
 		    <!--Pills-->
 	        <ul class="nav nav-pills">
-		        <li class="active"><a href="#robotics-panel" data-toggle="pill">Robotics</a></li>
+		        <li class="active"><a href="#lesions-panel" data-toggle="pill">Oral lesions</a></li>
 		        <li><a href="#surgery-panel" data-toggle="pill">Surgery</a></li>
 		        <li><a href="#imaging-panel" data-toggle="pill">Imaging</a></li>
-		        <li><a href="#lesions-panel" data-toggle="pill">Oral lesions</a></li>
+		        <li><a href="#robotics-panel" data-toggle="pill">Robotics</a></li>
 	        </ul>
             <div class="pill-content">
-                <!--ROBOTICS-->
-                <div class="pill-pane fade in active" id="robotics-panel">
+            
+                <!--ORAL LESIONS-->                
+                <div class="pill-pane fade in active" id="lesions-panel">    <!--BEFORE bioeng-panel-->
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <h2 class="panel-title">Robotics</h2>
+                        <h2 class="panel-title">Oral lesions - Problems to work on in the future</h2>
                         </div>
-                        <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
-                            <tbody>
-                                <tr>
-                                    <td style="width: 700px; vertical-align: top;">
-                                        <h4>2013</h4><h5>Autonomous Robot Accomplishing Standstill Balance and Forward Motion Using
-            Segway Technology, Royal Institute of Technology (KTH)</h5>
-                                      <p>Basically I worked in a team of five KTH electrical engineering students to deliver a functioning hardware/software prototype in less than four weeks. The code was written in C although most of the functions came from a library called ROBOTC (courtesy of Carnegie Mellon University) that was compatible with the hardware. We used Lego Mindstorms for the hardware and building components to build a little robot that would stand and balance on two wheels. The next challenge was to make it go forward, which also got accomplished. We also hacked together a compatible file that would take the standard tunes and make it play <i>The Ride of the Valkyries</i> by Wagner (as a geeky fun thing). We named the robot Valkyria and she is a beauty. We later took her to a fair at KTH and gave a presentation, and had her parade on the catwalk. So proud!</p>
-                                    </td>
-                                    <td style="width: 300px; text-align: right;">
-                                    <img alt="Robot Valkyria." style="width: 250px;" src="Images/robot.png"></img>
-                                    </td> 
-                                </tr>
-                                <tr>
-                                    <td style="vertical-align: top; text-align: center;">
-                                    <iframe width="480" height="360" src="http://www.youtube.com/embed/hQ1b9MYlXF0?rel=0" frameborder="0" allowfullscreen></iframe>
-                                    </td>
-                                    <td style="text-align: center;">
-                                    <img alt="Robot Valkyria on Slope." style="width: 250px;" src="Images/slope.jpg"></img>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div style="text-align: justify; width: 1000px; margin-left: auto; margin-right: auto;">
-                        <br><br><p>The diagram below describes the algorithm used for the robot to maintain its balance on two wheels. It's based on the Proportional Integral Derivative (PID) controller, which is a feedback system for automation and control. The sensor was a gyroscope, and the actuator was motor output to the wheels. Basically what happens is that the gyroscope input is defined as the <i>velocity</i>, and then the <i>acceleration</i> and the <i>position</i> are calculated by taking the derivative and the integral respectively. The sum of all three values is being sent through a filter (another piece of code) to extract values closer to reality, and then sent to the actuators for stabilizing the robot. Done!</p><br>
+                        <!-- NEW -->
+                        <div class="tabbable tabs-left">
+                            <ul class="nav nav-tabs">
+                                 <li class="active"><a href="#keratosis" data-toggle="tab">Frictional keratosis</a></li>
+                                 <li><a href="#pemphigus" data-toggle="tab">Pemphigus vulgaris</a></li>
+                                 <li><a href="#lupus" data-toggle="tab">Lichen & Lupus</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <!--KERATOSIS-->
+                                <div class="tab-pane active prezi-keratosis" id="keratosis">
+                                <!--iframe src="http://prezi.com/embed/7h7y39zsmchq/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined" width="1100" height="800" frameBorder="0" webkitAllowFullScreen mozAllowFullscreen allowfullscreen></iframe-->
+                                    <!--button data-toggle="tooltip" data-title="My tooltip">Button</button-->
+                                    <!--img alt="Keratosis Diagram" style="width: 1100px;" src="Images/keratosis-diagram.png"></img-->
+                                    <a id="ker-ref1" rel="tooltip" title="Tanaka T, Tanaka M, Tanaka T. Oral carcinogenesis and oral cancer chemoprevention: a review. Patholog Res Int. 2011;2011:431246">[1]</a>
+                                    <a id="ker-ref2"rel="tooltip" title="Silverman S Jr, Gorsky M, Lozada F. Oral leukoplakia and malignant transformation. A follow-up study of 257 patients. Cancer. 1984 Feb;53(3):563-8">[2]</a>
+                                    <a id="ker-ref3"rel="tooltip" title="Waldron CA, Shafer WG. Leukoplakia revisited. A clinicopathologic study 3256 oral leukoplakias. 1975 Oct;36(4):1386-92">[3]</a>
+                                    <a id="ker-ref4" rel="tooltip" title="Woo SB, Lin D. Morsicatio mucosae oris -- a chronic oral frictional keratosis, not a leukoplakia. J Oral Maxillofac Surg. 2009 Jan;67(1):140-6">[4]</a>
+                                    
+                                    <button id="ker1" class="btn btn-danger" data-toggle="popover" data-content="These are subconscious bad habits of pressing the tongue and inner side of the cheeks against the teeth arch. It happens most frequently at night when the patient is sleeping, or really focused at daytime. The etiology of these bad habits is unknown, but one theory is that psychological stress leads to hyperactivity in the oral muscles.">More</button>
+                                    <button id="ker2" class="btn btn-danger" data-toggle="popover" data-content="In some literature, such white lesions are classified as leukoplakia [1], which means “white patch” and has been used for diagnostic purposes when all other diagnoses have been eliminated. However, as the diagnosis doesn’t really provide any further information, it should only be used as a clinical term [1]. Keratosis is usually benign, but people with leukoplakia have a greater risk of developing oral cancer if it develops into dysplasia [1, 2, 3]. However, some studies suggest that the risk of developing oral cancer from cheek biting is close to nothing [4]. In my opinion, more studies need to confirm this before ruling out the possibility of developing cancer. Especially since case studies and clinical studies have a lower scientific reliability. There’s always the possibility that some of the lesions would have become malignant at a later stage in the patient’s lifetime.  
+">More</button>
+                                </div>
+                                 <!--PEMPHIGUS-->
+                                <div class="tab-pane prezi-pemphigus" id="pemphigus">
+                                    <button id="pem1" class="btn btn-danger" data-toggle="popover" data-content="The patch cannot replace the current treatment of corticosteroids, as those target the whole body affected by the disease. However, the mouth is a harsh environment for the mucosa with constant tongue movements and intake of food and beverages, so the patch could serve as an extra layer of protection.">More</button>
+                                </div>
+                                 <!--LUPUS & LICHEN-->
+                                <div class="tab-pane prezi-lupus" id="lupus">
+                                </div>
+                            </div>
                         </div>
-                        <div style="text-align: center;">
-                        <img alt="Algorithm." style="width: 1000px;" src="Images/algo.png"></img>
-                        </div>
+                        <!--END NEW-->
                     </div>
                 </div>
-                <!--END ROBOTICS-->
+                <!--END ORAL LESIONS-->
                 
                 <!--SURGERY-->
                 <div class="pill-pane fade" id="surgery-panel">
@@ -789,52 +812,49 @@
                 </div>
                 <!--END IMAGING-->
                 
-                <!--ORAL LESIONS-->                
-                <div class="pill-pane fade" id="lesions-panel">    <!--BEFORE bioeng-panel-->
+                <!--ROBOTICS-->
+                <div class="pill-pane fade" id="robotics-panel">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                        <h2 class="panel-title">Oral lesions - Problems to work on in the future</h2>
+                            <h2 class="panel-title">Robotics</h2>
                         </div>
-                        <!-- NEW -->
-                        <div class="tabbable tabs-left">
-                            <ul class="nav nav-tabs">
-                                 <li class="active"><a href="#keratosis" data-toggle="tab">Frictional keratosis</a></li>
-                                 <li><a href="#pemphigus" data-toggle="tab">Pemphigus vulgaris</a></li>
-                                 <li><a href="#lupus" data-toggle="tab">Lichen & Lupus</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <!--KERATOSIS-->
-                                <div class="tab-pane active prezi-keratosis" id="keratosis">
-                                <!--iframe src="http://prezi.com/embed/7h7y39zsmchq/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined" width="1100" height="800" frameBorder="0" webkitAllowFullScreen mozAllowFullscreen allowfullscreen></iframe-->
-                                    <!--button data-toggle="tooltip" data-title="My tooltip">Button</button-->
-                                    <!--img alt="Keratosis Diagram" style="width: 1100px;" src="Images/keratosis-diagram.png"></img-->
-                                    <a id="ker-ref1" rel="tooltip" title="Tanaka T, Tanaka M, Tanaka T. Oral carcinogenesis and oral cancer chemoprevention: a review. Patholog Res Int. 2011;2011:431246">[1]</a>
-                                    <a id="ker-ref2"rel="tooltip" title="Silverman S Jr, Gorsky M, Lozada F. Oral leukoplakia and malignant transformation. A follow-up study of 257 patients. Cancer. 1984 Feb;53(3):563-8">[2]</a>
-                                    <a id="ker-ref3"rel="tooltip" title="Waldron CA, Shafer WG. Leukoplakia revisited. A clinicopathologic study 3256 oral leukoplakias. 1975 Oct;36(4):1386-92">[3]</a>
-                                    <a id="ker-ref4" rel="tooltip" title="Woo SB, Lin D. Morsicatio mucosae oris -- a chronic oral frictional keratosis, not a leukoplakia. J Oral Maxillofac Surg. 2009 Jan;67(1):140-6">[4]</a>
-                                    
-                                    <button id="ker1" class="btn btn-danger" data-toggle="popover" data-content="These are subconscious bad habits of pressing the tongue and inner side of the cheeks against the teeth arch. It happens most frequently at night when the patient is sleeping, or really focused at daytime. The etiology of these bad habits is unknown, but one theory is that psychological stress leads to hyperactivity in the oral muscles.">More</button>
-                                    <button id="ker2" class="btn btn-danger" data-toggle="popover" data-content="In some literature, such white lesions are classified as leukoplakia [1], which means “white patch” and has been used for diagnostic purposes when all other diagnoses have been eliminated. However, as the diagnosis doesn’t really provide any further information, it should only be used as a clinical term [1]. Keratosis is usually benign, but people with leukoplakia have a greater risk of developing oral cancer if it develops into dysplasia [1, 2, 3]. However, some studies suggest that the risk of developing oral cancer from cheek biting is close to nothing [4]. In my opinion, more studies need to confirm this before ruling out the possibility of developing cancer. Especially since case studies and clinical studies have a lower scientific reliability. There’s always the possibility that some of the lesions would have become malignant at a later stage in the patient’s lifetime.  
-">More</button>
-                                </div>
-                                 <!--PEMPHIGUS-->
-                                <div class="tab-pane prezi-pemphigus" id="pemphigus">
-                                    <button id="pem1" class="btn btn-danger" data-toggle="popover" data-content="The patch cannot replace the current treatment of corticosteroids, as those target the whole body affected by the disease. However, the mouth is a harsh environment for the mucosa with constant tongue movements and intake of food and beverages, so the patch could serve as an extra layer of protection.">More</button>
-                                </div>
-                                 <!--LUPUS & LICHEN-->
-                                <div class="tab-pane prezi-lupus" id="lupus">
-                                </div>
-                            </div>
+                        <table style="text-align: justify; vertical-align: top; width: 1000px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 700px; vertical-align: top;">
+                                        <h4>2013</h4><h5>Autonomous Robot Accomplishing Standstill Balance and Forward Motion Using
+            Segway Technology, Royal Institute of Technology (KTH)</h5>
+                                      <p>Basically I worked in a team of five KTH electrical engineering students to deliver a functioning hardware/software prototype in less than four weeks. The code was written in C although most of the functions came from a library called ROBOTC (courtesy of Carnegie Mellon University) that was compatible with the hardware. We used Lego Mindstorms for the hardware and building components to build a little robot that would stand and balance on two wheels. The next challenge was to make it go forward, which also got accomplished. We also hacked together a compatible file that would take the standard tunes and make it play <i>The Ride of the Valkyries</i> by Wagner (as a geeky fun thing). We named the robot Valkyria and she is a beauty. We later took her to a fair at KTH and gave a presentation, and had her parade on the catwalk. So proud!</p>
+                                    </td>
+                                    <td style="width: 300px; text-align: right;">
+                                    <img alt="Robot Valkyria." style="width: 250px;" src="Images/robot.png"></img>
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <td style="vertical-align: top; text-align: center;">
+                                    <iframe width="480" height="360" src="http://www.youtube.com/embed/hQ1b9MYlXF0?rel=0" frameborder="0" allowfullscreen></iframe>
+                                    </td>
+                                    <td style="text-align: center;">
+                                    <img alt="Robot Valkyria on Slope." style="width: 250px;" src="Images/slope.jpg"></img>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="text-align: justify; width: 1000px; margin-left: auto; margin-right: auto;">
+                        <br><br><p>The diagram below describes the algorithm used for the robot to maintain its balance on two wheels. It's based on the Proportional Integral Derivative (PID) controller, which is a feedback system for automation and control. The sensor was a gyroscope, and the actuator was motor output to the wheels. Basically what happens is that the gyroscope input is defined as the <i>velocity</i>, and then the <i>acceleration</i> and the <i>position</i> are calculated by taking the derivative and the integral respectively. The sum of all three values is being sent through a filter (another piece of code) to extract values closer to reality, and then sent to the actuators for stabilizing the robot. Done!</p><br>
                         </div>
-                        <!--END NEW-->
+                        <div style="text-align: center;">
+                        <img alt="Algorithm." style="width: 1000px;" src="Images/algo.png"></img>
+                        </div>
                     </div>
                 </div>
+                <!--END ROBOTICS-->
             </div>
         </div>
         <!-- End Projects --> 
         
         <!-- Contact -->
-        <div id="contact-content" style="vertical-align: center; text-align: center;"> 
+        <div id="contact" style="vertical-align: center; text-align: center;"> 
             <div class="panel panel-primary">
                 <div class="panel-heading">
                 <h2 class="panel-title">Contact</h2>
@@ -848,7 +868,7 @@
         
         <!-- Header Pictures-->
         <!-- Biotechnology-->
-        <div id="biotech-content" style="vertical-align: top;"> 
+        <div id="biotech" style="vertical-align: top;"> 
             <div class="panel panel-success">
                 <div class="panel-heading">
                 <h2 class="panel-title">Biotechnology</h2>
@@ -881,7 +901,7 @@
         <!-- END Biotechnology-->
         
         <!-- Computer Science-->
-        <div id="cs-content" style="vertical-align: top;"> 
+        <div id="cs" style="vertical-align: top;"> 
             <div class="panel panel-warning">
                 <div class="panel-heading">
                 <h2 class="panel-title">Computer Science</h2>
@@ -912,7 +932,7 @@
         <!--END Computer Science-->
         
         <!-- Medicine Dentistry-->
-        <div id="med-content" style="vertical-align: top;"> 
+        <div id="med" style="vertical-align: top;"> 
             <div class="panel panel-danger">
                 <div class="panel-heading">
                 <h2 class="panel-title">Medicine &amp; Dentistry</h2>
@@ -936,7 +956,7 @@
         <!-- END Medicine Dentistry>
         
         <!-- Electrical Engineering-->
-        <div id="ee-content" style="vertical-align: top;"> 
+        <div id="ee" style="vertical-align: top;"> 
             <div class="panel panel-info">
                 <div class="panel-heading">
                 <h2 class="panel-title">Electrical Engineering</h2>
