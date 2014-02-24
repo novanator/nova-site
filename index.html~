@@ -156,15 +156,6 @@
         "projects-nav": "#projects-content",
     };
     
-    
-    
-    
-    //Displaying content on each page
-    function displayPage(pageID) {
-        $("#top-nav").find("li").removeClass("active");using js function inside jquery inside 
-        $("#main-content").html("").append($("#" + pageID).html());
-        window.location.hash = pageID;
-    }
 
     //jQuery
     //shifting images in header
@@ -182,89 +173,76 @@
             $("#main-content").html("").append($(TAB_PAIRINGS[id]).html());
         });
         
-        //Calling the displayPage function
-        $("#header-banner, #nicolenova-nav").on("click", displayPage("nicolenova-content"));
+        //Displaying pages
+        function displayPage(pageID){ 
+            $("#top-nav").find("li").removeClass("active"); 
+            $("#main-content").html("").append($("#" + pageID).html()); 
+            window.location.hash = pageID;
+        }
+        
+        
+        $("#header-banner, #nicolenova-nav").on("click", function(){ 
+            displayPage("nicolenova-content")
+        });
 
-        $("#contact-nav").on("click", displayPage("contact-content"));
+        $("#contact-nav").on("click", function(){
+            displayPage("contact-content")
+        });
 
-        $("#biotech-img").on("click", displayPage("biotech-content"));
+        $("#biotech-img").on("click", function(){ 
+            displayPage("biotech-content")
+        });
 
-        $("#cs-img").on("click", displayPage("cs-content"));
+        $("#cs-img").on("click", function(){ 
+            displayPage("cs-content")
+        });
 
-        $("#med-img").on("click", displayPage("med-content"));
+        $("#med-img").on("click", function(){ 
+            displayPage("med-content")
+        });
 
-        $("#ee-img").on("click", displayPage("ee-content"));
+        $("#ee-img").on("click", function(){ 
+            displayPage("ee-content")
+        });
 
-        $("#main-content").on("click", "#view1", "#view2", "#view3", displayPage("research-content"));
+        $("#main-content").on("click", "#view1", function(){
+            displayPage("research-content")
+        });
 
-        /*
-        $("#main-content").on("click", "#view2", displayPage(research-content));
+        $("#main-content").on("click", "#view2", function(){
+            displayPage("research-content")
+        });
 
-        $("#main-content").on("click", "#view3", displayPage(research-content));
-        */
+        $("#main-content").on("click", "#view3", function(){
+            displayPage("research-content")
+        });
 
-        $("#main-content").on("click", "#view4", displayPage("rsi-panel"));
+        $("#main-content").on("click", "#view4", function(){
+            displayPage("rsi-panel")
+        });
 
-        $("#main-content").on("click", "#here-education", "#here-ee", displayPage("about-content"));
+        $("#main-content").on("click", "#here-education", "#here-ee", function(){
+            displayPage("about-content")
+        });
 
-        $("#main-content").on("click", "#here-robot", displayPage("projects-content"));
+        $("#main-content").on("click", "#here-robot", function(){
+            displayPage("projects-content") 
+        });
+        
+        //IMPORTANT
+        //$("#nicolenova-nav").click();
+        if (window.location.hash) {
+            displayPage(window.location.hash);
+        } 
+        else {
+            $("#nicolenova-nav").click();
+        }
         
         //popover
-        $('#example').popover(options);
+        $('#example').popover('options');
         $('#element').popover('toggle');
     });
     
-    if (window.location.hash) {
-        displayPage(window.location.hash);
-    } 
-    else {
-        $("#nicolenova-nav").click();
-    }
-
-
-
-//window.location.hash = 'home';
-/*
-x = window.location.hash
-x == "home"
-if x == 'home' {
-displayPage('home');
-}
-*/
-    /*hashtag location
-    
-    
-    function homeHandler() {
-//Do stuff--e.g. get via AJAX -> render template (optional) -> append HTML to an element
-}
-
-function aboutHandler() {
-  //Do stuff
-}
-
-function researchHandler() {
-  //Do stuff
-}
-
-function leadershipHandler() {
-  //Do stuff
-}
-
-function projectsHandler() {
-  //Do stuff
-}
-
-function locationHashChanged() {  
-    (location.hash === "#/home/") &&  homeHandler();
-    (location.hash === "#/about/") &&  aboutHandler();
-    (location.hash === "#/research/") && researchHandler();
-    (location.hash === "#/leadership/") &&  leadershipHandler();
-    (location.hash === "#/projects/") && projectsHandler();  
-  }  
-}  
-
-window.onhashchange = locationHashChanged;
-*/
     
     </script>
     
