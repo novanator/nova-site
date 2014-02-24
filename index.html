@@ -157,6 +157,14 @@
     };
     
     
+    
+    
+    //Displaying content on each page
+    function displayPage(pageID) {
+        $("#top-nav").find("li").removeClass("active");
+        $("#main-content").html("").append($("#" + pageID).html());
+        window.location.hash = pageID;
+    }
 
     //jQuery
     //shifting images in header
@@ -174,13 +182,7 @@
             $("#main-content").html("").append($(TAB_PAIRINGS[id]).html());
         });
         
-        //Displaying content on each page
-        $(function displayPage(pageID) {
-            $("#top-nav").find("li").removeClass("active");
-            $("#main-content").html("").append($("#" + pageID).html());
-            $(window.location.hash = pageID);
-        });
-        
+        //Calling the displayPage function
         $("#header-banner, #nicolenova-nav").on("click", displayPage(nicolenova-content));
 
         $("#contact-nav").on("click", displayPage(contact-content));
@@ -206,20 +208,19 @@
         $("#main-content").on("click", "#here-education", "#here-ee", displayPage(about-content));
 
         $("#main-content").on("click", "#here-robot", displayPage(projects-content));
-
-        
-        $(if (window.location.hash) {
-            displayPage(window.location.hash);
-        } 
-        else {
-            $("#nicolenova-nav").click();
-        });
         
         //popover
         $('#example').popover(options);
         $('#element').popover('toggle');
     });
- 
+    
+    if (window.location.hash) {
+        displayPage(window.location.hash);
+    } 
+    else {
+        $("#nicolenova-nav").click();
+    }
+
 
 
 //window.location.hash = 'home';
