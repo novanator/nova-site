@@ -171,6 +171,12 @@
             $("#top-nav").find("li").removeClass("active");
             $("#main-content").html("").append($(TAB_PAIRINGS[id]).html());
             window.location.hash = TAB_PAIRINGS[id];
+            window.document.title = "Nicole Nova | " + TAB_PAIRINGS[id].slice(1);
+            window.onhashchange = TAB_PAIRINGS[id];
+            $(window).bind("hashchange",function(){ 
+                var hval = location.hash.slice(1); // remove the leading #
+            }); 
+            $(window).trigger("hashchange");
         });
         
         //Displaying pages in header
@@ -178,28 +184,15 @@
             $("#top-nav").find("li").removeClass("active"); 
             $("#main-content").html("").append($("#" + pageID).html()); 
             window.location.hash = pageID;
+            window.document.title = "Nicole Nova | " + pageID;
+            window.onhashchange = pageID;
+            $(window).bind("hashchange",function(){ 
+                var hval = location.hash; 
+            }); 
+            $(window).trigger("hashchange");
         };
         
-        /*
-        $("#about-nav").on("click", function(){
-            displayPage("about-content");
-        });
         
-        $("#research-nav").on("click", function(){
-            displayPage("research-content");
-        });
-        
-        $("#leadership-nav").on("click", function(){
-            displayPage("leadership-content");
-        });
-        
-        $("#projects-nav").on("click", function(){
-            displayPage("projects-content");
-        });
-        */
-        
-   
-        //Nothing after # after refreshing (took out #home-nav)
         $("#header-banner, #home-nav").on("click", function(){ 
             displayPage("home");
         });
@@ -208,8 +201,6 @@
             displayPage("contact");
         });
         
-        //Those who don't work are all in the navigation bar, and header-banner, so all with turqouise content, have in common href=#.
-        //These all work with hash.location
         $("#biotech-img").on("click", function(){ 
             displayPage("biotech");
         });
@@ -234,7 +225,6 @@
             displayPage("rsi-panel");
         });
 
-        // Nothing after #
         $("#main-content").on("click", "#here-education, #here-ee", function(){
             displayPage("about");
         });
@@ -261,6 +251,10 @@
         $('#element').popover('toggle');
     });
     
+    //function to change hash
+    function change_hash(x){
+         location.hash = x;
+    }
     
     </script>
     
@@ -813,7 +807,7 @@
                 <!--END IMAGING-->
                 
                 <!--ROBOTICS-->
-                <div class="pill-pane fade in" id="robotics-panel">
+                <div class="pill-pane fade" id="robotics-panel">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <h2 class="panel-title">Robotics</h2>
