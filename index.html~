@@ -254,7 +254,6 @@
             $("#see4").goTo();
         });
 
-//not working
         $("#main-content").on("click", "#here-education, #here-ee", function(){
             displayPage("about");
         });
@@ -986,7 +985,7 @@
                             </td>
                             <td style="width: 300px; text-align: center;">
                             <img alt="Robot." style="width: 300px;" src="Images/valkyria.png"></img><br><br>
-                            <p style="text-align: justify;">A robot that five of us electrical engineering students built. For more information regarding this project click <a id="here-robot" href="#projects/robotics">here</a>.</p>
+                            <p style="text-align: justify;">A robot that five of us electrical engineering students built. For more information regarding this project click <a id="here-robot" href="#robotics-panel">here</a>.</p>
                             </td> 
                         </tr>
                     </tbody>
