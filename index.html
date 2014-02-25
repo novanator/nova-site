@@ -156,6 +156,22 @@
         "projects-nav": "#projects",
     };
 
+    //Displaying pages in header
+    function displayPage(pageID){ 
+        $("#top-nav").find("li").removeClass("active"); 
+        $("#main-content").html("").append($("#" + pageID).html()); 
+        window.location.hash = pageID;
+        window.document.title = "Nicole Nova | " + pageID;
+    };
+    
+    //Navigation in the browser
+    window.onhashchange = function (){
+        console.log('changing hash!');
+        var pageID = window.location.hash.slice(1);     //replace('#','') => slice(1)
+        displayPage(pageID);
+    };
+
+
     //jQuery
     $(document).ready(function(){
         //shifting images in header
@@ -172,26 +188,7 @@
             $("#main-content").html("").append($(TAB_PAIRINGS[id]).html());
             window.location.hash = TAB_PAIRINGS[id];
             window.document.title = "Nicole Nova | " + TAB_PAIRINGS[id].slice(1);
-            window.onhashchange = TAB_PAIRINGS[id];
-            $(window).bind("hashchange",function(){ 
-                var hval = location.hash.slice(1); // remove the leading #
-            }); 
-            $(window).trigger("hashchange");
         });
-        
-        //Displaying pages in header
-        function displayPage(pageID){ 
-            $("#top-nav").find("li").removeClass("active"); 
-            $("#main-content").html("").append($("#" + pageID).html()); 
-            window.location.hash = pageID;
-            window.document.title = "Nicole Nova | " + pageID;
-            window.onhashchange = pageID;
-            $(window).bind("hashchange",function(){ 
-                var hval = location.hash; 
-            }); 
-            $(window).trigger("hashchange");
-        };
-        
         
         $("#header-banner, #home-nav").on("click", function(){ 
             displayPage("home");
@@ -233,43 +230,31 @@
             displayPage("projects"); 
         });
         
-        //IMPORTANT
-        $("#home-nav").click();
-        // IF stays on same page when refreshing (but no content shows up) ELSE goes to homepage when refreshing
-        /*
+        //Page initialization from URL hash
         if (window.location.hash) {
-            displayPage(window.location.hash);
+            displayPage(window.location.hash.slice(1));
         } 
         else {
             $("#home-nav").click(); //important
         }
-        */
         
-        
-        //popover
+        //Popover windows
         $('#example').popover('options');
         $('#element').popover('toggle');
-    });
-    
-    //function to change hash
-    function change_hash(x){
-         location.hash = x;
-    }
-    
-    </script>
-    
-    <script type="text/javascript">
-    $(function () {
-        $('body').popover({
-            selector: '[data-toggle="popover"]'
-        });
+        
+        $(function () {
+            $('body').popover({
+                selector: '[data-toggle="popover"]'
+            });
 
-        $('body').tooltip({
-            selector: 'a[rel="tooltip"], [data-toggle="tooltip"]'
+            $('body').tooltip({
+                selector: 'a[rel="tooltip"], [data-toggle="tooltip"]'
+            });
         });
     });
-
+    
 </script>
+
 </head>
 
 <body style="height: 100%; background-color: #d1e2e5;">
