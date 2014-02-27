@@ -73,49 +73,50 @@
     .prezi-keratosis {
         background-image: url("Images/keratosis-diagram.png");
         width: 1100px;
-        height: 700px;
+        height: 670px;
         background-size: contain; 
+        background-repeat: no-repeat; 
     }
 
     #ker1 {
         position:relative;
-		left: 188px;
+		left: 180px;
 		top: 575px;
     }
     
     #ker2 {
         position:relative;
-		left: 388px;
-		top: 375px;
+		left: 390px;
+		top: 370px;
     }
     
     #ker-ref1 {
         position:relative;
-		left: 560px;
-		top: 322px;
+		left: 465px;
+		top: 333px;
     }
     
     #ker-ref2 {
         position:relative;
-		left: 560px;
-		top: 322px;
+		left: 465px;
+		top: 333px;
     }
     
     #ker-ref3 {
         position:relative;
-		left: 560px;
-		top: 322px;
+		left: 465px;
+		top: 333px;
     }
     
     #ker-ref4 {
         position:relative;
-		left: 560px;
-		top: 322px;
+		left: 465px;
+		top: 333px;
     }
     
     #pem1 {
         position:relative;
-		left: 790px;
+		left: 797px;
 		top: 695px;
     }
     
@@ -736,15 +737,12 @@
                             <div class="tab-content">
                                 <!--KERATOSIS-->
                                 <div class="tab-pane active prezi-keratosis" id="keratosis">
-                                <!--iframe src="http://prezi.com/embed/7h7y39zsmchq/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined" width="1100" height="800" frameBorder="0" webkitAllowFullScreen mozAllowFullscreen allowfullscreen></iframe-->
-                                    <!--button data-toggle="tooltip" data-title="My tooltip">Button</button-->
-                                    <!--img alt="Keratosis Diagram" style="width: 1100px;" src="Images/keratosis-diagram.png"></img-->
                                     <a id="ker-ref1" rel="tooltip" title="Tanaka T, Tanaka M, Tanaka T. Oral carcinogenesis and oral cancer chemoprevention: a review. Patholog Res Int. 2011;2011:431246">[1]</a>
                                     <a id="ker-ref2"rel="tooltip" title="Silverman S Jr, Gorsky M, Lozada F. Oral leukoplakia and malignant transformation. A follow-up study of 257 patients. Cancer. 1984 Feb;53(3):563-8">[2]</a>
                                     <a id="ker-ref3"rel="tooltip" title="Waldron CA, Shafer WG. Leukoplakia revisited. A clinicopathologic study 3256 oral leukoplakias. 1975 Oct;36(4):1386-92">[3]</a>
                                     <a id="ker-ref4" rel="tooltip" title="Woo SB, Lin D. Morsicatio mucosae oris -- a chronic oral frictional keratosis, not a leukoplakia. J Oral Maxillofac Surg. 2009 Jan;67(1):140-6">[4]</a>
                                     
-                                    <button id="ker1" class="btn btn-danger" data-toggle="popover" data-content="These are subconscious bad habits of pressing the tongue and inner side of the cheeks against the teeth arch. It happens most frequently at night when the patient is sleeping, or really focused at daytime. The etiology of these bad habits is unknown, but one theory is that psychological stress leads to hyperactivity in the oral muscles.">More</button>
+                                    <button id="ker1" class="btn btn-danger" data-toggle="popover" data-content="These are subconscious bad habits of pressing the tongue and inner side of the cheeks against the teeth arch. It happens most frequently at night when the patient is sleeping, or really focused during the day. The etiology of these bad habits is unknown, but one theory is that psychological stress leads to hyperactivity in the oral muscles.">More</button>
                                     <button id="ker2" class="btn btn-danger" data-toggle="popover" data-content="In some literature, such white lesions are classified as leukoplakia [1], which means “white patch” and has been used for diagnostic purposes when all other diagnoses have been eliminated. However, as the diagnosis doesn’t really provide any further information, it should only be used as a clinical term [1]. Keratosis is usually benign, but people with leukoplakia have a greater risk of developing oral cancer if it develops into dysplasia [1, 2, 3]. However, some studies suggest that the risk of developing oral cancer from cheek biting is close to nothing [4]. In my opinion, more studies need to confirm this before ruling out the possibility of developing cancer. Especially since case studies and clinical studies have a lower scientific reliability. There’s always the possibility that some of the lesions would have become malignant at a later stage in the patient’s lifetime.  
 ">More</button>
                                 </div>
