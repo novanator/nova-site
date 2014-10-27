@@ -1592,7 +1592,7 @@ fieldset[disabled] .btn {btn-default
 }
 
 .btn-default {
-  color: #ffffff;
+  color: #E1E4E6;
   background-color: #175483;
   border-color: #175483;
 }
@@ -2261,10 +2261,12 @@ a.list-group-item.active .list-group-item-text {
   padding: 15px;
   margin-bottom: 20px;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border: 0px solid #dddddd;
+  border-radius: 0px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
 }
 
 .panel-heading {
@@ -2272,8 +2274,8 @@ a.list-group-item.active .list-group-item-text {
   margin: -15px -15px 15px;
   background-color: #f5f5f5;
   border-bottom: 1px solid #dddddd;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
 }
 
 .panel-title {
@@ -2294,13 +2296,13 @@ a.list-group-item.active .list-group-item-text {
 }
 
 .panel-primary {
-  border-color: #0592ab;
+  border-color: #0C090A;
 }
 
 .panel-primary .panel-heading {
-  color: #ffffff;
-  background-color: #0592ab;
-  border-color: #0592ab;
+  color: #E1E4E6;
+  background-color: #0C090A;
+  border-color: #0C090A;
 }
 
 .panel-success {
@@ -2473,8 +2475,8 @@ button.close {
 .nav.open > a:hover,
 .nav.open > a:focus {
   color: #ffffff;
-  background-color: #428bca;
-  border-color: #428bca;
+  background-color: #455360;
+  border-color: #455360;
 }
 
 .nav.open > a .caret,
@@ -2554,7 +2556,9 @@ button.close {
 }
 
 .nav-pills > li > a {
-  border-radius: 5px;
+  border-radius: 0px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 .nav-pills > li + li {
@@ -2565,7 +2569,7 @@ button.close {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #175483;
+  background-color: #0C090A;
 }
 
 .nav-stacked > li {
@@ -2689,14 +2693,14 @@ button.close {
   padding-top: 15px;
   padding-bottom: 15px;
   line-height: 20px;
-  color: #a3c3de;
+  color: #E1E4E6;
   border-radius: 4px;
 }
 
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus {
   color: #ffffff;
-  background-color: #658dab;
+  background-color: #69777D;
 }
 
 .navbar-nav > .active > a,
@@ -2748,7 +2752,7 @@ button.close {
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
-  color: #a3c3de;
+  color: #E1E4E6;
   text-align: center;
 }
 
@@ -4679,3 +4683,8 @@ td.visible-print {
     display: none !important;
   }
 }
+
+
+
+
+
