@@ -2345,6 +2345,27 @@ a.list-group-item.active .list-group-item-text {
   border-color: #428bca;
 }
 
+.panel-evo {
+  border-color: #FE9C41;
+}
+
+.panel-evo .panel-heading {
+  color: #ffffff;
+  background-color: #FE9C41;
+  border-color: #FE9C41;
+}
+
+.panel-math {
+  border-color: #B759C1;
+}
+
+.panel-math .panel-heading {
+  color: #ffffff;
+  background-color: #B759C1;
+  border-color: #B759C1;
+}
+
+
 .list-group-flush {
   margin: 15px -15px -15px;
 }
