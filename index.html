@@ -162,7 +162,7 @@
     
     TAB_PAIRINGS = {
         "about-nav": "#about",
-        "research-nav": "#research",
+        //"research-nav": "#research",
         "outreach-nav": "#outreach"
     };
 
@@ -252,7 +252,7 @@
             displayPage("ee");
         });
 
-        $("#main-content").on("click", "#view1", function(){
+        /*$("#main-content").on("click", "#view1", function(){
             displayPage("research");
             $("#see1").goTo();
         });
@@ -266,11 +266,13 @@
             displayPage("research");
             $("#see3").goTo();
         });
+        
 
         $("#main-content").on("click", "#view4", function(){
             displayPage("rsi-panel");
             $("#see4").goTo();
         });
+        */
 
         $("#main-content").on("click", "#here-education, #here-ee", function(){
             displayPage("about");
@@ -311,7 +313,7 @@
         <a class="navbar-brand" id="home-nav" href="#home">Nicole Nova</a>
           <ul id="top-nav" class="nav navbar-nav">
             <li class="active"><a id="about-nav" href="#about">Education</a></li>
-            <li><a id="research-nav" href="#research">Research</a></li>
+            <!-- <li><a id="research-nav" href="#research">Research</a></li> -->
             <li><a id="outreach-nav" href="#outreach">Outreach</a></li>
             <li><a id="contact-nav" href="#contact">Contact</a></li>
           </ul>
@@ -535,8 +537,7 @@
                                     <h5>Medical University of Vienna and the General Hospital (AKH), Austria</h5>
                                     <p>Admitted to a four week medical program organized by the <a href="http://www.meduniwien.ac.at/homepage/1/homepage/">Medical University of Vienna</a> for international students to shadow/assist physicians/surgeons at the General Hospital (AKH). <br>
                     Internship at the Department of Cranio-, Maxillofacial and Oral Surgery. <br>
-                    Supervisor: Prof. Dr. Dr. Rolf Ewers. <br><br>
-                    I learned a lot spending a month at the General Hospital AKH. On my first day of internship I witnessed a craniofacial procedure, where a benign bone tumor had to be removed (located on the patient's forehead). The incision was made behind the hairline (from ear to ear), out of esthetic reasons to "hide" the wound of incision. But the cost was to pull the whole flap down, or rather loosen the skin, all the way down to the forehead. It was pretty extreme. Other procedures that I've seen were orthognatic surgery (jaw correction), removal of cysts, cancer surgery, and reconstructive surgery (sometimes with transplants from other parts of the body, like a part of the fibula for bone reconstruction for the jaw). When assisting the two head surgeons I usually held the "hooks" attached to the flaps, or removed fluids through suction. This whole experience got me thinking of ways to improve surgical procedures.</p><br>
+                    Supervisor: Prof. Dr. Dr. Rolf Ewers. </p><br><br>
                                     <img alt="IFMSA." style="height: 80px; text-align: right;" src="Images/ifmsa.png"></img>
                                     <br>
                                     <br>
@@ -574,7 +575,7 @@
                                 <tr>
                                     <td>
                                     <h4>Google Scholarship (2013)</h4>
-                                    <h5>Women in Tech Conference and Travel Grant (EMEA)</h5>
+                                    <h5>Women in Tech Conference and Travel Grant</h5>
                                     <p>Recipient of a scholarship from Google to attend a computer science conference</p>
                                     <br>
                                     </td>
@@ -609,119 +610,10 @@
             </div>
         </div> <!-- End about -->
         
-        <!-- Research -->
-        <div id="research" style="vertical-align: top;"> 
-		    <!--Pills-->
-	        <!--ul class="nav nav-pills">
-		        <li class="active"><a href="#ki-panel" data-toggle="pill">Karolinska Institute</a></li>
-		        <li><a href="#rsi-panel" data-toggle="pill">Research Science Institute</a></li>
-	        </ul>
-            <div class="pill-content">
-                <div class="pill-pane fade in active" id="ki-panel"-->
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                        <h2 class="panel-title">Duke University</h2>
-                        </div>
-                        <table style="text-align: justify; vertical-align: top; width: 900px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
-                            <tbody>
-                                <tr>
-                                    <td style="width: 620px;">
-                                    <a id="see4"></a>
-                                        <h4>Associate in Research (2015 - present)</h4><h5>Duke University, Department of Biology</h5>
-                                      <p>Projects are in progress.</p>
-                                    </td>
-                                </tr>
-                            <tbody>
-                        </table>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                        <h2 class="panel-title">Harvard / Dana-Farber Cancer Institute</h2>
-                        </div>
-                        <table style="text-align: justify; vertical-align: top; width: 900px; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
-                            <tbody>
-                                <tr>
-                                    <td style="width: 620px;">
-                                    <a id="see4"></a>
-                                        <h4>Research Trainee (2014 - 2015)</h4><h5>Dana-Farber Cancer Institute, Department of Biostatistics and Computational Biology</h5>
-                                      <p>Projects will be posted after paper submission.</p>
-                                    </td>
-                                </tr>
-                            <tbody>
-                        </table>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                        <h2 class="panel-title">Karolinska Institute</h2>
-                        </div>
-                        <table style="text-align: justify; vertical-align: top; width: 900px; margin-left: auto; margin-right: auto;" border="0" cellpadding="10" cellspacing="10">
-                            <tbody>
-                                <tr>
-                                    <td style="width: 700px">
-                                        <a id="see1"></a>
-                                        
-                                        <h4>Master's Thesis (2012)</h4>
-                                        <h5>Chronic inflammation and pain: Assessment of c-Fos and ATF-3 as markers of spinal neuronal activity in a pain model of rheumatoid arthritis</h5>
-                                        <p>I conducted the research project at the <b>Department of Physiology and Pharmacology</b> with Dr. Camilla Svensson in the <a href="http://ki.se/en/fyfa/molecular-pain-research">Molecular Pain Lab</a>. The whole project was sporadically spread over a period of two years. I was basically working on the side of my dental studies, mostly being in the lab on the other side of the capital city (north campus) on weekends and late nights. Whenever I could skip lectures to instead be working on my research - I'd do that, and catch up on studies through books and other students' lecture notes. However, especially in the last two years of dental school, most lectures were mandatory (as they are very treatment specific with a lot of patient case studies). Also, a major component of the third to fifth year of school was a clinical internship where I was responsible for treating my own patients.  Needless to say, that schedule was pretty inflexible! So, whenever I could find the time to be in the lab outside of school hours, I'd go for it. </p>
-                                    </td>
-                                    <td style="width: 200px; text-align: left; vertical-align: top;">
-                                        <br>
-                                        <a href="Files/master.pdf"><button class="btn btn-danger">Paper</button></a>
-                                        <a href="Files/MasterPPP.pdf"><button class="btn btn-warning">Presentation</button></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 700px">
-                                    <a id="see2"></a>
-                                    <h4>Research Program in Medical Sciences (2010)</h4><h5>Assessment of c-fos as a Marker of Spinal Neuronal Activity in a Pain model of Rheumatoid Arthritis</h5>
-                                    <p>This was a summer research program for talented KI students who got funding for doing research in a lab for two months. This was when I started working with Dr. Camilla Svensson on a project that later became a part of my <i>Master's Thesis</i>. I learned how to do antibody probing and immunohistochemistry, as well as how to analyze microscope images using the software <i>ImageJ</i>. It was a really exciting summer.</p>
-                                    </td>
-                                    <td style="width: 200px; text-align: left; vertical-align: top">
-                                        <br>
-                                        <a href="Files/KIsom.pdf"><button class="btn btn-danger">Paper</button></a>
-                                        <a href="Files/poster.pdf"><button class="btn btn-warning">Presentation</button></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 700px;">
-                                    <a id="see3"></a>
-                                    <h4>Research Program in Biomedical Sciences (2006)</h4><h5>Activation of Liver X Receptor Affects the Function and Differentiation of Osteoclasts</h5>
-                                    <p>This was a six week summer research program for the top 20 smartest high school students in the country (Sweden). This was how I first got acquainted with real research at the age of 16. The first week consisted of lectures, and the remaining part was spent working in a lab. I was working with Dr. Kirsten Robertson in the <b>Adopted Orphan Receptors Lab</b> at the <b>Department of Biosciences and Nutrition</b>. The nuclear receptor that we were investigating was <i>Liver X Recepter</i> (LXR). Little was known about it at the time, and my project was investigating what the receptor does to bone tissue. It was a cell study, and we were looking at the bone resorption cells, namely <i>osteoclasts</i>. I learned various lab techniques, such as pipetting correctly, electrophoresis, PCR (Polymerase Chain Reaction), Real-Time PCR, and doing statistical analysis in the software <i>Prism</i>. I found the rush of learning and new experiences so exhilarating that I became determined to pursue a career in research.</p>
-                                    </td>
-                                    <td style="width: 200px; text-align: left; vertical-align: top">
-                                        <br>
-                                        <a href="Files/LXR.pdf"><button class="btn btn-danger">Paper</button></a>
-                                    </td>
-                                </tr>
-                            <tbody>
-                        </table>
-                    </div>
-                <!--/div-->
-                <!--div class="pill-pane fade" id="rsi-panel"-->
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                        <h2 class="panel-title">MIT / Harvard Medical School </h2>
-                        </div>
-                        <table style="text-align: justify; vertical-align: top; width: 900px; margin-left: auto; margin-right: auto;" border="0" cellpadding="10" cellspacing="10">
-                            <tbody>
-                                <tr>
-                                    <td style="width: 700px;">
-                                    <a id="see4"></a>
-                                        <h4>Research Science Institute (2007)</h4><h5>What does performance on one visual search task tell you about performance on another?</h5>
-                                      <p>This was a six week international summer research program for talented high school students. It was held at <a href="http://www.mit.edu/">Massachusetts Institute of Technology (MIT)</a> and organized by the <a href="http://cee.org/">Center for Excellence in Education (CEE)</a>. The first week of the program consisted of classes in two science subjects of interest (in my case <i>biology</i> and <i>chemistry</i>), math, and humanities. Also we learned how to write a scientific paper in LaTeX and hold a professional presentation. The rest of the summer was spent on working in a lab and attending great evening lectures. <br><br>
-                                      I was working with Dr. Jeremy Wolfe in the <a href="http://search.bwh.harvard.edu/new/">Visual Attention Lab</a> at the <b>Department of Brain and Cognitive Sciences</b> at <a href="http://hms.harvard.edu/">Harvard Medical School</a> and <a href="http://www.brighamandwomens.org/">Brigham and Women's Hospital</a>. The project dealt with investigating whether simple search tasks (looking for a green line among red lines) was correlated with the complicated real-world scenes. I looked especially if it correlated with searching for weapons in baggage x-ray pictures. I collaborated with a grad student and our work was published in the <a href="http://www.journalofvision.org/">Journal of Vision</a>.</p>
-                                    </td>
-                                    <td style="width: 200px; text-align: left; vertical-align: top">
-                                        <br>
-                                        <a href="http://www.journalofvision.org/content/8/6/312"><button class="btn btn-success">Publication</button></a>
-                                    </td>
-                                </tr>
-                            <tbody>
-                        </table>
-                    </div>
-                <!--/div>
-            </div-->
-        </div> <!-- End Research -->
+        
+
+        
+
 
         <!-- Outreach -->
         <div id="outreach" style="vertical-align: top;"> 
