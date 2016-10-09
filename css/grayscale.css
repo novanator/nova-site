@@ -364,7 +364,7 @@ a:focus {
     -o-background-size: cover;
 }
 
-.footer-bg-section {
+.yolo-section {
     width: 100%;
     padding: 0px 0;
     color: #fff;
@@ -376,20 +376,21 @@ a:focus {
     -o-background-size: cover;
 }
 
+/*!
 .footer-section {
     display: table;
     width: 100%;
     height: auto;
     padding: 0px 0;
     color: #fff;
-    /*background: url(../img/footer-bg.jpg) no-repeat top center scroll;*/
+    background: url(../img/footer-bg.jpg) no-repeat top center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
-
+*/
 
 
 
