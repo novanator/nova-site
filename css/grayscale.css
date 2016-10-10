@@ -359,31 +359,9 @@ a:focus {
     -o-background-size: cover;
 }
 
-.contact-section {
-    width: 100%;
-    height: auto;
-    padding: 0px 0;
-    color: #000;
-    background: url(../img/contact-bg.jpg) no-repeat center center scroll;
-    background-color: #fff;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
 
-.yolo-section {
-    width: 100%;
-    height: auto;
-    padding: 0px 0;
-    color: #fff;
-    background: url(../img/footer-bg.jpg) no-repeat center center scroll;
-    background-color: #fff;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
+
+
 
 
 .footer-section {
