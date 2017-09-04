@@ -316,6 +316,13 @@ a:focus {
     padding-left: 40px;
 }
 
+.padd-robot {
+    padding-top: 0px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 0px;
+}
+
 .padd-rays {
     padding-top: 40px;
     padding-right: 0px;
@@ -349,9 +356,8 @@ a:focus {
 
 .research-section {
     width: 100%;
-    padding: 50px;
     color: #000;
-    background: url(../img/research-bg.jpg) no-repeat center center scroll;
+    background: url(../img/research-bg.jpg) no-repeat left bottom scroll;
     background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -359,8 +365,32 @@ a:focus {
     -o-background-size: cover;
 }
 
+#text {
+    padding-right: 50px;
+    padding-left: 50px;
+}
 
+.fox-space {
+    width: 50%;
+    float: left;
+    padding: 0px 0;
+}
 
+.fox-row {
+    width:100%;
+    padding: 0px 0;
+}
+
+.publications-section {
+    width: 100%;
+    color: #000;
+    background: url(../img/publications-bg.jpg) no-repeat right center scroll;
+    background-color: #fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
 
 
 
@@ -393,6 +423,10 @@ a:focus {
     }
 
     .research-section {
+        padding: 80px 0;
+    }
+
+    .publications-section {
         padding: 80px 0;
     }
 
