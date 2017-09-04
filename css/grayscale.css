@@ -384,7 +384,7 @@ a:focus {
 .publications-section {
     width: 100%;
     color: #000;
-    background: url(../img/publications-bg.jpg) no-repeat right center scroll;
+    background: url(../img/publications-bg.jpg) no-repeat right bottom scroll;
     background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
