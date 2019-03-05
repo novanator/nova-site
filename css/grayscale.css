@@ -1,4 +1,4 @@
-/*!
+534BBA/*!
  * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
@@ -70,7 +70,7 @@ p {
 }
 
 a {
-    color: #8C1515;
+    color: #534BBA;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -79,11 +79,11 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #CC2121;
+    color: #7380DD;
 }
 
 #stanford {
-    color: #8C1515;
+    color: #534BBA;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -92,7 +92,7 @@ a:focus {
 #stanford:hover,
 #stanford:focus {
     text-decoration: none;
-    color: #CC2121;
+    color: #7380DD;
 }
 
 
@@ -466,17 +466,17 @@ a:focus {
 */
 
 .btn-default {
-    border: 1px solid #8C1515;
-    color: #8C1515;
+    border: 1px solid #534BBA;
+    color: #534BBA;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #8C1515;
+    border: 1px solid #534BBA;
     outline: 0;
     color: #fff;
-    background-color: #8C1515;
+    background-color: #534BBA;
 }
 
 ul.banner-social-buttons {
